@@ -1,0 +1,59 @@
+// pages/recentlist/recentlist.js
+var app = getApp()
+Page({
+  /**
+   * 页面的初始数据
+   */
+  data: {
+    token: '',
+    record: '',
+    orders: ''
+  },
+
+  /**
+   * 生命周期函数--监听页面加载
+   */
+  onLoad: function (options) {
+    var that = this
+    var token = options.token;
+    wx.request({
+      url: app.globalData.URL + '/pss/discuss/last?token=' + options.token + '&pageSize=10',
+      data: {},
+      method: 'GET',
+      header: {
+        "Content-Type": "application/json"
+      },
+      success: function (res) {
+        var data = res.data;
+        that.setData({
+          records: data.records,
+          orders: data.orders,
+          token: options.token
+        })
+
+      }
+    })
+  },
+
+  /**
+   * 用户点击右上角分享
+   */
+  onShareAppMessage: function () {
+  
+  },
+  allList: function (e) {
+    console.log('全部订单列表');
+    wx.redirectTo({
+      url: '../alllist/alllist?token=' + this.data.token
+    })
+  },
+  discussTalk: function (e) {
+    console.log('最近列表页跳转到聊天页');
+
+    var designCode = e.currentTarget.id;
+    console.log("designCode" + designCode)
+    wx.navigateTo({
+      url: '../discuss/discuss?designCode=' + designCode + '&token=' + this.data.token
+    })
+  }
+})

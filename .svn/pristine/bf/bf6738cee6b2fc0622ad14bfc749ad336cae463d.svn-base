@@ -1,0 +1,16 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/complete/complete",
+    "pages/alllist/alllist",
+    "pages/recentlist/recentlist",
+    "pages/discuss/discuss",
+    "pages/logs/logs"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "验证手机号",
+    "navigationBarTextStyle":"black"
+  }
+}

@@ -1,0 +1,175 @@
+/* pages/recentlist/recentlist.wxss */
+.top {
+  width: 100%;
+  height: 116px;
+  background-color: #459de6;
+}
+.msgnum {
+  padding: 20rpx 40rpx;
+  font-size: 28rpx;
+  color: #ffffff;
+}
+.panels {
+  position: absolute;
+  top: 120rpx;
+  width:100%;
+}
+.panel {
+  margin:0 20rpx 0 40rpx;
+  width: 260px;
+  height: 260rpx;
+  border-radius: 3px;
+  background-color: #ffffff;
+  display:inline-table;
+}
+.panel-top {
+  padding:40rpx 40rpx 30rpx 40rpx;
+  height: 80rpx;
+}
+.headimg {
+  float: left;
+  height: 80rpx;
+  width: 80rpx;
+  border-radius: 50%;
+  padding-right:1rem;
+}
+.headImg {
+  height: 80rpx;
+  width: 80rpx;
+  border-radius: 50%;
+}
+.info {
+  float: left;
+  padding:10rpx 40rpx 10rpx 0;
+  height:60rpx;
+}
+.infoname {
+  float: left;
+  font-size: 28rpx;
+  color: #798896;
+}
+.infojob {
+  float: left;
+  font-size: 20rpx;
+  color: #b1c0ce;
+  padding-top:10rpx;
+}
+.infobottom {
+  clear: both;
+  padding-top: 10rpx;
+}
+.middleLine {
+  border: 0.5rpx solid #f0f3f5;
+  width:calc(100% - 6rpx);
+}
+.panelbottom {
+  margin: 20rpx 40rpx;
+  font-size: 28rpx;
+  color: #798896;
+  white-space: pre-wrap;
+  display:-webkit-box;
+  -webkit-box-orient:vertical;
+  -webkit-line-clamp:2;
+  overflow:hidden;
+  height:74rpx;
+
+}
+
+.content {
+  padding: 160rpx 40rpx 0 40rpx;
+  width: calc(100% - 80rpx);
+  height: calc(100% - 490rpx);
+  background-color: #f5f5f5;
+}
+.title {
+  padding: 40rpx 0;
+  font-size: 28rpx;
+  color: #798896;
+}
+.cadlists {
+  margin-bottom:40rpx;
+}
+.cadlist {
+  width: calc(100% - 80rpx);
+  /*height: 130rpx;*/
+  border-radius: 3px;
+  background-color: #ffffff;
+  box-shadow: 0px 1.5px 3.5px 0 rgba(55, 62, 70, 0.1);
+  padding:20rpx 40rpx;
+}
+.listtop {
+  height: 80rpx;
+  padding-top: 10rpx;
+}
+.listtop-right {
+  height: 80rpx;
+  padding:10rpx 40rpx 0 0;
+}
+.cadfile {
+  font-size: 28rpx;
+  color: #798896;
+  word-break:break-all;
+  width:100%;
+  display:-webkit-box;
+  -webkit-box-orient:vertical;
+  -webkit-line-clamp:2;
+  overflow:hidden;
+}
+.cadcode {
+  padding-top: 10rpx;
+  font-size: 22rpx;
+  color: #b1c0ce;
+}
+.designerName {
+  font-size: 28rpx;
+  color: #798896;
+}
+.designerJob {
+  padding-top: 10rpx;
+  font-size: 22rpx;
+  color: #b1c0ce;
+}
+.newmsg {
+  float:right;
+  right:80rpx;
+  margin-top:-66rpx;
+  margin-right:60rpx;
+  width:36rpx;
+  height:36rpx;
+  border-radius:50%;
+  background-color:#459de6;
+  color:#ffffff;
+  font-size:24rpx;
+  text-align:center;
+  line-height:36rpx;
+}
+
+.bottom {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 98rpx;
+  background-color: #fafbfc;
+  box-shadow: 0px -1px 10px 0 rgba(55, 62, 70, 0.1);
+  display: -webkit-flex;
+}
+.botm {
+  text-align: center;
+  flex: 1;
+}
+.recentlist {
+  color: #459de6;
+}
+.alllist {
+  color: #b1c0ce;
+}
+
+
+.icon-recent:before {
+  content: "\e603";
+  font-size:54rpx;
+}
+.icon-all:before {
+  content: "\e622";
+  font-size:54rpx;
+}

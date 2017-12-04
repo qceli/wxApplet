@@ -1,0 +1,272 @@
+$(function(){
+	$.get('discuss/records?token=${param.token}&designCode=${param.designCode}&pageSize=20', function(data, status) {
+         myCode = data.myCode;
+         var recordId = data.record[0].id;
+         if ( data.isAll == 0 ) {
+	         $(".content").prepend('<div class="load-more" onclick=loadMore(' + recordId + ')>点击加载更多</div>');
+	     }else{
+	         $(".content").prepend('<div class="msg">您的消息将会通过微信通知到</div><div class="msg">设计负责人及设计师</div>');
+	     }
+	     recordCon(data);
+	     //scrolldIV.scrollTop = scrolldIV.scrollHeight;
+	     //toChatRecordsBottom();
+	     setTimeout("toChatRecordsBottom()",500);
+	     setTimeout("toChatRecordsBottom()",1000);
+    });
+});
+   
+function recordCon(data){
+	var tbody = window.document.getElementById("talkContent");
+	var content = data.record;
+	if ( data.result != 0 ) {
+		/* alert("999"+status) */
+	} else {
+		for (i in content) { 
+	        var result = checkChatRecord(content[i].id);
+	        if (result == 1) {
+	        	continue;
+	        }	            
+			if (content[i].id > lastId) {
+	       		lastId = content[i].id;
+	       	}
+			var list = "";
+			     	
+			var imageUrl = content[i].headImageUrl;
+			var headImg = imageUrl;
+			if ( imageUrl == "" || imageUrl == null){
+				headImg = "img/headimg.png";
+			}
+			if ( content[i].userType == -1 ){
+				list = PeopleMine(content[i], headImg, content[i].msgType);
+			} 
+			else if ( content[i].userType == 0 || content[i].userType == 3 ){
+				list = PeopleLeft(content[i], headImg, content[i].msgType);
+			} 
+			
+		    var timeFirst = content[i].createTime;  
+		    var timeSecond = "";
+	   	    if ( i >= 1 ){
+	   	    	var j = -- i;
+	   	    	timeSecond = content[j].createTime;  
+	   	    }
+	   		var timeStr = showTime(timeFirst, timeSecond);
+	   		$(".talk-text").append(timeStr);
+			$(".talk-text").append(list);
+			document.getElementById("scrolldIV").scrollIntoView(false);
+      	}
+	}
+}
+
+function loadMore(recordId) {
+	$(".load-more").remove();
+	$.get('discuss/records?token=${param.token}&designCode={designCode}&pageSize=20&lastId=' + recordId, function(data, status) {
+		var recordId = data.record[0].id;
+        if ( data.isAll == 0 ) {
+	        $(".content").prepend('<view class="load-more" onclick=loadMore(' + recordId + ')>点击加载更多</view>');
+	    }else{
+	        $(".content").prepend('<view class="msg">您的消息将会通过微信通知到</view><view class="msg">设计负责人及设计师</view>');
+	    }
+		
+		var tbody = window.document.getElementById("talkContent"); 
+        var content = data.record;
+        if ( data.result != 0 ) {
+        	//alert("000"+status)
+        } else {
+        	var n = content.length;
+        	for ( var n = content.length; n>0; n-- ) {       		
+        		var i = n-1;
+        		var list = "";           		     	
+        		var imageUrl = content[i].headImageUrl;
+        		if ( imageUrl != "" && imageUrl != null){
+        			headImg = imageUrl;
+        		}
+        		if ( content[i].userType == -1 ){
+        			list = PeopleMine(content[i], headImg, content[i].msgType);
+        		} else if ( content[i].userType == 0 || content[i].userType == 3 ){
+       				list = PeopleLeft(content[i], headImg, content[i].msgType);           			
+        		}
+				$(".talk-text").prepend(list);
+				var timeFirst = content[i].createTime;  
+        	    var timeSecond = "";
+        	    if ( i >= 1 ){
+        	    	var j = -- i;
+        	    	timeSecond = content[j].createTime;  
+        	    }
+        		var timeStr = showTime(timeFirst, timeSecond);
+        		$(".talk-text").prepend(timeStr);
+				
+        	}
+        }
+	});
+}
+	
+	
+function PeopleLeft(data, headImg, msgType){
+	var con = "";
+	if( msgType == 1 ){
+        con = "<img class='text text-left images min' src='" + data.content + "' onclick=imgChange(this)>";		
+    } else {
+    	con = "<view class='text text-left'>" + data.content + "</view>";
+    }
+	var userType = data.userType;
+	var job = "布局人员";
+	if ( userType == 0 ){
+		job = "主负责";			
+	}        
+	var str = "";
+	str = "<view class='people people-left'>" + 
+	   		"<view class='head-img'>" + 
+	   			"<img src='" + headImg + "' />" + 
+	   		"</view>" + 
+	   		"<view class='line'>" + 
+		   		"<view class='name'>" + data.userName + "</view>" + 
+		   		"<view class='role'>" + job + "</view>" + 
+	   		"</view>" + 
+   			con +
+   			"<view style='clear: both'></view>" + 
+   		"</view>";
+	return str;
+}
+   
+function PeopleMine(data, headImg, msgType){
+	var name = "";
+	var con = "";
+	if( data.msgType == 1 ){
+		con = "<img class='text text-right images min' src='" + data.content + "' onclick=imgChange(this)>";		
+	} else con = "<view class='text text-right'>" + data.content + "</view>";
+	if ( myCode = data.userCode ) {
+		name = "我";
+	} else name = data.userName;
+	var str = "";
+	str = "<view class='people people-me'>" + 
+		"<view class='head-imgright'>" + 
+			"<img src='" + headImg + "' />" + 
+		"</view>" + 
+		"<view class='line'>" + 
+			"<view class='name-right'>" + name + "</view>" + 
+		"</view>" + 
+		con + 
+		"<view style='clear: both'></view>" + 
+	"</view>";
+	return str;   	
+}
+   
+function mine(data, headImg){
+	var str = "";
+	str = "<view class='people people-me'>" + 
+		"<view class='head-imgright'>" + 
+			"<img src='" + headImg + "' />" + 
+		"</view>" + 
+		"<view class='line'>" + 
+			"<view class='name-right'>" + "我" + "</view>" + 
+		"</view>" + 
+		"<view class='text text-right'>" + data + "</view>" + 
+		"<view style='clear: both'></view>" + 
+	"</view>";
+	return str;   	
+}
+
+function minePhoto(data, headImg){
+	/* alert("minePhoto") */
+	var str = "";
+	str = "<view class='people people-me'>" + 
+		"<view class='head-imgright'>" + 
+			"<img src='" + headImg + "' />" + 
+		"</view>" + 
+		"<view class='line'>" + 
+			"<view class='name-right'>" + "我" + "</view>" + 
+		"</view>" + 
+		"<img class='text text-right images min' src='" + data.imageUrl + "' onclick=imgChange(this)>" + 
+		"<view style='clear: both'></view>" + 
+	"</view>";
+	return str;   	
+}
+   
+var lastSendTime = 0;
+function send(){
+	var date = new Date();
+	var timeFirst = date.getTime();
+	if (timeFirst - lastSendTime <= 3000) {
+		// 显示消息发送频繁
+		return;
+	}
+	lastSendTime = timeFirst;
+	
+	var timeSecond = $(".talk-text> .time").last().attr("id");
+	var timeContent = $(".talk-text> .time").last().html();
+	var calc = timeFirst - timeSecond;
+	var msg = $(".input-content").val();
+	$(".input-content").val("");
+	//alert(msg)
+	if( msg == "" || msg == null ){
+		//alert("请输入内容");
+	} else {
+
+		var str = "<view class='people people-me'>" + 
+			"<view class='head-imgright'>" + 
+				"<img src='" + headImg + "' />" + 
+			"</view>" + 
+			"<view class='line'>" + 
+				"<view class='name-right'>" + "我" + "</view>" + 
+			"</view>" + 
+			"<view class='text text-right'>" + msg + "</view>" + 
+			"<view class='reSend' style='display:none;' onclick='reSend(this)'><i class='iconfont icon-reSend'>&#xe606;</i></view>" + 
+			"<view style='clear:both'></view>" + 
+		"</view>";
+		if ( calc > 120000 ) {
+			var times= "刚刚";
+       		if ( timeContent == "刚刚" ){
+       		    timeSecond = parseInt(timeSecond, 10);
+				var lastDate = dateFormat(timeSecond, "yyyyMMddhhmmss");
+				lastDate = lastDate.split(" ")[1];
+				$(".talk-text> .time").last().html(lastDate);
+       		}
+        	var timeStr = "<view class='time' id='" + timeFirst +"'>" + times + "</view>";
+    		$(".talk-text").append(timeStr);
+		}
+		$(".talk-text").append(str);
+        scrolldIV.scrollTop = scrolldIV.scrollHeight;
+	        
+		$.ajax({
+           type: "POST",
+           url: "discuss/message?designCode=${param.designCode}&token=${param.token}&clientType=" + myClientType + "&message=" + msg,
+           /* data: jsonstr, */
+           contentType: 'application/json',
+           success: function (data) {
+           	if (data.recordId > lastId) {
+               		lastId = data.recordId;
+               	}
+           	$(".reSend").css("display", "none");
+           },
+           error: function (data) {
+           	$(".reSend").removeAttr("style");
+           }
+       });
+	}
+}
+
+function reSend(obj) {
+	var date = new Date();
+	var timeFirst = date.getTime();
+	if (timeFirst - lastSendTime <= 3000) {
+		return;
+	}
+	lastSendTime = timeFirst;
+	
+	var msg = $(obj).prev().html();
+	$.ajax({
+       type: "POST",
+       url: "discuss/message?designCode=${param.designCode}&token=${param.token}&clientType=" + myClientType + "&message=" + msg,
+       /* data: jsonstr, */
+       contentType: 'application/json',
+       success: function (data) {
+       	if (data.recordId > lastId) {
+          		lastId = data.recordId;
+          	}
+       	$(obj).remove();
+       },
+       error: function (data) {
+       	$(".reSend").removeAttr("style");
+       }
+   });
+}

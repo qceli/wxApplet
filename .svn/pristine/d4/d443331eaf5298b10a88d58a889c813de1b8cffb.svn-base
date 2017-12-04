@@ -1,0 +1,197 @@
+//index.js
+//获取应用实例
+var app = getApp()
+Page({
+  data: {
+    userInfo: {},
+    displaySend: '',
+    displayNext: 'none',
+    displayMobile: '',
+    displayCode: 'none',
+    displayErrorCode: 'none',
+    buttonDisable: 'true',
+    rCode: ''
+  },
+  onLoad: function () {
+    var that = this
+    //调用应用实例的方法获取全局数据
+    app.getUserInfo(function(userInfo){
+      that.setData({
+        userInfo:userInfo,
+      })
+    })
+    wx.getStorage({
+      key: 'r.code',
+      success: function (res) {
+        that.setData({
+          rCode: res.data,
+        })
+      }
+    }) 
+  },
+  mobileInputEvent: function (e) {
+    this.setData({
+      mobile: e.detail.value
+    })
+  },
+  getCode: function(e) {
+    console.log('获取验证码');
+    var mobile = this.data.mobile;
+    var regMobile = /^1\d{10}$/;
+    if (!regMobile.test(mobile)) {
+      wx.showToast({
+        title: '手机号有误！',
+        icon: 'loading'
+      })
+      return false;
+    } else {
+      var displayNext = this.data.displayNext == '' ? 'none' : '';
+      var displaySend = this.data.displaySend == '' ? 'none' : '';
+      var displayMobile = this.data.displayMobile == '' ? 'none' : '';
+      var displayCode = this.data.displayCode == '' ? 'none' : '';
+      this.setData({
+        displayNext: displayNext,
+        displaySend: displaySend,
+        displayMobile: displayMobile,
+        displayCode: displayCode
+      });
+      var that = this
+      var c = 60;
+      var intervalId = setInterval(function () {
+        c = c - 1;
+        that.setData({
+          verifyCodeTime: c + 's后',
+          buttonDisable: true
+        })
+        if (c == 0) {
+          clearInterval(intervalId);
+          that.setData({
+            verifyCodeTime: '获取验证码',
+            buttonDisable: false
+          })
+        }
+      }, 1000)
+      // sendVerifyCode(mobile);//获取短信验证码接口
+      console.log("发送短信验证码")
+      wx.request({
+        url: app.globalData.URL + '/pss/validate/authCode?mobile=' + mobile,
+        data: {},
+        method: 'GET',
+        header: {
+          "Content-Type": "application/json"
+        },
+        success: function (res) {
+          var data = res.data;
+          console.log("发送短信接口调用成功")
+
+        }
+      })
+    }
+  },
+  getCodes: function (e) {
+    console.log('获取验证码');
+    var mobile = this.data.mobile;
+    var that = this
+    var c = 60;
+    var intervalId = setInterval(function () {
+      c = c - 1;
+      that.setData({
+        verifyCodeTime: c + 's后',
+        buttonDisable: true
+      })
+      if (c == 0) {
+        clearInterval(intervalId);
+        that.setData({
+          verifyCodeTime: '获取验证码',
+          buttonDisable: false
+        })
+      }
+    }, 1000)
+    // sendVerifyCode(mobile);//获取短信验证码接口
+    console.log("重新发送短信验证码")
+    wx.request({
+      url: app.globalData.URL + '/pss/validate/authCode?mobile=' + mobile,
+      data: {},
+      method: 'GET',
+      header: {
+        "Content-Type": "application/json"
+      },
+      success: function (res) {
+        var data = res.data;
+        console.log("重新发送验证码成功")
+
+      }
+    })
+  },
+  goBackEvent: function (e) {
+    console.log("back");
+    var displayNext = this.data.displayNext == '' ? 'none' : '';
+    var displaySend = this.data.displaySend == '' ? 'none' : '';
+    var displayMobile = this.data.displayMobile == '' ? 'none' : '';
+    var displayCode = this.data.displayCode == '' ? 'none' : '';
+    this.setData({
+      displayNext: displayNext,
+      displaySend: displaySend,
+      displayMobile: displayMobile,
+      displayCode: displayCode,
+      displayErrorCode: 'none'
+    });
+  },
+  codeInputEvent: function (e) {
+    this.setData({
+      code: e.detail.value
+    })
+  },
+  identifyCode: function(e) {
+    var that = this
+    console.log('验证 验证码');
+    console.info("rCode:" + that.data.rCode)
+    var code = that.data.code;
+    console.log("identifyCode-code:" + code);
+    var verificationCode = /^1\d{10}$/; 
+    wx.request({
+      url: app.globalData.URL + '/pss/validate/chatAuth?code=' + that.data.rCode + '&unionid=&mobile=' + that.data.mobile + '&smCode=' + this.data.code,
+      data: {},
+      method: 'POST',
+      header: {
+        "Content-Type": "application/json"
+      },
+      success: function (res) {
+        var data = res.data;
+        if (data.result != 0) {
+          var displayErrorCode = this.data.displayErrorCode == 'none';
+          this.setData({
+            displayErrorCode: displayErrorCode
+          });
+        } else {
+          var displayErrorCode = this.data.displayErrorCode == '';
+          this.setData({
+            displayErrorCode: displayErrorCode
+          });
+          if (data.user != '') {
+            var token = data.token;
+            try {
+              wx.setStorageSync('chatToken', token)
+            } catch (e) {
+            }
+            wx.redirectTo({
+              url: '../recentlist/recentlist?chatToken=' + token
+            })
+          } else {
+            var token = data.token;
+            try {
+              wx.setStorageSync('chatToken', token)
+            } catch (e) {
+            }
+            wx.navigateTo({
+              url: '../complete/complete?chatToken=' + token
+            })
+
+          }
+        }
+        
+      }.bind(this)
+    })
+
+  }
+})

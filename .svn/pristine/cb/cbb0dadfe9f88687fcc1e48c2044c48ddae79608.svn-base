@@ -1,0 +1,76 @@
+<view style="height:100%;overflow-y:hidden;">
+  <view class="search">
+    <view class="search-top">
+      <!--<form class="search-form">-->
+        <span class="iconfont icon-search"></span>
+        <input type="search" class="search-input" placeholder="搜索" autocomplete="off" />
+      <!--</form>-->
+    </view>
+  </view>
+  <view class="content" style="overflow-y:auto;">
+    <block wx:for="{{allOrders}}">
+    <view class="cadlists" bindtap="discussTalk">
+      <view class="listtop">
+        <view class="headimg"><image class="headImg" src="../images/headImg.png" /></view>
+        <view class="listtop-right">
+          <view class="cadfile">设计文件名：SW411_DB_151028</view>
+          <view class="cadcode">CAD设计号：7CAD15100192</view>
+        </view>
+      </view>
+      <view class="designer">设计负责人：张亦凡</view>
+    </view>
+    <view class="cadlists" bindtap="discussTalk">
+      <view class="listtop">
+        <view class="headimg"><image class="headImg" src="../images/headImg.png" /></view>
+        <view class="listtop-right">
+          <view class="cadfile">设计文件名：SW411_DB_151028</view>
+          <view class="cadcode">CAD设计号：7CAD15100192</view>
+        </view>
+      </view>
+      <view class="designer">设计负责人：张亦凡</view>
+    </view>
+    <view class="cadlists" bindtap="discussTalk">
+      <view class="listtop">
+        <view class="headimg"><image class="headImg" src="../images/headImg.png" /></view>
+        <view class="listtop-right">
+          <view class="cadfile">设计文件名：SW411_DB_151028</view>
+          <view class="cadcode">CAD设计号：7CAD15100192</view>
+        </view>
+      </view>
+      <view class="designer">设计负责人：张亦凡</view>
+    </view>
+    <view class="cadlists" bindtap="discussTalk">
+      <view class="listtop">
+        <view class="headimg"><image class="headImg" src="../images/headImg.png" /></view>
+        <view class="listtop-right">
+          <view class="cadfile">设计文件名：SW411_DB_151028</view>
+          <view class="cadcode">CAD设计号：7CAD15100192</view>
+        </view>
+      </view>
+      <view class="designer">设计负责人：张亦凡</view>
+    </view>
+    <view class="cadlists" bindtap="discussTalk">
+      <view class="listtop">
+        <view class="headimg"><image class="headImg" src="../images/headImg.png" /></view>
+        <view class="listtop-right">
+          <view class="cadfile">设计文件名：SW411_DB_151028</view>
+          <view class="cadcode">CAD设计号：7CAD15100192</view>
+        </view>
+      </view>
+      <view class="designer">设计负责人：张亦凡</view>
+    </view>
+
+    </block>
+  </view>
+
+  <view class="bottom">
+    <view class="botm recentlist" bindtap="recentList">
+      <view class="iconfont icon-recent"></view>
+      <view class="">最近</view>
+    </view>
+    <view class="botm alllist">
+      <view class="iconfont icon-all"></view>
+      <view class="">全部订单</view>
+    </view>
+  </view>
+</view>

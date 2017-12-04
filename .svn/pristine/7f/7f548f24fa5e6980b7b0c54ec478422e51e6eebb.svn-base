@@ -1,0 +1,12 @@
+<!--pages/nomate/nomate.wxml-->
+<view class="tipTop">
+  <image class="tipImg" src="../images/nomate.jpg" />
+</view>
+<view class="tipFirst">啊哦，没有匹配的信息！</view>
+<view class="tipSecond">请使用您在同步下单时所留的手机号验证</view>
+<view class="tipThird">
+  <view class="thirdTop"  bindtap="goBackEvent">
+    <span class="iconfont icon-back"></span>
+    <view class="thirdText">重新验证</view>
+  </view>
+</view>

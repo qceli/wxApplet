@@ -1,0 +1,81 @@
+//app.js
+App({
+  globalData: {
+    appid: 'wxadae3f811c88b8fd',
+    secret: '26f4e6e50535d9884850e4dd4a94778b',
+    URL: 'https://devops.pcbwx.com'
+  },
+  onLaunch: function () {
+    //调用API从本地缓存中获取数据
+    // var logs = wx.getStorageSync('logs') || []
+    // logs.unshift(Date.now())
+    // wx.setStorageSync('logs', logs)
+    wx.getStorage({
+      key: 'chatToken',
+      success: function (res) {
+        console.log(res.data)
+        wx.redirectTo({
+          url: 'pages/recentlist/recentlist?chatToken=' + res.data
+        })
+      }
+    })
+  },
+  getUserInfo: function (cb) {
+    var that = this
+    if (this.globalData.userInfo) {
+      typeof cb == "function" && cb(this.globalData.userInfo)
+    } else {
+      //调用登录接口
+      wx.login({
+        success: function (r) {
+          var code = r.code;
+          console.log(r.code);
+          try {
+            wx.setStorageSync('r.code', r.code)
+          } catch (e) {
+          }  
+          if(code) {
+            wx.getUserInfo({
+              success: function (res) {
+                console.log(res.userInfo)
+                console.log("res.iv:" + res.iv)
+                console.log(res.encryptedData)
+                that.globalData.userInfo = res.userInfo
+                typeof cb == "function" && cb(that.globalData.userInfo)
+              }
+            })
+          } else {
+            console.log('获取用户登录态失败！' + r.errMsg)
+          }
+        }
+      })
+    }
+  },
+
+  upload_file: function(url, filePath, name, success, fail) {
+    console.log('a=' + filePath)
+    wx.uploadFile({
+      url: url,
+      filePath: filePath,
+      name: name,
+      header: {
+        'content-type': 'multipart/form-data'
+      }, // 设置请求的 header
+      // formData: formData, // HTTP 请求中其他额外的 form data
+      success: function (res) {
+        console.log(res);
+        if (res.statusCode == 200 && !res.data.result_code) {
+          typeof success == "function" && success(res.data);
+        } else {
+          typeof fail == "function" && fail(res);
+        }
+      },
+      fail: function (res) {
+        console.log(res);
+        typeof fail == "function" && fail(res);
+      }
+    })
+  }
+
+
+})

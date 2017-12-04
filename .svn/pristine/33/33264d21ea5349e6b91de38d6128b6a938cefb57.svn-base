@@ -1,0 +1,44 @@
+<!--index.wxml-->
+<image class="bg" src="../images/bg.jpg" />
+<!--<view class="topLogo">
+  <image class="logo" src="../images/logo.png" />
+ </view>-->
+<view class="container">
+  <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+  <view class="userinfo">
+    <span class="iconfont icon-back back" bindtap="goBackEvent" style="display:{{displayNext}};"></span>
+    <view class="info userinfo-nickname">{{motto}}</view>
+    <view class="info userinfo-tel">
+      <!--<span placeholder="请输入内容...">请输入手机号</span>-->
+      <input class="telephone" placeholder="请输入手机号" bindblur="mobileInputEvent" style="display:{{displayMobile}};" />
+      <input class="verificationCode" placeholder="请输入验证码" bindblur="codeInputEvent" style="display:{{displayCode}};" />
+    </view>
+    <view class="error-code" style="display:{{displayErrorCode}};">
+      <span class="iconfont icon-error"></span>
+      <span>验证码错误</span>
+    </view>
+    <view class="send" style="display:{{displayNext}};">
+      <span>已给 {{mobile}} 发送验证码，{{verifyCodeTime}}</span>
+      <span bindtap="getCode" class="re-send">重新发送！</span>
+    </view>
+  </view>
+  
+  <view class="next get-code" bindtap="getCode" style="display:{{displaySend}};">
+    <span class="iconfont icon-next"></span>
+  </view>
+
+  <view class="next complet" bindtap="identifyCode" style="display:{{displayNext}};">
+    <span class="iconfont icon-complet"></span>
+  </view>
+ 
+
+  <!--<view class="usermotto">
+    <text class="user-motto">{{motto}}</text>
+  </view>
+  <div class="test"></div>-->
+</view>
+
+
+ <view class="bottom">
+  <text>同步设计微平台</text>
+ </view>

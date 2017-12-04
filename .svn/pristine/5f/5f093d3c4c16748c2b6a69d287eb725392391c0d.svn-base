@@ -1,0 +1,54 @@
+<view style="height:100%;overflow-y:hidden;">
+  <view class="search">
+    <view class="search-top">
+      <span class="iconfont icon-search"></span>
+      <input type="text" class="search-input"  placeholder="搜索文件名,设计号,负责人" bindinput="bindInput" bindconfirm="bindconfirm" value="{{inputValue}}" autocomplete="off" confirm-type="search" />
+    </view>
+  </view>
+  <view class="content" style="overflow-y:auto;-webkit-overflow-scrolling:touch;">
+    <block wx:if="{{allOrders != ''}}">
+      <block wx:for="{{allOrders}}" wx:for-item="i" wx:key="i.designId">
+        <view class="cadlists" bindtap="discussTalk" id="{{i.designId}}">
+          <view class="cadfile">设计文件名：{{i.orderFile}}</view>
+          <view class="cadcode">CAD设计号：{{i.designId}}</view>
+          <view class="listtop">
+            <view class="headimg">
+              <block wx:if="{{i.chiefAvatarUrl != ''}}">
+                <image class="headImg" src="{{i.chiefAvatarUrl}}" />
+              </block>
+              <block wx:if="{{i.chiefAvatarUrl == '' && i.chiefName != ''}}">
+                <image class="headImg" src="../images/headImgs.png" />
+              </block>
+              <block wx:if="{{i.chiefAvatarUrl == '' && i.chiefName == ''}}">
+                <image class="headImg" src="../images/headImg.png" />
+              </block>
+            </view>
+            <view class="listtop-right">
+              <block wx:if="{{i.chiefName != ''}}">
+                <view class="designerName">{{i.chiefName}}</view>
+                <view class="designerJob">设计负责人</view>
+              </block>
+              <block wx:if="{{i.chiefName == ''}}">
+                <view class="designerName">客服</view>
+                <view class="designerJob">客服人员</view>
+              </block>
+            </view>
+          </view>  
+        </view>    
+
+      </block>
+    </block>
+    <view class="bottom-tip">已经到底部啦！</view>
+  </view>
+
+  <view class="bottom">
+    <view class="botm recentlist" bindtap="recentList">
+      <view class="iconfont icon-recent"></view>
+      <view class="">最近</view>
+    </view>
+    <view class="botm alllist">
+      <view class="iconfont icon-all"></view>
+      <view class="">全部订单</view>
+    </view>
+  </view>
+</view>

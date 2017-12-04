@@ -1,0 +1,64 @@
+<!--pages/feds/feds.wxml-->
+<view style="height:100%;overflow-y:hidden;">
+  <scroll-view scroll-y="true" class="content" scroll-into-view="{{toView}}" style="-webkit-overflow-scrolling:touch;"> 
+    <view wx:for="{{records}}" wx:for-item="j" wx:key="j.id">
+      <view class="time">{{j.timeStr}}</view>
+      <block wx:if="{{j.userType == -2}}">
+        <view class="people peopleContents" id="{{'f_' + j.id}}">
+          <view class="tops peopleTop">
+            <view class="peopleJob">客服</view>
+            <view class="peopleName">客服人员</view>
+          </view>
+          <view class="headimg peopleImg">
+            <image class="headImg" src="../images/headImg.png" />
+          </view>
+          <view class="peopleInfos">
+            <view class="infos peopleInfo">{{j.content}}</view>
+            <view class="sendState peopleSendState">已发送</view>
+          </view>
+        </view>
+      </block>
+      <block wx:if="{{j.userType != -2}}">
+        <view class="mine" id="{{'f_' + j.id}}">
+          <view class="tops mineTop">
+            <view class="mineName">我</view>
+          </view>
+          <view class="headimg mineImg">
+            <block wx:if="{{j.chiefAvatar != ''}}">
+              <image class="headImg" src="{{j.chiefAvatar}}" />
+            </block>
+            <block wx:if="{{j.chiefAvatar == ''}}">
+              <image class="headImg" src="../images/cum.png" />
+            </block>
+          </view>
+          <view class="mineInfos">
+            <view class="sendState mineState">已发送</view>
+            <view class="infos mineInfo">{{j.content}}</view>
+          </view>
+        </view>
+      </block>
+    </view>
+
+    <block wx:if="{{records}}">
+      <view class="people peopleContents">
+        <view class="tops peopleTop">
+          <view class="peopleJob">客服</view>
+          <view class="peopleName">客服人员</view>
+        </view>
+        <view class="headimg peopleImg">
+          <image class="headImg" src="../images/headImg.png" />
+        </view>
+        <view class="peopleInfos">
+          <view class="infos peopleInfo">已经将信息发送给设计团队，回复可能需要几分钟时间</view>
+          <view class="sendState peopleSendState">已发送</view>
+        </view>
+      </view>
+    </block>
+    <view id="scrollBottom" style="height:10rpx;width:100%;"></view>
+  </scroll-view>
+
+  <view class="bottom">
+    <view class="input"><input type="text" class="wx-input" value="{{inputTemp}}" bindinput="bindKeyInput" confirm-type="send" bindconfirm="sendMessage" /></view>
+    <view class="iconfont icon-send send" bindtap="sendMessage"></view>
+  </view>
+</view>

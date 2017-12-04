@@ -1,0 +1,33 @@
+//complete.js
+//获取应用实例
+var app = getApp()
+Page({
+  data: {
+    userInfo: {},
+    token: ''
+  },
+  //事件处理函数
+  onLoad: function () {
+    var that = this
+    //调用应用实例的方法获取全局数据
+    app.getUserInfo(function(userInfo){
+      that.setData({
+        userInfo: userInfo
+      })
+    })
+    wx.getStorage({
+      key: 'token',
+      success: function (res) {
+        that.setData({
+          token: res.data,
+        })
+      }
+    }) 
+  },
+  checkIdentifyCode: function (e) {
+    console.log('聊天 discuss');
+    wx.redirectTo({
+      url: '../recentlist/recentlist?token=' + this.data.token
+    })
+  }
+})

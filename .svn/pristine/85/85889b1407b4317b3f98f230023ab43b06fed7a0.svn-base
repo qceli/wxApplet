@@ -1,0 +1,210 @@
+<!--pages/discuss/discuss.wxml-->
+<view style="height:100%;overflow-y:hidden;">
+  <view class="top">
+    <view class="topInfo">CAD设计号：{{designCode}}</view>
+    <view class="topInfo">设计文件名：{{orderFile}}</view>
+    <view class="topInfo">设计负责人：{{chiefName}}</view>
+    <view class="topInfo">下单时间：{{latestStateTime}}</view>
+  </view>
+  <scroll-view scroll-y="true" class="content" scroll-into-view="{{toView}}">
+    <view class="msg" wx:if="{{isAll != 0}}">需要更多功能？点击右上角，关注微信公众号</view>
+    <view class="load-more" wx:if="{{isAll == 0}}" data-record-id="{{recordId}}" bindtap="loadMore">点击加载更多</view>
+
+    <view class="msg">已经将信息发送给设计团队，回复可能需要几分钟时间</view>
+
+    <block wx:if="{{loadRecord != '' }}" >
+      <view wx:for="{{loadDatas}}" wx:for-item="j" wx:key="j.id">
+      <view class="time">{{j.createTime}}</view>
+        <block wx:if="{{j.userType != -1}}">
+          <block wx:if="{{j.msgType != 1}}">
+            <view class="people peopleContents">
+              <view class="tops peopleTop">
+                <view class="peopleJob">设计负责人</view>
+                <view class="peopleName">{{j.userName}}</view>
+              </view>
+              <view class="headimg peopleImg"><image class="headImg" src="../images/headImg.png" /></view>
+              <view class="peopleInfos">
+                <view class="infos peopleInfo">{{j.content}}</view>
+                <view class="sendState peopleSendState">已发送</view>
+              </view>
+            </view>
+          </block>
+          <block wx:elif="{{j.msgType == 1}}">
+            <view class="people peopleImgs">
+              <view class="tops peopleTop">
+                <view class="peopleJob">设计负责人</view>
+                <view class="peopleName">{{j.userName}}</view>
+              </view>
+              <view class="headimg peopleImg"><image class="headImg" src="../images/headImg.png" /></view>
+              <view class="peopleInfos">
+                <view class="infos contentImg"><image class="imgUrl" src="{{j.content}}" /></view>
+                <view class="sendState peopleSendState">已发送</view>
+              </view>
+            </view>
+          </block>
+        </block>
+        <block wx:elif="{{j.userType == -1}}">
+          <block wx:if="{{j.msgType != 1}}">
+            <view class="mine">
+              <view class="tops mineTop">
+                <view class="mineName">我</view>
+              </view>
+              <view class="headimg mineImg"><image class="headImg" src="../images/headImg.png" /></view>
+              <view class="mineInfos">
+                <view class="sendState mineState">已发送</view>
+                <view class="infos mineInfo">{{j.content}}</view>
+              </view>
+            </view>
+          </block>
+          <block wx:elif="{{j.msgType == 1}}">
+            <view class="mineImgs">
+              <view class="tops mineTop">
+                <view class="mineName">我</view>
+              </view>
+              <view class="headimg mineImg"><image class="headImg" src="../images/headImg.png" /></view>
+              <view class="mineInfos" style="max-width:100%;">
+                <view class="sendState mineState">已发送</view>
+                <view class="infos contentImgs"><image class="imgUrl" src="{{j.content}}" /></view>
+              </view>
+            </view>
+          </block>
+        </block>
+      </view>
+    </block>
+
+
+    <view wx:for="{{record}}" wx:for-item="i" wx:key="i.id" id="{{'s_' + i.id}}">
+      <view class="time">{{i.createTime}}</view>
+      <block wx:if="{{i.userType != -1}}">
+        <block wx:if="{{i.msgType != 1}}">
+          <view class="people peopleContents">
+            <view class="tops peopleTop">
+              <view class="peopleJob">设计负责人</view>
+              <view class="peopleName">{{i.userName}}</view>
+            </view>
+            <view class="headimg peopleImg"><image class="headImg" src="../images/headImg.png" /></view>
+            <view class="peopleInfos">
+              <view class="infos peopleInfo">{{i.content}}</view>
+              <view class="sendState peopleSendState">已发送</view>
+            </view>
+          </view>
+        </block>
+        <block wx:elif="{{i.msgType == 1}}">
+          <view class="people peopleImgs">
+            <view class="tops peopleTop">
+              <view class="peopleJob">设计负责人</view>
+              <view class="peopleName">{{i.userName}}</view>
+            </view>
+            <view class="headimg peopleImg"><image class="headImg" src="../images/headImg.png" /></view>
+            <view class="peopleInfos">
+              <view class="infos contentImg"><image class="imgUrl" src="{{i.content}}" /></view>
+              <view class="sendState peopleSendState">已发送</view>
+            </view>
+          </view>
+        </block>
+      </block>
+      <block wx:elif="{{i.userType == -1}}">
+        <block wx:if="{{i.msgType != 1}}">
+          <view class="mine">
+            <view class="tops mineTop">
+              <view class="mineName">我</view>
+            </view>
+            <view class="headimg mineImg"><image class="headImg" src="../images/headImg.png" /></view>
+            <view class="mineInfos">
+              <view class="sendState mineState">已发送</view>
+              <view class="infos mineInfo">{{i.content}}</view>
+            </view>
+          </view>
+        </block>
+        <block wx:elif="{{i.msgType == 1}}">
+          <view class="mineImgs">
+            <view class="tops mineTop">
+              <view class="mineName">我</view>
+            </view>
+            <view class="headimg mineImg"><image class="headImg" src="../images/headImg.png" /></view>
+            <view class="mineInfos" style="max-width:100%;">
+              <view class="sendState mineState">已发送</view>
+              <view class="infos contentImgs"><image class="imgUrl" src="{{i.content}}" /></view>
+            </view>
+          </view>
+        </block>
+      </block>
+    </view>   
+    
+      
+    <view wx:for="{{allContentList}}" wx:for-item="n" wx:key="{{n}}" id="{{'t_' + n.id}}">
+      <view class="time">{{n.createTime}}</view>
+      <!--<view class="mineImgs">
+        <view class="tops mineTop">
+          <view class="mineName">我</view>
+        </view>
+        <view class="headimg mineImg"><image class="headImg" src="../images/headImg.png" /></view>
+        <view class="mineInfos" style="max-width:100%;">
+          <view class="sendState mineState"><span class="iconfont icon-reSend reSend"></span></view>
+          <view class="infos contentImgs"><image class="imgUrl" src="../images/headImg.png" /></view>
+        </view>
+      </view>-->
+      <block wx:if="{{n.userType != -1}}">
+        <block wx:if="{{n.msgType != 1}}">
+          <view class="people peopleContents" id="{{n.id}}">
+            <view class="tops peopleTop">
+              <view class="peopleJob">设计负责人</view>
+              <view class="peopleName">{{n.userName}}</view>
+            </view>
+            <view class="headimg peopleImg"><image class="headImg" src="../images/headImg.png" /></view>
+            <view class="peopleInfos">
+              <view class="infos peopleInfo">{{n.content}}</view>
+              <view class="sendState peopleSendState">已发送</view>
+            </view>
+          </view>
+        </block>
+        <block wx:elif="{{n.msgType == 1}}">
+          <view class="people peopleImgs" id="{{n.id}}">
+            <view class="tops peopleTop">
+              <view class="peopleJob">设计负责人</view>
+              <view class="peopleName">{{n.userName}}</view>
+            </view>
+            <view class="headimg peopleImg"><image class="headImg" src="../images/headImg.png" /></view>
+            <view class="peopleInfos">
+              <view class="infos contentImg"><image class="imgUrl" src="{{n.content}}" /></view>
+              <view class="sendState peopleSendState">已发送</view>
+            </view>
+          </view>
+        </block>
+      </block>
+      <block wx:elif="{{n.userType == -1}}">
+        <block wx:if="{{n.msgType != 1}}">
+          <view class="mine" id="{{n.id}}">
+            <view class="tops mineTop">
+              <view class="mineName">我</view>
+            </view>
+            <view class="headimg mineImg"><image class="headImg" src="../images/headImg.png" /></view>
+            <view class="mineInfos">
+              <view class="sendState mineState">已发送</view>
+              <view class="infos mineInfo">{{n.content}}</view>
+            </view>
+          </view>
+        </block>
+        <block wx:elif="{{n.msgType == 1}}">
+          <view class="mineImgs" id="{{n.id}}">
+            <view class="tops mineTop">
+              <view class="mineName">我</view>
+            </view>
+            <view class="headimg mineImg"><image class="headImg" src="../images/headImg.png" /></view>
+            <view class="mineInfos" style="max-width:100%;">
+              <view class="sendState mineState">已发送</view>
+              <view class="infos contentImgs"><image class="imgUrl" src="{{n.content}}" /></view>
+            </view>
+          </view>
+        </block>
+      </block>
+    </view>
+
+  </scroll-view>
+
+  <view class="bottom">
+    <view class="iconfont icon-photo photo" bindtap="chooseImg"></view>
+    <view class="input"><input type="text" class="wx-input" value="{{inputTemp}}" bindinput="bindKeyInput" /></view>
+    <view class="iconfont icon-send send" bindtap="sendMessage"></view>
+  </view>
+</view>

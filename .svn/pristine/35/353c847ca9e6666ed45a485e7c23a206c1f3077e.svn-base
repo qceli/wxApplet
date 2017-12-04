@@ -1,0 +1,103 @@
+<!--pages/discuss/discuss.wxml-->
+<view style="height:100%;overflow-y:hidden;">
+  <view class="top">
+    <view class="topInfo">CAD设计号：7CAD15100192</view>
+    <view class="topInfo">设计文件名：{{chiefName}}</view>
+    <view class="topInfo">设计负责人：{{chiefName}}</view>
+    <view class="topInfo">下单时间：2017-03-02 12：20：16{{latestStateTime}}</view>
+  </view>
+  <scroll-view scroll-y="true" class="content">
+    <view class="msg">需要更多功能？点击右上角，关注微信公众号</view>
+    <view class="talk-text">
+      <view class="time">03-08 15：16：20</view>
+      <view class="people peopleContents">
+        <view class="tops peopleTop">
+          <view class="peopleJob">设计负责人</view>
+          <view class="peopleName">张亦凡</view>
+        </view>
+        <view class="headimg peopleImg"><image class="headImg" src="../images/headImg.png" /></view>
+        <view class="peopleInfos">
+          <view class="infos peopleInfo">你好，关于这个订单有一点疑问想要跟你确认一下，请问有时间吗？</view>
+          <view class="sendState peopleSendState">已发送</view>
+        </view>
+      </view>
+      <view class="msg">已经将信息发送给设计团队，回复可能需要几分钟时间</view>
+      <view class="time">03-08 15：16：20</view>
+      <view class="people peopleContents">
+        <view class="tops peopleTop">
+          <view class="peopleJob">设计负责人</view>
+          <view class="peopleName">张亦凡</view>
+        </view>
+        <view class="headimg peopleImg"><image class="headImg" src="../images/headImg.png" /></view>
+        <view class="peopleInfos">
+          <view class="infos peopleInfo">可以发给我吗？</view>
+          <view class="sendState peopleSendState">已发送</view>
+        </view>
+      </view>
+      <view class="time">03-08 15：16：20</view>
+      <view class="mine">
+      <view class="tops mineTop">
+        <view class="mineName">我</view>
+      </view>
+        <view class="headimg mineImg"><image class="headImg" src="../images/headImg.png" /></view>
+        <view class="mineInfos">
+          <view class="sendState mineState">已发送</view>
+          <view class="infos mineInfo">你好，请问有时间吗？</view>
+        </view>
+      </view>
+      <view class="time">03-08 15：16：20</view>
+      <view class="mine">
+        <view class="tops mineTop">
+          <view class="mineName">我</view>
+        </view>
+        <view class="headimg mineImg"><image class="headImg" src="../images/headImg.png" /></view>
+        <view class="mineInfos">
+          <view class="sendState mineState">已发送</view>
+          <view class="infos mineInfo">你好，关于这个订单有一点疑问想要跟你确认一下，请问有时间吗？</view>
+        </view>
+      </view>
+      <view class="people peopleContents">
+        <view class="tops peopleTop">
+          <view class="peopleJob">设计负责人</view>
+          <view class="peopleName">张亦凡</view>
+        </view>
+        <view class="headimg peopleImg"><image class="headImg" src="../images/headImg.png" /></view>
+        <view class="peopleInfos">
+          <view class="infos peopleInfo">可以发给我吗？</view>
+          <view class="sendState peopleSendState">已发送</view>
+        </view>
+      </view>
+
+
+       <view class="people peopleImgs">
+        <view class="tops peopleTop">
+          <view class="peopleJob">设计负责人</view>
+          <view class="peopleName">张亦凡</view>
+        </view>
+        <view class="headimg peopleImg"><image class="headImg" src="../images/headImg.png" /></view>
+        <view class="peopleInfos">
+          <view class="infos contentImg"><image class="imgUrl" src="../images/headImg.png" /></view>
+          <view class="sendState peopleSendState">已发送</view>
+        </view>
+      </view>
+      <view class="mineImgs">
+        <view class="tops mineTop">
+          <view class="mineName">我</view>
+        </view>
+        <view class="headimg mineImg"><image class="headImg" src="../images/headImg.png" /></view>
+        <view class="mineInfos" style="max-width:100%;">
+          <view class="sendState mineState"><span class="iconfont icon-reSend reSend"></span></view>
+          <view class="infos contentImgs"><image class="imgUrl" src="../images/headImg.png" /></view>
+        </view>
+      </view>
+
+    </view>
+
+  </scroll-view>
+
+  <view class="bottom">
+    <view class="iconfont icon-photo photo"></view>
+    <view class="input"><input type="text" class="wx-input"/></view>
+    <view class="iconfont icon-send send"></view>
+  </view>
+</view>

@@ -1,0 +1,177 @@
+/**index.wxss**/
+.bg {
+  z-index: -1;
+  position: fixed;
+  width:100%;
+  height:calc(100% - 1rpx);
+}
+.container {
+  height:100%;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  padding:200rpx 0;
+  box-sizing:border-box;
+  top:40px;
+  position:fixed;
+  width:100%;
+} 
+.icon-back:before {
+  content: "\e611";
+  font-size:20rpx;
+  margin-right: 5px;
+}
+.icon-error:before {
+  content: "\e605";
+  font-size:20rpx;
+  margin-right: 5px;
+}
+.icon-next:before {
+  content: "\e69a";
+  font-size:80rpx;
+  color:#2ba0ff;
+  display:-webkit-flex;
+  /*align-items:center;*/
+  justify-content:center;
+}
+.icon-complet:before {
+  content:"\e626";
+  font-size:80rpx;
+  color:#2ba0ff;
+  display:-webkit-flex;
+  /*align-items:center;*/
+  justify-content:center;
+
+}
+
+input::-webkit-input-placeholder {
+  /* placeholder颜色  */
+  color: #cccccc;
+}
+
+.userinfo-avatar {
+  width:68px;
+  height:68px;
+  border-radius: 50%;
+  overflow:hidden;
+  z-index:1;
+}
+.userinfo {
+  display: flex;
+  flex-direction: column;
+  /*align-items: center;*/
+  border: 1px solid #d9d8d2;
+  border-radius: 6px;
+  background-color: #f4f4ef;
+  width: 90%;
+  height: 490rpx;
+  margin-top:-34px;
+  z-index: -1;
+}
+.info {
+  border-bottom: 1px solid #d9d8d2;
+  width: 90%;
+  font-size:30rpx;
+  color: #696969;
+  text-align: center; 
+  margin: 0 auto;
+  height:120rpx;
+}
+.back {
+  width:40rpx;
+  height:30rpx;
+  padding:0.5rem 1rem;
+  color:#373e46;
+  font-size:1rem;
+  position:fixed;
+}
+.userinfo-nickname {
+  height:60rpx;
+  line-height:60rpx;
+  margin-top:90rpx;
+}
+.username {
+  border-bottom:1px solid #d9d8d2;
+}
+.userinfo-tel {
+  height: 240rpx;
+  line-height: 180rpx;
+  color: #cccccc;
+}
+.telephone {
+  height:60rpx;
+  padding-top:60rpx;
+  color: #696969;
+}
+.verificationCode {
+  height:60rpx;
+  padding-top:60rpx;
+  color: #696969;
+}
+.error-code {
+  color: #ff5050;
+  font-size:20rpx;
+  text-align:right;
+  margin-top:-44rpx;
+  margin-right:1rem;
+}
+.send {
+  margin-top:10rpx;
+  margin-left:1rem;
+  color: #999999;
+}
+.sendmsg {
+  float:left;
+}
+.re-send {
+  color: #2ba0ff;
+  font-size:20rpx;
+  padding-left:5rpx;
+  margin:0;
+  line-height:20rpx;
+  background-color:#f4f4ef;
+  float:left;
+  padding-top:6rpx;
+}
+.re-send::after { 
+  border: 0;
+}
+button[disabled][type="default"], wx-button[disabled]:not([type]) {
+  color:#999999 !important;
+  background-color:#f4f4ef !important;
+
+}
+
+.next {
+  width: 120rpx;
+  height: 120rpx;
+  background-color: #f4f4ef;
+  border: solid 2px rgba(191, 220, 222, 0.6);
+  border-radius: 50%;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  margin-top:-60rpx;
+  line-height:120rpx;
+}
+
+
+.bottom {
+  color: #ffffff;
+  font-size: 20rpx;
+  position:fixed;
+  bottom:16rpx;
+  text-align:center;
+  left:40%;
+
+}
+
+.usermotto {
+  margin-top: 200px;
+}
+
+.test {
+  border: 1px solid #d9d8d2;
+  border-radius: 6px;
+  width: 80%;
+  height: 190px;
+}

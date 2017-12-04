@@ -1,0 +1,92 @@
+<!--pages/recentlist/recentlist.wxml-->
+<view style="height:100%;overflow-y:hidden;">
+  <view class="top">
+    <view class="msgnum">10条新消息</view>
+    
+  </view>
+  <scroll-view scroll-x="true" class="panels" style=" white-space: nowrap; display: flex" >
+    <view class="panel">
+      <view class="panel-top">
+        <view class="headimg"><image class="headImg" src="../images/headImg.png" /></view>
+        <view class="info">
+          <view class="infotop">
+            <view class="infoname">张亦凡</view>
+            <view class="infojob">设计负责人</view>
+          </view>
+          <view class="infobottom">10分钟前</view>
+        </view>
+      </view>
+      <view class="panelbottom">你好，关于这个订单有一点疑问想要跟你确认一下，请问有时间吗？</view>
+    </view>
+    <view class="panel">
+      <view class="panel-top">
+        <view class="headimg"><image class="headImg" src="../images/headImg.png" /></view>
+        <view class="info">
+          <view class="infotop">
+            <view class="infoname">张亦凡</view>
+            <view class="infojob">设计负责人</view>
+          </view>
+          <view class="infobottom">10分钟前</view>
+        </view>
+      </view>
+      <view class="panelbottom">你好，关于这个订单有一点疑问想要跟你确认一下，请问有时间吗？</view>
+    </view>
+    
+  </scroll-view>
+  <view class="content" style="overflow-y:auto;">
+    <view class="title">最近留言</view>
+    <!--<view bindtap="discussTalk" id="{{designCOde}}" wx:for="{{Industry}}">-->
+    <view class="cadlists" bindtap="discussTalk" id="KCAD1508094">
+      <view class="cadlist">
+        <view class="listtop">
+          <view class="headimg"><image class="headImg" src="../images/headImg.png" /></view>
+          <view class="listtop-right">
+            <view class="cadfile">设计文件名：{{designFileName}}</view>
+            <view class="cadcode">CAD设计号：KCAD1508094</view>
+          </view>
+        </view>
+        <view class="designer">设计负责人：张亦凡</view>
+      </view>
+      <view class="newmsg">222</view>
+    </view>
+    <view class="cadlists" bindtap="discussTalk" id="7CAD15100192">
+      <view class="cadlist">
+        <view class="listtop">
+          <view class="headimg"><image class="headImg" src="../images/headImg.png" /></view>
+          <view class="listtop-right">
+            <view class="cadfile">设计文件名：SW411_DB_151028</view>
+            <view class="cadcode">CAD设计号：7CAD15100192</view>
+          </view>
+        </view>
+        <view class="designer">设计负责人：张亦凡</view>
+      </view>
+      <view class="newmsg">11</view>
+    </view>
+    <view class="cadlists" bindtap="discussTalk" id="7CAD15100190">
+      <view class="cadlist">
+        <view class="listtop">
+          <view class="headimg"><image class="headImg" src="../images/headImg.png" /></view>
+          <view class="listtop-right">
+            <view class="cadfile">设计文件名：SW411_DB_151028</view>
+            <view class="cadcode">CAD设计号：7CAD15100190</view>
+          </view>
+        </view>
+        <view class="designer">设计负责人：张亦凡</view>
+      </view>
+      <view class="newmsg">3</view>
+    </view>
+   
+
+  </view>
+
+  <view class="bottom">
+    <view class="botm recentlist">
+      <view class="iconfont icon-recent"></view>
+      <view class="">最近</view>
+    </view>
+    <view class="botm alllist" bindtap="allList">
+      <view class="iconfont icon-all"></view>
+      <view class="">全部订单</view>
+    </view>
+  </view>
+</view>

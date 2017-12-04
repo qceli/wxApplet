@@ -1,0 +1,54 @@
+/* pages/nomate/nomate.wxss */
+page {
+  background-color: #f7f7f7;
+}
+.tipTop {
+  padding-top: 112px;
+  text-align: center;
+}
+.tipImg {
+  width: 290rpx;
+  height: 230rpx;
+}
+.tipFirst {
+  margin-top: 56rpx;
+  font-family: HiraginoSansGB-W6;
+  font-size: 36rpx;
+  line-height: 1.25;
+  text-align: center;
+  color: #575757;
+}
+.tipSecond {
+  font-family: HiraginoSansGB-W3;
+  font-size: 24rpx;
+  line-height: 1.88;
+  text-align: center;
+  color: #8d8d8d;
+  margin-top: 40rpx;
+}
+.tipThird {
+  margin-top: 165rpx;
+  text-align: center;
+  /*line-height: 100rpx;*/
+}
+.thirdTop {
+  width: 460rpx;
+  height: 100rpx;
+  border-radius: 8rpx;
+  border: solid 4rpx #bbbbbb;
+  left:20%;
+  position:absolute;
+}
+.icon-back:before {
+  content: "\e611";
+  font-size: 24rpx;
+  color: #656565;
+}
+.thirdText {
+  font-family: HiraginoSansGB-W6;
+  font-size: 24rpx;
+  color: #656565;
+  display: inline-block;
+  margin-left: 20rpx;
+  line-height: 100rpx;
+}

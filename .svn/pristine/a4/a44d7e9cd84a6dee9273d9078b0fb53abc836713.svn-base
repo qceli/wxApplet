@@ -1,0 +1,28 @@
+<!--complete.wxml-->
+<image class="bg" src="../images/bg.jpg" />
+<view class="container">
+    <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+  <view class="userinfo">
+    <view class="info userinfo-name">
+      <input type="text" class="infos people-name" placeholder="请输入姓名" value="{{peopleName}}" bindinput="peopleNameInputEvent" />
+    </view>
+    <view class="info userinfo-com">
+      <input type="text" class="infos company" placeholder="请输入单位名称" value="{{company}}" bindinput="companyInputEvent" />
+    </view>
+  </view>
+ 
+  <view class="next complet" bindtap="checkIdentifyCode">
+    <span class="iconfont icon-complet"></span>
+  </view>
+ 
+
+  <!--<view class="usermotto">
+    <text class="user-motto">{{motto}}</text>
+  </view>
+  <div class="test"></div>-->
+</view>
+
+
+ <view class="bottom">
+  <text>同步设计微平台</text>
+ </view>

@@ -1,0 +1,132 @@
+<!--pages/recentlist/recentlist.wxml-->
+<view style="height:100%;overflow-y:hidden;-webkit-overflow-scrolling:touch;">
+  <view class="content" style="overflow-y:auto;">
+    <view class="top">
+      <view class="msgnum" wx:if="{{newNums != ''}}">{{newNums}}条新消息</view>
+      <view class="msgnum" wx:if="{{records == ''}}">1条新消息</view>    
+    </view>
+    <scroll-view scroll-x="true" class="panels" style="white-space: nowrap;" >
+      <block wx:for="{{records}}" wx:for-item="i" wx:key="i.id">
+        <view class="panel" id="{{i.designCode}}" wx:if="{{i.chiefName != '同步设计微平台'}}" bindtap="discussTalk">
+          <view class="panel-top">
+            <view class="headimg">
+              <block wx:if="{{i.headImageUrl != ''}}">
+                <image class="headImg" src="{{i.headImageUrl}}" />
+              </block>
+              <block wx:if="{{i.headImageUrl == '' && i.chiefName != ''}}">
+                <image class="headImg" src="../images/headImgs.png" />
+              </block>
+              <block wx:if="{{i.headImageUrl == '' && i.chiefName == ''}}">
+                <image class="headImg" src="../images/headImg.png" />
+              </block>
+            </view>
+            <view class="info">
+              <view class="infotop">
+                <block wx:if="{{i.chiefName != ''}}">
+                  <view class="infoname">{{i.chiefName}}</view>
+                  <view wx:if="{{i.userType != 0}}" class="infojob">布局人员</view>
+                  <view wx:if="{{i.userType == 0}}" class="infojob">设计负责人</view>
+                </block>
+                <block wx:if="{{i.chiefName == ''}}">
+                  <view class="infoname">客服</view>
+                  <view class="infojob">客服人员</view>
+                </block>
+              </view>
+              <view class="infobottom">{{i.timeDesc}}</view>
+            </view>
+          </view>
+          <view class="middleLine"></view>
+          <block wx:if="{{i.msgType == 0}}">
+            <view class="panelbottom">{{i.content}}</view>
+          </block>
+          <block wx:if="{{i.msgType == 1}}">
+            <view class="panelbottom">图片</view>
+          </block>
+        </view> 
+        <view class="panel" id="{{i.chiefName}}" wx:if="{{i.chiefName == '同步设计微平台'}}" bindtap="fedTalk">
+          <view class="panel-top">
+            <view class="headimg"><image class="headImg" src="../images/logo.png" /></view>
+            <view class="info">
+              <view class="infotop">
+                <view class="infoname">{{i.chiefName}}</view>
+              </view>
+              <view class="infobottom">{{i.timeDesc}}</view>
+            </view>
+          </view>
+          <view class="panelbottom">{{i.content}}</view>
+        </view> 
+      </block>
+    </scroll-view>
+    <view class="contentList">
+      <view class="title">最近留言</view>
+      <block wx:for="{{orders}}" wx:for-item="j" wx:key="j.designId">
+        <view class="cadlists" wx-if="{{j.type != 1}}">
+          <view class="cadlist" bindtap="discussTalk" id="{{j.designId}}">
+            <view class="cadfile">设计文件名：{{j.orderFile}}</view>
+            <view class="cadcode">CAD设计号：{{j.designId}}</view>
+            <view class="listtop">
+              <block wx:if="{{j.chiefAvatarUrl != ''}}">
+                <view class="headimg"><image class="headImg" src="{{j.chiefAvatarUrl}}" /></view>
+              </block>
+              <block wx:if="{{j.chiefAvatarUrl == '' && j.chiefName != ''}}">
+                <view class="headimg"><image class="headImg" src="../images/headImgs.png" /></view>
+              </block>
+              <block wx:if="{{j.chiefAvatarUrl == '' && j.chiefName == ''}}">
+                <view class="headimg"><image class="headImg" src="../images/headImg.png" /></view>
+              </block>
+              <view class="listtop-right">
+                <block wx:if="{{j.chiefName != ''}}">
+                  <view class="designerName">{{j.chiefName}}</view>
+                  <view class="designerJob">项目负责人</view>
+                </block>
+                <block wx:if="{{j.chiefName == ''}}">
+                  <view class="designerName">客服</view>
+                  <view class="designerJob">客服人员</view>
+                </block>
+              </view>
+            </view>        
+          </view>
+          <block wx:if="{{j.unreadChatNum != 0}}">
+            <block wx:if="{{j.unreadChatNum <= 9}}">
+              <view class="newmsg">{{j.unreadChatNum}}</view>
+            </block>
+            <block wx:if="{{j.unreadChatNum > 9}}">
+              <view class="newmsg">9+</view>
+            </block>
+          </block>
+        </view> 
+        <view class="cadlists" wx-if="{{j.type == 1}}">
+          <view class="cadlist" bindtap="fedTalk" id="{{j.designId}}">
+            <view class="listtop">
+              <view class="headimg"><image class="headImg" src="../images/logo.png" /></view>
+              <view class="listtop-right">
+                <view class="designerName">{{j.designId}}</view>
+                <view class="designerJob">{{j.lastChatTimeDesc}}</view>
+              </view>
+            </view>        
+          </view>
+          <block wx:if="{{j.unreadChatNum != 0}}">
+            <block wx:if="{{j.unreadChatNum <= 9}}">
+              <view class="newmsg">{{j.unreadChatNum}}</view>
+            </block>
+            <block wx:if="{{j.unreadChatNum > 9}}">
+              <view class="newmsg">9+</view>
+            </block>
+          </block>
+        </view>
+      </block>      
+      <view class="bottom-tip">已经到底部啦！</view>
+    </view>
+  </view>
+
+  <view class="bottom">
+    <view class="botm recentlist">
+      <view class="iconfont icon-recent"></view>
+      <view class="">最近</view>
+    </view>
+    <view class="botm alllist" bindtap="allList">
+      <view class="iconfont icon-all"></view>
+      <view class="">全部订单</view>
+    </view>
+  </view>
+</view>
