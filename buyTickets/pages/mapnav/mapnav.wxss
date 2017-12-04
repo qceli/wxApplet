@@ -1,0 +1,4 @@
+/* pages/mapnav/mapnav.wxss */
+page, map {
+  height: 100%;
+}

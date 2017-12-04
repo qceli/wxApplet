@@ -1,0 +1,124 @@
+/* pages/airmonitor/airmonitor.wxss */
+.bg-img {
+  width: 100%;
+  height: 100%;
+  background-image: url("https://api.smalltown.wshoto.com/Public/images/microprogram/weatherbg.jpg");
+  overflow: hidden;
+  background-size:cover;
+}
+.location {
+  position: absolute;
+  top: 40rpx;
+  left: 60rpx;
+  color: #ccc;
+}
+.wind {
+  position: absolute;
+  top: 40rpx;
+  right: 40rpx;
+  color: #ccc;
+  font-size: 28rpx;
+  text-align:center;
+}
+.wind-img {
+  height: 65rpx;
+}
+.wind-img>image {
+  width: 50rpx;
+  height: 50rpx;
+}
+.position {
+  margin-top: 15rpx;
+}
+.position>view {
+  display: inline-block
+}
+.speed {
+  font-size: 42rpx;
+  margin-left: 10rpx;
+}
+.humidity {
+  position: absolute;
+  top: 300rpx;
+  left: 60rpx;
+  color: #ccc;
+  font-size: 28rpx;
+  text-align:center;
+}
+.humidity-img {
+  height: 100rpx;
+}
+.humidity-img>image {
+  width: 40rpx;
+  height: 90rpx;
+}
+.humidity-num {
+  margin-top: 10rpx;
+  font-size: 48rpx;
+}
+.temperature {
+  padding-top: 120rpx;
+  left: 40rpx;
+  color: #ccc;
+  font-size: 28rpx;
+  text-align:center;
+}
+.temperature-img {
+  height:150rpx;
+  margin:150rpx auto 0 auto;
+}
+.temperature-img>image {
+  width: 280rpx;
+  height: 280rpx;
+}
+.temperature2 {
+  font-size: 56rpx;
+  margin: 15rpx 0 20rpx 0;
+}
+.temperature-num {
+  font-size: 100rpx;
+}
+.deg {
+  position: absolute;
+  margin-top:-120rpx;
+  margin-left:440rpx;
+  font-weight: bold;
+  font-size: 48rpx;
+}
+.bottom {
+  padding: 20rpx 40rpx;
+  position:absolute;
+  width:calc(100% - 80rpx);
+  bottom:20rpx;
+}
+.bottom-title {
+  color: #ccc;
+  font-weight: bold;
+  line-height: 50rpx;
+}
+.title-num {
+  font-size: 28rpx;
+}
+ .bottom-line {
+  height: 223rpx; 
+  display: flex;
+} 
+.weather-list {
+  background-image: url("https://api.smalltown.wshoto.com/Public/images/microprogram/bottombg.png");
+  margin: 20rpx;
+  padding: 30rpx 0;
+  flex: 1;
+  overflow: hidden;
+  background-size:cover;
+  text-align: center;
+}
+.list1, .list2 {
+  line-height: 60rpx;
+}
+.list1 {
+  color: #666;
+}
+.list2 {
+  font-size: 48rpx;
+  color: #333;
+}

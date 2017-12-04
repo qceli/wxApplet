@@ -1,0 +1,30 @@
+<!--pages/bussearch/bussearch.wxml-->
+<view>
+  <view class="header_route">
+    <view class="title_route">线路查询</view>
+    <view class="luxian_souso">
+      <input type="text" bindinput="bindKeyInput" confirm-type="search" placeholder="搜索无锡公交路线" />
+    </view>
+    <view class="banner_route"><image src="../img/banner2.png" /></view>
+  </view>
+
+  <view id="leftTabBox" class="tabBox zhandian_content">
+    <view class="zhandian">线路信息</view>
+    <scroll-view>
+      <view class="station" wx:for="{{stations}}" wx:for-item="i" wx:key="">
+        <view class="left">
+          <view class="leftSolid"></view>
+          <view class="circle">{{index + 1}}</view>
+        </view>
+        <view class="right">{{i}}</view>
+      </view>
+      <!-- <view class="station">
+        <view class="left">
+          <view class="leftSolid"></view>
+          <view class="circle">1</view>
+        </view>
+        <view class="right">河埒口</view>
+      </view> -->
+    </scroll-view>
+  </view>
+</view>

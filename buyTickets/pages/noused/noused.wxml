@@ -1,0 +1,41 @@
+<!--pages/noused/noused.wxml-->
+<view class="container">
+  <view class="order-infos">
+    <view class="info-top">
+      <view class="info-state">
+        <view>订单状态：</view>
+        <view>待使用</view>
+      </view>
+      <view class="return" id="{{orderInfo.id}}" bindtap="returnTicket">申请退票</view>
+    </view>
+    <view class="info-bottoms">
+      <view>{{orderInfo.t_name}}</view>
+      <view class="info-money">
+        <view class="info-name">订单总额</view>
+        <view class="orange">￥{{orderInfo.price}}</view>
+        <view>{{orderInfo.count}}张*￥{{orderInfo.single_price}}/张</view>
+      </view>
+      <view>
+        <view class="info-name">订单确认号</view>
+        <view class="grey">{{orderInfo.ticket_sn}}</view>
+      </view>
+      <view>
+        <view class="info-name">入园时间</view>
+        <view class="grey">{{orderInfo.use_time}}</view>
+      </view>
+    </view>
+  </view>
+  <view>
+    <view class="people-infos">出行人信息</view>
+    <view class="people-info">
+      <view class="people-name">
+        <view class="info-name">出行人</view>
+        <view class="grey">{{orderInfo.customer}}</view>
+      </view>
+      <view class="people-tel">
+        <view class="info-name">手机号</view>
+        <view class="grey">{{orderInfo.phone}}</view>
+      </view>
+    </view>
+  </view>
+</view>

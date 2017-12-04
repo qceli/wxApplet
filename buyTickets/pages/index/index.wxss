@@ -1,0 +1,57 @@
+
+.goods-lists {
+  height:210rpx;
+  width:calc(100% - 40rpx);
+  padding:0 20rpx;
+}
+.goods-list {
+  height:160rpx;
+  padding:20rpx 0;
+  border-bottom: solid 1rpx #ccc;
+}
+.goods-img {
+  height: 160rpx;
+  width: 180rpx;
+  float: left;
+}
+.goods-img>image {
+  height: 160rpx;
+  width: 180rpx;
+  border-radius: 5px;
+}
+.goods-infos {
+  height:160rpx;
+  padding-left:20rpx;
+  float:left;
+  width:calc(100% - 340rpx);
+}
+.infos-title {
+  height: 50rpx;
+  line-height:40rpx;
+  font-size: 40rpx;
+}
+.infos-introduce {
+  height: 30rpx;
+  line-height:40rpx;
+  font-size:22rpx;
+  color: #666;
+}
+.infos-price {
+  height: 80rpx;
+  line-height: 80rpx;
+  color: #ff6600;
+}
+.price {
+  font-size: 50rpx;
+}
+.commit {
+  width:140rpx;
+  height:60rpx;
+  line-height:60rpx;
+  text-align: center;
+  background-color: #ff6600;
+  color: #fff;
+  border-radius: 5px;
+  float:left;
+  margin-top: 50rpx;
+}

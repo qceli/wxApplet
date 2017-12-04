@@ -1,0 +1,68 @@
+/* pages/codeinfo/codeinfo.wxss */
+.container {
+  height: 100%;
+  background-color: #efeef4;
+  padding-top: 20px;  
+}
+.codes {
+  margin: 0rpx 20rpx 20rpx 20rpx;
+  border-left: 1px solid #efeef4;
+  border-right: 1px solid #efeef4;
+  height: 240rpx;
+  background-color: #fff !important;
+  padding: 30rpx;
+  border-bottom:none;
+  background:radial-gradient(circle at 50% 50%, #efeef4 0, #efeef4 50%, transparent 0), radial-gradient(circle at 50% 50%, #efeef4 0, #efeef4 50%, transparent 0);
+  background-repeat:repeat-x;
+  background-size:20rpx 20rpx;
+  background-position:0px 290rpx, 0px -10rpx;
+}
+.code {
+  width: 100%;
+  border: 1px solid #eee;
+  border-radius: 5px;
+  height:240rpx;
+}
+.coupon-top {
+  height: 120rpx;
+  width: calc(100% - 40rpx);
+  padding: 0 20rpx;
+  border-bottom:#eee 1px solid;
+}
+.img {
+  width: 80rpx;
+  height: 80rpx;
+  float: left;
+  padding-left: 20rpx;
+}
+.img>image {
+  margin-top: 20rpx;
+  width: 80rpx;
+  height: 80rpx;
+}
+.title {
+  display: inline-block;
+  height: 80rpx;
+  margin: 20rpx 0 0 20rpx;
+}
+.title>view {
+  height: 40rpx;
+  line-height: 40rpx;
+}
+.title-second {
+  color: #666;
+}
+.codeimg {
+  height: 120rpx;
+  text-align: center;
+}
+.code-title {
+  color: #666;
+  line-height: 120rpx;
+  margin-right:20rpx;
+}
+.code-content {
+  font-weight: bold;
+  font-size: 48rpx;
+  line-height: 120rpx;
+}

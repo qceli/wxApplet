@@ -1,0 +1,38 @@
+<!--pages/life/life.wxml-->
+<view class="top-img">
+  <image src="{{imgUrl}}lifebg.jpg"></image>
+</view>
+<view class="san-title">生    活</view>
+
+<view class="lifes">
+  <view class="life-list">
+    <view class="life right-line" bindtap="life1" data-id="22">
+      <view class="life-img"><image src="{{imgUrl}}life1.png"></image></view>
+      <view class="life-name">医  疗</view>
+    </view>
+    <view class="life" bindtap="life2" data-id="4">
+      <view class="life-img"><image src="{{imgUrl}}life2.png"></image></view>
+      <view class="life-name">学  校</view>
+    </view>
+  </view>
+  <view class="life-list">
+    <view class="life right-line" bindtap="life3" data-id="23">
+      <view class="life-img"><image src="{{imgUrl}}life3.png"></image></view>
+      <view class="life-name">住  宅</view>
+    </view>
+    <view class="life" bindtap="businessMatching">
+      <view class="life-img"><image src="{{imgUrl}}life4.png"></image></view>
+      <view class="life-name">商  配</view>
+    </view>
+  </view>
+  <view class="life-list">
+    <view class="life right-line" bindtap="life4" data-id="28">
+      <view class="life-img"><image src="{{imgUrl}}life5.png"></image></view>
+      <view class="life-name">人才公寓</view>
+    </view>
+    <view class="life" bindtap="wisdomTourism">
+      <view class="life-img"><image src="{{imgUrl}}life6.png"></image></view>
+      <view class="life-name">智慧旅游</view>
+    </view>
+  </view>
+</view>

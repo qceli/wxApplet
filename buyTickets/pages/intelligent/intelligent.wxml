@@ -1,0 +1,43 @@
+<!--pages/intelligent/intelligent.wxml-->
+<view class="bg-img">
+  <view class="intelligent-img"><image src="{{imgUrl}}intelligent.png"></image></view>
+  <view class="intelligent-title">
+    <view>智慧</view>
+    <view>应用</view>
+  </view>
+  <view class="intelligent-list list1" bindtap="wisdom1" data-id="14">
+    <view class="intell-img"><image src="{{imgUrl}}intell-medical.png"></image></view>
+    <view class="intell-name">
+      <view>智慧</view>
+      <view>医疗</view>
+    </view>
+  </view>
+  <view class="intelligent-list list2" bindtap="wisdom2" data-id="15"> 
+    <view class="intell-img"><image src="{{imgUrl}}intell-educate.png"></image></view>
+    <view class="intell-name">
+      <view>智慧</view>
+      <view>教育</view>
+    </view>
+  </view>
+  <view class="intelligent-list list3" bindtap="wisdom3" data-id="16">
+    <view class="intell-img"><image src="{{imgUrl}}intell-finance.png"></image></view>
+    <view class="intell-name">
+      <view>智慧</view>
+      <view>金融</view>
+    </view>
+  </view>
+  <view class="intelligent-list list4" bindtap="wisdom4" data-id="12">
+   <view class="intell-img"><image src="{{imgUrl}}intell-agriculture.png"></image></view>
+    <view class="intell-name">
+      <view>智慧</view>
+      <view>农业</view>
+    </view>
+  </view>
+  <view class="intelligent-list list5" bindtap="wisdom5" data-id="13">
+    <view class="intell-img"><image src="{{imgUrl}}intell-traffic.png"></image></view>
+    <view class="intell-name">
+      <view>智慧</view>
+      <view>交通</view>
+    </view>
+  </view>
+</view>

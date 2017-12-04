@@ -1,0 +1,55 @@
+/* pages/fuseofsan/fuseofsan.wxss */
+.bg-img {
+  width: 100%;
+  height: 100%;
+  background-image: url("https://api.smalltown.wshoto.com/Public/images/microprogram/homebg.jpg");
+  overflow: hidden;
+  background-size:cover;
+  display:-webkit-flex;
+  align-items:center;
+}
+.intelligent-img {
+  width:450rpx;
+  height:620rpx;
+  position:absolute;
+  right:0;
+  top: 24.5%;
+}
+.intelligent-img>image {
+  width:450rpx;
+  height:620rpx;
+}
+.intelligent-title {
+  position:absolute;
+  right:88rpx;
+  color:#fff;
+  font-size:72rpx;
+  top: 42.5%;
+}
+.intelligent-list {
+  z-index: 1;
+}
+.intelligent-list,.intell-img,.intell-img>image {
+  width:250rpx;
+  height:250rpx;
+  border-radius:50%;
+}
+.list1 {
+  margin-bottom:620rpx;
+  margin-left:280rpx;
+}
+.intell-name {
+  width:80rpx;
+  height:80rpx;
+  margin-top:-100rpx;
+  margin-left:85rpx;
+  color:#fff;
+}
+.list2 {
+  margin-bottom:45rpx;
+  margin-left:-420rpx;
+}
+.list3 {
+  margin-top:605rpx;
+  margin-left:-100rpx;
+}

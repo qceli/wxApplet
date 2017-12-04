@@ -1,0 +1,56 @@
+/* pages/produce/produce.wxss */
+.top-img,.top-img>image {
+  width: 100%;
+  height:600rpx;
+}
+.san-title {
+  width:385rpx;
+  height:100rpx;
+  background-image:url("https://api.smalltown.wshoto.com/Public/images/microprogram/san.png");
+  overflow:hidden;
+  background-size:cover;
+  margin-top:-55rpx;
+  z-index:1;
+  position:absolute;
+  left:25%;
+  text-align:center;
+  line-height:100rpx;
+  color:#fff;
+  font-size:50rpx;
+  font-weight:bold;
+}
+.produces {
+  background-color: #fff9e1;
+  padding-top: 35rpx;
+  width: 100%;
+}
+.produce-list {
+  display: flex;
+  width: 100%;
+  border-bottom:1px solid #ccc;
+}
+.produce {
+  flex: 1;
+  padding-left: 20rpx;
+  height:189rpx;
+
+}
+.right-line {
+  border-right:1px solid #ccc;
+}
+.produce-img {
+  float: left;
+}
+.produce>view {
+  display: inline-block;
+  padding-left: 10rpx;
+}
+.produce-img>image {
+  margin:50rpx auto;
+  width:100rpx;
+  height:80rpx;
+}
+.produce-name {
+  line-height:180rpx;
+  color: #666;
+}

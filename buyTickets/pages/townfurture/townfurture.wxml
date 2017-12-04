@@ -1,0 +1,19 @@
+<!--pages/townfurture/townfurture.wxml-->
+<view class="page">
+  <view class="title">
+    <!-- <view class="title-content">小镇未来</view> -->
+    <image src="../img/townfurture-top.jpg"></image>
+  </view>
+  <view class="media">
+    <!-- <video src="https://api.smalltown.wshoto.com/Uploads/videos/%E5%B0%8F%E9%95%87%E5%AE%A3%E4%BC%A0%E7%89%87%E5%8E%8B%E7%BC%A9.MP4" binderror="videoErrorCallback"></video>  -->
+    <!-- <video src="http://115.231.152.25/vhot2.qqvideo.tc.qq.com/AKliaLDtB_IvfcWa6g8D6N1U9wff5OYsYUKN0xYmu1i8/r034208tmqp.p702.1.mp4?sdtfrom=v1010&guid=1a7441b3b2460c9cfcf284e6722f85c5&vkey=7AF4744D2792C2F65D16DD1FBE7004326F8CBA90E3092563E92B9D7D7EE30CB2EC68304401CE84C6958C1200F5603959735CBFDB36A4E14C23C23545CE7ACCEBE1EBEDE3CA8D700DD91370E206990EBE5FAAC5C4B00706872FD421C010CFD821E8C7CCD6A255928B7569888E5C5C9F7DC90856FC77219EFA&platform=2" binderror="videoErrorCallback"></video>  -->
+    <video src="https://api.smalltown.wshoto.com/Uploads/videos/wuboyuan.mp4" binderror="videoErrorCallback"></video> 
+    
+    
+          
+  </view>
+
+  <view class="IMG">
+    <image src="../img/townfurture.jpg"></image>
+  </view>               
+</view>

@@ -1,0 +1,21 @@
+<!--pages/fuseofsan/fuseofsan.wxml-->
+<view class="bg-img">
+  <view class="intelligent-img"><image src="{{imgUrl}}fuseofsan.png"></image></view>
+  <view class="intelligent-title">
+    <view>三生</view>
+    <view>融合</view>
+  </view>
+  <view class="intelligent-list list1" bindtap="produce">
+    <view class="intell-img"><image src="{{imgUrl}}fuse-produce.png"></image></view>
+    <view class="intell-name">生产</view>
+  </view>
+  <view class="intelligent-list list2" bindtap="life"> 
+    <view class="intell-img"><image src="{{imgUrl}}fuseofsan-life.png"></image></view>
+    <view class="intell-name">生活</view>
+  </view>
+  <view class="intelligent-list list3" bindtap="fuseofsan1" data-id="20">
+    <view class="intell-img"><image src="{{imgUrl}}fuse-ecology.png"></image></view>
+    <view class="intell-name">生态</view>
+  </view>
+
+</view>

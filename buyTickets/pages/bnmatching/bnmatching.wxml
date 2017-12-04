@@ -1,0 +1,20 @@
+<!--pages/bnmatching/bnmatching.wxml-->
+<view class="bg-img">
+  <view class="lists">
+    <view class="bnmatching-list list1" bindtap="bnmatching1" data-id="7">
+      <view class="list">
+        <view class="chiness">吴越水街</view>
+      </view>
+    </view>
+    <view class="bnmatching-list list2" bindtap="bnmatching2" data-id="6">
+      <view class="list">
+        <view class="chiness">梁鸿湿地丽笙度假酒店</view>
+      </view>
+    </view>
+    <view class="bnmatching-list list3" bindtap="bnmatching3" data-id="8">
+      <view class="list">
+        <view class="chiness">物联网会议中心</view>
+      </view>
+    </view>
+  </view>
+</view>

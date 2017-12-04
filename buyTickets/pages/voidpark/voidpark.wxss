@@ -1,0 +1,62 @@
+/* pages/voidpark/voidpark.wxss */
+.bg-img {
+  width: 100%;
+  height: 100%;
+  background-image: url("https://api.smalltown.wshoto.com/Public/images/microprogram/parkbg.jpg");
+  overflow: hidden;
+  background-size:cover;
+}
+.top {
+  /* height: 100rpx; */
+  text-align: center;
+  padding: 20rpx 0 40rpx 0;
+  color: #ccc;
+}
+.top>view {
+  height: 80rpx;
+  line-height: 80rpx;
+}
+.freeNum {
+  font-size: 48rpx;
+  /* color: crimson; */
+}
+.park-nums {
+  width: calc(100% - 80rpx);
+  border-top: 1px #ccc solid; 
+  padding: 10rpx 40rpx;
+}
+.park-area {
+  height: 100rpx;
+  width: 100%;
+  display: flex;
+  color: #666;
+}
+.park-area>view {
+  text-align: center;
+  font-size: 52rpx;
+  font-weight: bold;
+  line-height: 100rpx;
+  flex: 1;
+}
+.active {
+  background-color: rgba(204, 204, 204,0.8); 
+  border-radius: 5px;
+}
+.area-nums {
+  width: 100%;
+  display: inline-block;
+  font-size:32rpx;
+  padding-top: 20rpx;
+}
+.area-nums>view {
+  height:70rpx;
+  line-height:70rpx;
+  text-align: center;
+  border: 1px solid #ccc;
+  margin: 0 0 20rpx 20rpx;
+  border-radius: 5px;
+  width:140rpx;
+  display:inline-block;
+  font-size: 36rpx;
+  color: #ccc;
+}

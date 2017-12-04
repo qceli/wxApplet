@@ -1,0 +1,50 @@
+<!--pages/returnInfos/returnInfos.wxml-->
+<view class="container">
+  <view class="top">
+    <view>
+      <view class="top-title">退款金额</view>
+      <view class="top-content money">18元</view>
+    </view>
+    <view>
+      <view class="top-title">退回账户</view>
+      <view class="top-content">微信支付账户</view>
+    </view>
+    <view>
+      <view class="top-title">到账时间</view>
+      <view class="top-content">预计最晚2017年08月16日到账</view>
+    </view>
+  </view>
+  <view class="bottom">
+    <view class="bottom-top">退款流程</view>
+    <view class="time-line">
+
+      <view id="cd-timeline" class="cd-container">
+        <view class="cd-timeline-block">
+          <view class="cd-timeline cd-timeline-img"></view>
+          <view class="cd-timeline-content">
+            <view class="process active">审核中</view>
+            <view class="actives">退款申请已受理，会在1天内完成审核</view>
+            <span class="cd-date actives">2017-08-08 11::24:37</span>
+          </view>
+        </view>
+        <view class="cd-timeline-block">
+          <view class="cd-timeline"></view>
+          <view class="cd-timeline-content">
+            <view class="process">微信退款处理</view>
+            <view>审核通过后会将退款申请提交至微信，微信1~4天内完成退款处理</view>
+          </view>
+        </view>
+        <view class="cd-timeline-block">
+          <view class="cd-timeline"></view>
+          <view class="cd-timeline-content">
+            <view class="process">退款入账（微信）</view>
+            <view>微信退款处理成功后会在1天内完成入账，将18元入账至您的微信支付账户</view>
+          </view>
+        </view>
+      </view>
+   
+    </view>
+  </view>
+
+</view>
+

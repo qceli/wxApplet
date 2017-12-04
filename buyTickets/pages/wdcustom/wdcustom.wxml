@@ -1,0 +1,28 @@
+<!--pages/wdcustom/wdcustom.wxml-->
+<view class="top-img">
+  <image src="{{imgUrl}}custom.jpg"></image>
+</view>
+<view class="san-title">客    服</view>
+
+<view class="lifes">
+  <view class="life-list">
+    <view class="life right-line" bindtap="telephoneCall1">
+      <view class="life-img"><image src="{{imgUrl}}custom1.png"></image></view>
+      <view class="life-name">梁鸿国家湿地公园</view>
+    </view>
+    <view class="life" bindtap="telephoneCall2">
+      <view class="life-img"><image src="{{imgUrl}}custom2.png"></image></view>
+      <view class="life-name">中华赏石园</view>
+    </view>
+  </view>
+  <view class="life-list">
+    <view class="life right-line" bindtap="telephoneCall3">
+      <view class="life-img"><image src="{{imgUrl}}custom3.png"></image></view>
+      <view class="life-name">鸿山遗址博物馆</view>
+    </view>
+    <view class="life" bindtap="telephoneCall4">
+      <view class="life-img"><image src="{{imgUrl}}custom4.png"></image></view>
+      <view class="life-name">无锡长乔海洋王国</view>
+    </view>
+  </view>
+</view>

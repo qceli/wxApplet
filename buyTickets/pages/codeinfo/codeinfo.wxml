@@ -1,0 +1,18 @@
+<!--pages/codeinfo/codeinfo.wxml-->
+<view class="container">
+  <view class="codes">
+    <view class="code">
+      <view class="coupon-top">
+        <view class="img"><image src="{{imgUrl}}coupon.jpg"></image></view>
+        <view class="title">
+          <view>{{orderInfo.t_name}}</view>
+          <view class="title-second">使用日期：{{orderInfo.use_time}}</view>
+        </view>
+      </view>
+      <view class="codeimg">
+        <span class="code-title">取票号：</span>
+        <span class="code-content">{{orderInfo.ticket_sn}}</span>
+      </view>
+    </view>
+  </view>
+</view>

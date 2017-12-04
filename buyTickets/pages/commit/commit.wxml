@@ -1,0 +1,65 @@
+<!--pages/commit/commit.wxml-->
+<view class="container">
+  <view class="top">
+    <view class="name">{{ticketName}}</view>
+    <view>
+      <span class="prices">￥</span>
+      <span class="prices price">{{ticketPrice}}</span>
+      <span>/张</span>
+    </view>
+  </view>
+  <view class="middle">
+    <view class="middle-first">
+      <view class="commit-title">出行日期</view>
+      <view class="date">
+        <view class="date-first today">
+          <view>今天</view>
+          <view>不可订</view>
+        </view>
+        <view class="date-first {{currentActive=='0'? 'active' : ''}}" bindtap="chooseDate">
+          <view>明天</view>
+          <view>{{tomorrow}}</view>
+        </view>        
+
+        <view class="date-first datePicker {{moreDate=='0'? 'active' : ''}}">
+          <picker mode="date" value="{{dateValue}}" start="{{starttime}}" end="{{endtime}}" bindchange="datePickerBindchange">
+            <view class="date-second" style="display:inline-block;">
+              <view>更多日期</view>
+              <view>{{dateValue}}</view>
+            </view>
+            <view class="right-img"><image src="{{imgUrl}}right.png"></image></view>
+          </picker>       
+        </view>
+      </view>
+    </view>
+    <view class="middle-second">
+      <view class="commit-title">门票数量</view>
+      <view class="numbers">
+        <view class="minus" bindtap="minusnumbers">-</view>
+        <input type="number" class="number" value="{{trickNumber}}" />
+        <view class="add" bindtap="addnumbers">+</view>
+      </view>
+    </view>
+  </view>
+
+  <view class="people-info">
+    <view class="info-top">
+      <view class="commit-title">出行人</view>
+      <input type="text" bindchange="personName" placeholder="填写出行人姓名" />
+    </view>
+    <view class="info-bottom">
+      <view class="commit-title">手机号</view>
+      <input type="number" bindchange="telephoneNum" placeholder="填写出行人手机号" />
+    </view>
+  </view>
+
+  <view class="commit-bottom">
+    <view class="commit-title">订单总额</view>
+    <view>
+      <span class="prices">￥</span>
+      <span class="prices price">{{totalPrice}}</span>
+    </view>
+    <!-- <view class="commit-img" bindtouchstart="mytouchstart" bindtouchmove="mytouchmove"><image src="{{imgUrl}}up.png"></image></view> -->
+    <view class="commit" bindtap="commitPay">提交订单</view>
+  </view>
+</view>

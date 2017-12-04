@@ -1,0 +1,57 @@
+<!--pages/orders2/orders2.wxml-->
+<view class="container">
+  <view class="orders-nav">
+    <view bindtap="allList">全部</view>
+    <view bindtap="allList" bindtap="allList1">待付款</view>
+    <view class="ordersNav-active">待使用</view>
+    <view bindtap="allList" bindtap="allList3">退款</view>
+  </view>
+  <scroll-view scroll-y="true" class="order-lists">
+    <block wx:if="{{msg == '暂无订单！'}}">
+      <view class="noOeders">暂无订单</view>
+    </block>
+    <block wx:if="{{msg != '暂无订单！'}}" wx:for="{{orderLists}}" wx:for-item="i" wx:key="i.id">     
+      <view class="order-list">
+        <view class="orderList-top" data-id="{{i.id}}" bindtap="unusedInfos">{{i.t_name}}</view>
+          <view class="orderList-bottom">
+            <view class="orderList-left">
+              <view data-id="{{i.id}}" bindtap="unusedInfos">门票数量：{{i.count}}</view>
+              <view data-id="{{i.id}}" bindtap="unusedInfos">游玩日期：{{i.use_time}}</view>
+              <view data-id="{{i.id}}" bindtap="unusedInfos">总价：￥{{i.price}}</view>
+            </view>
+            <view class="orderList-right">
+              <view>待使用</view>
+              <view class="pay" id="{{i.id}}" bindtap="orderInfos">查看券码</view>        
+            </view>
+          </view>
+        </view>
+        <!-- <view class="order-list">
+          <view class="orderList-top" bindtap="unusedInfos">乐游无锡旅游巴士</view>
+          <view class="orderList-bottom">
+            <view class="orderList-left" bindtap="unusedInfos">
+              <view>门票数量：1</view>
+              <view>游玩日期：2017-08-08</view>
+              <view>总价：￥14.5</view>
+            </view>
+            <view class="orderList-right">
+              <view>待使用</view>
+              <view class="pay" bindtap="orderInfos">查看券码</view>        
+            </view>
+          </view>
+        </view> -->
+    </block>
+  </scroll-view>
+    
+
+  <view class="goods-bottom">
+    <view bindtap="trickList">
+      <view class="nav-img"><image src="{{imgUrl}}list-1.png"></image></view>
+      <view>门票列表</view>
+    </view>
+    <view class="trickList">
+      <view class="nav-img"><image src="{{imgUrl}}trick-2.png"></image></view>
+      <view>我的订单</view>
+    </view>
+  </view>
+</view>
+

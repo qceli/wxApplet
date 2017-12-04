@@ -1,0 +1,41 @@
+<!--pages/unpaid/unpaid.wxml-->
+<view class="container">
+  <view class="order-infos">
+    <view class="info-top">
+      <view class="info-state">
+        <view>订单状态：</view>
+        <view>待支付</view>
+      </view>
+    </view>
+    <view class="info-bottoms">
+      <view>中华赏石园门票</view>
+      <view class="info-money">
+        <view class="info-name">订单总额</view>
+        <view class="orange">￥{{orderInfos.price}}</view>
+        <view>1张*￥{{orderInfos.single_price}}/张</view>
+      </view>
+      <view>
+        <view class="info-name">订单确认号</view>
+        <view class="grey">{{orderInfos.trade_no}}</view>
+      </view>
+      <view>
+        <view class="info-name">入园时间</view>
+        <view class="grey">{{orderInfos.buy_time}}</view>
+      </view>
+    </view>
+  </view>
+  <view>
+    <view class="people-infos">出行人信息</view>
+    <view class="people-info">
+      <view class="people-name">
+        <view class="info-name">出行人</view>
+        <view class="grey">{{orderInfos.customer}}</view>
+      </view>
+      <view class="people-tel">
+        <view class="info-name">手机号</view>
+        <view class="grey">{{orderInfos.phone}}</view>
+      </view>
+    </view>
+  </view>
+  <view class="pay" bindtap="payMoney">立即支付</view>
+</view>

@@ -1,0 +1,41 @@
+<!--pages/home/home.wxml-->
+<view class="bg-img">
+  <view class="homelists">
+    <view class="homelist homelist1" bindtap="townIntroduce" data-id="30">
+      <view class="homelist-content">
+        <image src="{{imgUrl}}homelist1.png"></image>
+        <view class="contents content1">小镇概况</view>
+      </view>
+    </view>
+    <view class="homelist homelist2" bindtap="intelligentApp">
+      <view class="homelist-content">
+        <image src="{{imgUrl}}homelist2.png"></image>
+        <view class="contents content2">智慧应用</view>
+      </view>
+    </view>
+    <view class="homelist homelist3" bindtap="townFuture" data-id="31">
+      <view class="homelist-content">
+        <image src="{{imgUrl}}homelist3.png"></image>
+        <view class="contents content1">小镇未来</view>
+      </view>
+    </view>
+    <view class="homelist homelist4" bindtap="fuseSan">
+      <view class="homelist-content">
+        <image src="{{imgUrl}}homelist4.png"></image>
+        <view class="contents content4">三生融合</view>
+      </view>
+    </view>
+    <view class="homelist homelist5" bindtap="townBusiness" data-id="33">
+      <view class="homelist-content">
+        <image src="{{imgUrl}}homelist5.png"></image>
+        <view class="contents content5">小镇招商</view>
+      </view>
+    </view>
+  </view>
+
+  <view class="home-bottom">
+    <view class="home-nav"><image src="{{imgUrl}}home1.png"></image></view>
+    <view class="home-nav" bindtap="mapIntroduce"><image src="{{imgUrl}}map.png"></image></view>
+    <view class="home-nav" bindtap="townServe"><image src="{{imgUrl}}service.png"></image></view>
+  </view>
+</view>

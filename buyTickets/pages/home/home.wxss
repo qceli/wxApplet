@@ -1,0 +1,33 @@
+/* pages/home/home.wxss */
+.bg-img {
+  width: 100%;
+  height: 100%;
+  background-image: url("https://api.smalltown.wshoto.com/Public/images/microprogram/homebg1.jpg");
+  overflow: hidden;
+  background-size:cover;
+}
+.homelists {
+  margin-top: 150rpx;
+}
+.homelist {
+  height:102rpx;
+  padding:4rpx 0;
+  margin-bottom:20px;
+  float: right;
+}
+.homelist-content {
+  height:90rpx;
+  float:left;
+  padding-top:10rpx;
+}
+.homelist-content>image {
+  height: 100rpx;
+  width: 450rpx;
+}
+.contents {
+  position:absolute;
+  margin-top:-85rpx;
+  margin-left:175rpx;
+  color: #fff;
+
+}

@@ -1,0 +1,23 @@
+<!--pages/map2/map2.wxml-->
+<view class="map-content">
+  <view class="maplists">
+    <view id="maplist1" data-id="0" bindtap="map1">小镇周边配套</view>
+    <view class="active" data-id="1">小镇中心区</view>
+  </view>
+  <scroll-view scroll-y='true' scroll-x='true' class="map map2" scroll-left="123">
+    <!-- <image class="map2-img" src="{{dataimg1}}" catchtouchend="endtap" catchtouchmove="movetap" bindload="imgload" style="width:{{scaleWidth}}px;height:{{scaleHeight}}px" mode="aspectFit"></image> -->
+    <image class="map2-img" src="{{dataimg1}}" mode="aspectFit"></image>
+
+    <!-- <image class="position" id="position8" bindtap="position8" src="{{imgUrl}}location.png" style="top:{{top8}};right:{{right8}}"></image> -->
+    <!-- <image class="position" id="position9" bindtap="position9" src="{{imgUrl}}location.png"></image>
+    <image class="position" id="position10" bindtap="position10" src="{{imgUrl}}location.png"></image>  -->
+    <!-- <image class="position" id="position11" bindtap="position11" src="{{imgUrl}}location.png"></image>
+    <image class="position" id="position12" bindtap="position12" src="{{imgUrl}}location.png"></image> -->
+  </scroll-view>
+    
+  <view class="home-bottom">
+    <view class="home-nav" bindtap="home"><image src="{{imgUrl}}home.png"></image></view>
+    <view class="home-nav"><image src="{{imgUrl}}map1.png"></image></view>
+    <view class="home-nav" bindtap="townServe"><image src="{{imgUrl}}service.png"></image></view>
+  </view>
+</view>

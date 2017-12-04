@@ -1,0 +1,12 @@
+<!--pages/wdpark/wdpark.wxml-->
+<view class="bg-img">
+  <view class="park-title">剩余车位</view>
+  <view class="park" bindtap="voidPark">
+    <view class="parkSearch-img"><image src="{{imgUrl}}P.png"></image></view>
+    <!-- <input type="text" placeholder="当前车位剩余  {{freeParkingSpace}}" />  -->
+    <view class="void-num">当前剩余车位  {{freeParkingSpace}}，点击查看</view>
+  </view>
+  <view class="surplusPark-img" bindtap="mineCar">
+    <image src="{{imgUrl}}surplus-park.png"></image>
+  </view>
+</view>

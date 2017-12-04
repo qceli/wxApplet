@@ -1,0 +1,48 @@
+<!--pages/voidpark/voidpark.wxml-->
+<view class="bg-img">
+  <view class="top">
+    <view>剩余车位总数：<span class="freeNum">{{freeParkingSpace}}</span></view>
+    <view>以下显示为空车位编号</view>
+  </view>
+   <view class="park-nums">
+    <view>
+      <view class="park-area" bindtap="tabFun">
+        <view class="{{tabArr.curHdIndex=='0'? 'active' : ''}}" data-id="0">A区</view>
+        <view class="{{tabArr.curHdIndex=='1'? 'active' : ''}}" data-id="1">B区</view>
+        <view class="{{tabArr.curHdIndex=='2'? 'active' : ''}}" data-id="2">C区</view>
+        <view class="{{tabArr.curHdIndex=='3'? 'active' : ''}}" data-id="3">D区</view>
+      </view>
+      <view class="area-nums" style="display:{{tabArr.curBdIndex=='0'? 'block' : 'none'}}">
+        <view>A001</view>
+        <view>A002</view>
+        <view>A003</view>
+        <view>A001</view>
+        <view>A002</view>
+        <view>A003</view>
+        <view>A003</view>
+        <view>A003</view>
+      </view>
+      <view class="area-nums" style="display:{{tabArr.curBdIndex=='1'? 'block' : 'none'}}">
+        <view>B001</view>
+        <view>B002</view>
+        <view>B003</view>
+      </view>
+      <view class="area-nums" style="display:{{tabArr.curBdIndex=='2'? 'block' : 'none'}}">
+        <view>C001</view>
+        <view>C002</view>
+        <view>C003</view>
+        <view>C001</view>
+        <view>C002</view>
+        <view>C003</view>
+      </view>
+      <view class="area-nums" style="display:{{tabArr.curBdIndex=='3'? 'block' : 'none'}}">
+        <view>D001</view>
+        <view>D002</view>
+        <view>D003</view>
+        <view>D001</view>
+        <view>D002</view>
+      </view>
+    </view>
+  </view>  
+
+</view>

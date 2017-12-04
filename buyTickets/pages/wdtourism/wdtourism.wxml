@@ -1,0 +1,27 @@
+<!--pages/wdtourism/wdtourism.wxml-->
+<view class="bg-img">
+  <view class="lists">
+    <view class="bnmatching-list list1" bindtap="wdtourism1" data-id="11">
+      <view class="list">
+        <view class="chiness">梁鸿国家湿地公园</view>
+      </view>
+    </view>
+    <view class="bnmatching-list list2" bindtap="wdtourism2" data-id="10">
+      <view class="list">
+        <view class="chiness">中华赏石园</view>
+      </view>
+    </view>
+  </view>
+  <view class="lists">
+    <view class="bnmatching-list list3" bindtap="wdtourism3" data-id="9">
+      <view class="list">
+        <view class="chiness">鸿山遗址博物馆</view>
+      </view>
+    </view>
+    <view class="bnmatching-list list4" bindtap="wdtourism4" data-id="5">
+      <view class="list">
+        <view class="chiness">无锡长乔海洋王国</view>
+      </view>
+    </view>
+  </view>
+</view>

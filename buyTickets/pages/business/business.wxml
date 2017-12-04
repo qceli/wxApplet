@@ -1,0 +1,28 @@
+<!--pages/business/business.wxml-->
+<view class="top-img">
+  <image src="{{imgUrl}}businessbg.jpg"></image>
+</view>
+<view class="middle">
+  <view>已入驻企业</view>
+</view>
+
+<view class="businesses">
+  <view class="business-list" bindtap="business1" data-id="21">
+    <view class="business">
+      <view class="business-img"><image src="{{imgUrl}}business1.png"></image></view>
+      <view class="business-name">移  动</view>
+    </view>
+  </view>
+  <view class="business-list" bindtap="business2" data-id="32">
+    <view class="business">
+      <view class="business-img"><image src="{{imgUrl}}business2.png"></image></view>
+      <view class="business-name">西门子</view>
+    </view>
+  </view>
+  <view class="business-list" bindtap="business3" data-id="26">
+    <view class="business">
+      <view class="business-img"><image src="{{imgUrl}}business3.png"></image></view>
+      <view class="business-name">华  为</view>
+    </view>
+  </view>
+</view>

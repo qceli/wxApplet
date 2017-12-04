@@ -1,0 +1,66 @@
+/* pages/beused/beused.wxss */
+.container {
+  height: 100%;
+  background-color: #efeef4;
+}
+.order-infos{
+  width: calc(100% - 40rpx);
+  padding: 0 20rpx;
+  background-color: #fff;
+  font-size:28rpx;
+}
+.info-top {
+  width: 100%;
+  height: 100rpx;
+  line-height: 100rpx;
+  border-bottom: 1px solid #ccc;
+}
+.info-top>view, .info-state>view {
+  float: left;
+}
+.info-state {
+  width: calc(100% - 250rpx);
+}
+.info-bottoms {
+  padding: 20rpx 0 50rpx 0;
+}
+.info-bottoms>view {
+  width: 100%;
+  height: 50rpx;
+  line-height: 50rpx;
+}
+.info-money>view {
+  float: left;
+}
+.info-name {
+  width: 180rpx;
+  float: left;
+}
+.orange {
+  padding-left: 20rpx;
+  color:#ff6600;
+  width:300rpx;
+  font-weight:bold;
+}
+.grey {
+  color: #666;
+}
+.people-infos {
+  height:100rpx;
+  line-height:100rpx;
+  color: #666;
+  padding: 10rpx 20rpx 0 20rpx;
+}
+.people-info {
+  width: 100%;
+  background-color: #fff;
+  padding: 0 20rpx;
+}
+.people-info>view {
+  width: 100%;
+  height: 50rpx;
+  line-height: 50rpx;
+}
+.people-name>view, .people-tel>view {
+  float: left;
+}

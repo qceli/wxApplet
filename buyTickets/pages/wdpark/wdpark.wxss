@@ -1,0 +1,73 @@
+/* pages/wdpark/wdpark.wxss */
+.bg-img {
+  width: 100%;
+  height: 100%;
+  background-image: url("https://api.smalltown.wshoto.com/Public/images/microprogram/parkbg.jpg");
+  overflow: hidden;
+  background-size:cover;
+}
+.park-title {
+  margin-top: 220rpx;
+  width: 100%;
+  height: 100rpx;
+  line-height: 100rpx;
+  text-align: center;
+  font-size: 54rpx;
+  font-weight: bold;
+  color: #fff;
+}
+.park {
+  margin:60rpx auto 0 auto;
+  width: calc(100% - 180rpx);
+  height: 85rpx;
+  padding: 5rpx;
+  background-color: #fff; 
+  /* border-radius: 5px; */
+  /* box-shadow: 0 0 20rpx #ccc;  */
+  border-radius:85rpx;
+}
+.parkSearch-img {
+  position: fixed;
+  width: 80rpx;
+  height: 80rpx;
+}
+.parkSearch-img>image {
+  width: 40rpx;
+  height: 40rpx;
+  margin-top:20rpx;
+  margin-left:40rpx;
+}
+.park>input {
+  height: 80rpx;
+  border-radius: 5px; 
+  border: 1px #ccc solid;
+  padding-left:80rpx;
+  font-size: 28rpx; 
+}
+.void-num {
+  height: 80rpx;
+  line-height: 80rpx;
+  border: 1px #ccc solid;
+  padding-left:100rpx;
+  font-size: 32rpx; 
+  border-radius:80rpx;
+  color: #8b8b8b;
+}
+.surplusPark-img {
+  height: 210rpx;
+  width: 200rpx;
+  position:absolute;
+  right:20px;
+  bottom:100rpx;
+  text-align: center;
+}
+.surplusPark-img>image {
+  height: 160rpx;
+  width: 160rpx;
+}
+.surplusPark-img>view {
+  font-size: 28rpx;
+  color: #ccc;
+  height: 50rpx;
+  line-height: 50rpx;
+}

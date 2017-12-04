@@ -1,0 +1,97 @@
+/* pages/map1/map1.wxss */
+.map-content {
+  height: 100%;
+}
+.maplists {
+  /* border: 1px solid #ccc; */
+  position: fixed;
+  top: 40rpx;
+  left: 20rpx;
+  /* height: 400rpx; */
+  width: 100rpx;
+  z-index:1;
+  text-align: center;
+  border-radius: 20rpx;
+  font-size:32rpx;
+}
+.maplists>view {
+  width: 40rpx; 
+  padding: 40rpx 30rpx;
+  color: #ccc;
+  background-color: #fff;
+}
+#maplist1 {
+  border-bottom: 1px solid #ccc;
+}
+.active {
+  color: #fff !important;
+  background-color: #ccc !important;
+}
+.map {
+  height: calc(100% - 100rpx);
+}
+.map1-img {
+  /* width: 400%;
+  height: 300%; */
+  height:99%;
+  /* width:194%; */
+  width:210%;
+  
+} 
+.position {
+  position:absolute;
+  height:80rpx;
+  width:80rpx;
+}
+#position1 {
+  top: 68%;
+  right:-50%;
+}
+#position2 {
+  top: 58%;
+  right:-20%;
+}
+#position3 {
+  top: 65%;
+  right:-20%;
+}
+#position4 {
+  top:41%;
+  right:-8%;
+}
+
+#position6 {
+  top:23%;
+  right:-24%;
+}
+#position7 {
+  top:66%;
+  right:-7%;
+}
+
+.map2-img {
+  /* height:335%;
+  width:300%; */
+  height:99%;
+  width:100%;
+}
+#position8 {
+  top:238%;
+  right:-115%;
+}
+#position9 {
+  top:141%;
+  right:-129%;
+}
+#position10 {
+  top:171%;
+  right:-106%;
+}
+
+
+/* .map1 {
+  width: 100%;
+  background-image: url("https://api.smalltown.wshoto.com/Public/images/microprogram/maps1.jpg");
+  overflow: hidden;
+  background-size:cover;
+} */

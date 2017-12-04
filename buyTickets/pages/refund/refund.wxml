@@ -1,0 +1,40 @@
+<!--pages/refund/refund.wxml-->
+<view class="container">
+  <view class="order-infos">
+    <view class="info-top">
+      <view class="info-state">
+        <view>订单状态：</view>
+        <view>已退款</view>
+      </view>
+    </view>
+    <view class="info-bottoms">
+      <view>中华赏石园门票</view>
+      <view class="info-money">
+        <view class="info-name">订单总额</view>
+        <view class="orange">￥99</view>
+        <view>1张*￥99/张</view>
+      </view>
+      <view>
+        <view class="info-name">订单确认号</view>
+        <view class="grey">Z31724877</view>
+      </view>
+      <view>
+        <view class="info-name">入园时间</view>
+        <view class="grey">2017-08-08周二</view>
+      </view>
+    </view>
+  </view>
+  <view>
+    <view class="people-infos">出行人信息</view>
+    <view class="people-info">
+      <view class="people-name">
+        <view class="info-name">出行人</view>
+        <view class="grey">谭笑笑</view>
+      </view>
+      <view class="people-tel">
+        <view class="info-name">手机号</view>
+        <view class="grey">189****0621</view>
+      </view>
+    </view>
+  </view>
+</view>

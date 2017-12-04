@@ -1,0 +1,71 @@
+<!--pages/service/service.wxml-->
+<view class="bg-img">
+  <view class="serviceLists">
+    <view class="serviceList">
+      <view class="outList" bindtap="buyTicket">
+        <view>
+          <view class="serce-img titleImg1"><image src="{{imgUrl}}serce1.png"></image></view>
+          <view class="title title1">门票购买</view>
+        </view>
+      </view>
+      <view class="outList" bindtap="mapNav">
+        <view>
+          <view class="serce-img titleImg2"><image src="{{imgUrl}}serce2.png"></image></view>
+          <view class="title title2">小镇导航</view>
+        </view>
+      </view>
+      <view class="outList" bindtap="eGuide" data-id="18">
+        <view>
+          <view class="serce-img titleImg3"><image src="{{imgUrl}}serce3.png"></image></view>
+          <view class="title title3">电子导游</view>
+        </view>
+      </view>
+    </view>
+    <view class="serviceList">
+      <view class="outList" bindtap="weatherReport">
+        <view>
+          <view class="serce-img titleImg4"><image src="{{imgUrl}}serce4.png"></image></view>
+          <view class="title title4">天气查询</view>
+        </view>
+      </view>
+      <view class="outList" bindtap="busSearch">
+        <view>
+          <view class="serce-img titleImg5"><image src="{{imgUrl}}serce5.png"></image></view>
+          <view class="title title5">公交查询</view>
+        </view>
+      </view>
+      <view class="outList" bindtap="airMonitor">
+        <view>
+          <view class="serce-img titleImg6"><image src="{{imgUrl}}serce6.png"></image></view>
+          <view class="title title6">大气监测</view>
+        </view>
+      </view>
+    </view>
+    <view class="serviceList">
+      <view class="outList" bindtap="wdPark">
+        <view>
+          <view class="serce-img titleImg7"><image src="{{imgUrl}}serce7.png"></image></view>
+          <view class="title title7">智慧停车</view>
+        </view>
+      </view>
+      <view class="outList" bindtap="wdCustom">
+        <view>
+          <view class="serce-img titleImg8"><image src="{{imgUrl}}serce8.png"></image></view>
+          <view class="title title8">智能客服</view>
+        </view>
+      </view>
+      <view class="outList" bindtap="shareBike">
+        <view>
+          <view class="serce-img titleImg9"><image src="{{imgUrl}}serce9.png"></image></view>
+          <view class="title title9">共享单车</view>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <view class="home-bottom">
+    <view class="home-nav" bindtap="home"><image src="{{imgUrl}}home.png"></image></view>
+    <view class="home-nav" bindtap="mapIntroduce"><image src="{{imgUrl}}map.png"></image></view>
+    <view class="home-nav"><image src="{{imgUrl}}service1.png"></image></view>
+  </view>
+</view>

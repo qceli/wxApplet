@@ -1,0 +1,101 @@
+/* pages/service/service.wxss */
+.bg-img {
+  width: 100%;
+  height: 100%;
+  background-image: url("https://api.smalltown.wshoto.com/Public/images/microprogram/townbg.jpg");
+  overflow: hidden;
+  background-size:cover;
+}
+.serviceLists {
+  margin:40rpx 0;
+}
+.serviceList {
+  display: flex;
+  margin:16rpx 0;
+}
+.outList {
+  margin: 20rpx;
+  width: 40rpx;
+  height: 290rpx;
+  background-color: #fff;
+  border-radius: 8rpx;
+  /* box-shadow: 2rpx 2rpx 2rpx #fff; */
+  flex: 1;
+}
+.outList>view {
+  margin:5rpx;
+  height: 280rpx;  
+  background-image: url("https://api.smalltown.wshoto.com/Public/images/microprogram/servicelist.png");
+  overflow: hidden;
+  background-size:cover;
+}
+.serce-img {
+  width: 140rpx;
+  height: 140rpx;
+  border-radius: 50%;
+  margin: 40rpx auto;
+}
+.serce-img>image {
+  margin:30rpx;
+  width: 80rpx;
+  height: 80rpx;
+}
+.title {
+  text-align: center;
+  font-size: 28rpx;
+  line-height: 46rpx;
+}
+.titleImg1 {
+  background-color: #f58e53;
+}
+.title1 {
+  color: #f58e53;
+}
+.titleImg2 {
+  background-color: #2f9fdf;
+}
+.title2 {
+  color: #2f9fdf;
+}
+.titleImg3 {
+  background-color: #3cd5e3;
+}
+.title3 {
+  color: #3cd5e3;
+}
+.titleImg4 {
+  background-color: #52b9f4;
+}
+.title4 {
+  color: #52b9f4;
+}
+.titleImg5 {
+  background-color: #7488d1;
+}
+.title5 {
+  color: #7488d1;
+}
+.titleImg6 {
+  background-color: #65dda0;
+}
+.title6 {
+  color: #65dda0;
+}
+.titleImg7 {
+  background-color: #e9ca34;
+}
+.title7 {
+  color: #e9ca34;
+}
+.titleImg8 {
+  background-color: #d06eb7;
+}
+.title8 {
+  color: #d06eb7;
+}
+.titleImg9 {
+  background-color: #a4ce52;
+}
+.title9 {
+  color: #a4ce52;
+}

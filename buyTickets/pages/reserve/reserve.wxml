@@ -1,0 +1,46 @@
+<!--pages/reserve/reserve.wxml-->
+<view class="container">
+  <scroll-view scroll-y="true" style="height:calc(100% - 100rpx);">
+    <view class="reserve">
+      <image src="{{tricketDetail.ticket_pic}}"></image>
+    </view>
+
+    <view class="reserve-title">
+      <view class="title-left">
+        <view class="left-top">{{tricketDetail.ticket_name}}</view>
+        <!-- <view class="left-bottom">作为中国吴文化博览园的特色景点</view> -->
+        <!-- <view class="left-bottom">{{tricketDetail.sight_info}}</view> -->
+      </view>
+      <view class="title-right">
+        <span class="right-unit">￥</span>
+        <span class="right-price">{{tricketDetail.ticket_price}}</span>
+      </view>
+      <view class="commit" bindtap="commitTrick">预定</view>   
+    </view>
+    <view class="reserve-introduce">
+      <view class="introduce-nav" bindtap="tabFun">
+        <view class="{{tabArr.curHdIndex=='0'? 'active' : ''}}" data-id="0">景点特色</view>
+        <view class="{{tabArr.curHdIndex=='1'? 'active' : ''}}" data-id="1">购票须知</view>
+      </view>
+      <view class="introduce-infos">
+        <view class="" style="display:{{tabArr.curBdIndex=='0'? 'block' : 'none'}}">
+          <view class="arrays" wx:for="{{infoArray}}" wx:for-item="i" wx:key="">{{infoArray[index]}}</view>
+        </view>
+        <view style="display:{{tabArr.curBdIndex=='1'? 'block' : 'none'}}">
+          <view class="arrays" wx:for="{{warningArray}}" wx:key="">{{warningArray[index]}}</view>
+        </view>
+      </view>
+    </view>
+  </scroll-view>
+  <view class="goods-bottom">
+    <view class="trickList">
+      <view class="nav-img"><image src="{{imgUrl}}list-2.png"></image></view>
+      <view>门票列表</view>
+    </view>
+    <view bindtap="mineTrick">
+      <view class="nav-img"><image src="{{imgUrl}}trick-1.png"></image></view>
+      <view>我的订单</view>
+    </view>
+  </view>
+
+</view>

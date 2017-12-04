@@ -1,0 +1,15 @@
+<!--pages/weather/weather.wxml-->
+<view class="bg-img">
+  <view class="city">{{city}}</view>
+  <view class="weather">{{todayWeather.weatherDesc}}</view>
+  <view class="nowtemperature">{{todayWeather.nowWeather}}</view>
+  <view class="content">
+    <view class="future" wx:for="{{weatherDatas}}" wx:for-item="i" wx:key="i.date">
+      <view class="day">{{i.date}}</view>
+      <view class="dayPictureUrl">
+        <image src="{{i.dayPictureUrl}}"></image>
+      </view>
+      <view class="temperature">{{i.temperature}}</view>
+    </view>
+  </view>
+</view>

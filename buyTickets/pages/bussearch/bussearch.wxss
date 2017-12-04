@@ -1,0 +1,80 @@
+/* pages/bussearch/bussearch.wxss */
+.header_route {
+  width: 100%;
+}
+.title_route {
+  height: 150rpx;
+  line-height: 150rpx;
+  width: 100%;
+  text-align: center;
+  color: #fff;
+}
+.luxian_souso {
+  height: 120rpx;
+  width: calc(100% - 80rpx);
+  padding: 0 40rpx;
+}
+.title_route, .luxian_souso {
+  background-color: rgba(235,97,100,0.9);
+}
+.luxian_souso>input {
+  width: calc(100% - 40rpx);
+  height: 50rpx;
+  background-color:#fff;
+  border-radius:5px;
+  padding:10rpx 20rpx;
+  font-size: 32rpx;
+}
+.banner_route, .banner_route>image {
+  width: 100%;
+  background-color: #f5f5fa;
+}
+.banner_route>image {
+  height: 400rpx;
+}
+.zhandian {
+  height: 60rpx;
+  line-height: 50rpx;
+  text-align: center;
+  background-color: #f5f5fa;
+  border-bottom: #e1e1e1 2px solid;
+}
+
+.station {
+  height: 80rpx;
+  width: calc(100% - 40rpx);
+  padding: 0 20rpx;
+  background-color: #f5f5fa;
+  color: #333;
+}
+.left {
+  float: left;
+  padding-left:40rpx;
+}
+.leftSolid {
+  width:0;
+  border:1px solid #ccc;
+  height:76rpx;
+  float:left;
+
+}
+.circle {
+  height: 40rpx;
+  width: 40rpx;
+  border-radius: 50%;
+  background-color: #ccc;
+  display: inline-block;
+  margin-left:-20rpx;
+  margin-top:20rpx;
+  color: #fff;
+  text-align: center;
+  line-height: 40rpx;
+  font-size:32rpx;
+}
+.right {
+  display: inline-block;
+  border-bottom: 1px #d6d7dc solid;
+  padding: 0 0 0 20rpx;
+  line-height: 80rpx;
+  width: calc(100% - 100rpx);
+}

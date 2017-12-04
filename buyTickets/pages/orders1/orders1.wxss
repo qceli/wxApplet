@@ -1,0 +1,77 @@
+/* pages/orders1/orders1.wxss */
+.container {
+  height: 100%;
+  background-color: #efeef4;
+}
+.orders-nav {
+  height: 100rpx;
+  line-height: 100rpx;
+  width: 100%;
+  background-color: #fff;
+}
+.ordersNav-active {
+  color: #ff6600;
+}
+.orders-nav>view {
+  font-size: 28rpx;
+  float: left;
+  width: 150rpx;
+  text-align: center;
+}
+
+.order-lists {
+  margin: 20rpx;
+  width:calc(100% - 40rpx);
+  height:calc(100% - 220rpx); 
+}
+.noOeders {
+  width: 100%;
+  padding-top:42px;
+  color: #ccc;
+  font-size:48rpx;
+  text-align: center;
+}
+.order-list {
+  height: 150rpx;
+  background-color: #fff;
+  border: solid 1px #ccc;
+  padding:20rpx;
+  margin-bottom:20rpx;
+}
+.orderList-top {
+  height:50rpx;
+  line-height:50rpx;
+  font-size: 28rpx;
+  width:calc(100% - 110px);
+}
+.orderList-left {
+  width:calc(100% - 220rpx);
+  float:left;
+}
+.orderList-left>view {
+  height:35rpx;
+  line-height:35rpx;
+  color:#666;
+}
+.orderList-right {
+  color:#ff9900;
+  margin-left:80rpx;
+  display:inline-block;
+  width:105rpx;
+  text-align:center;
+}
+.orderList-right>view {
+  width:100rpx;
+  height:40rpx;
+  line-height:40rpx;
+  text-align: center;
+}
+.pay {
+  margin-top:20rpx;
+  border: solid 1px #ff9900;
+  border-radius: 5px;
+}
+
+.mineTrick>view {
+  color: #ff6600;
+}

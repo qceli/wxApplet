@@ -1,0 +1,87 @@
+/* pages/reserve/reserve.wxss */
+.container {
+  height: 100%;
+  background-color: #efeef4;
+}
+.reserve>image {
+  width:100%;
+  height:400rpx;
+}
+.reserve-title {
+  height: 100rpx;
+  width: calc(100% - 40rpx);
+  padding: 20rpx;
+  background-color: #fff;
+}
+.reserve-title>view {
+  float: left;
+}
+.title-left {
+   margin: 0 20rpx 0 0; 
+  width: 360rpx;
+}
+.title-left>view {
+  height: 50rpx;
+  /* line-height: 50rpx; */
+}
+.left-top {
+  /* font-size: 28rpx; */
+  font-size: 36rpx;  
+  line-height:100rpx;
+
+}
+.left-bottom {
+  color: #666;
+  width: 360rpx;
+  font-size: 24rpx;
+}
+.title-right {
+  color: red;
+  line-height: 100rpx;
+}
+.right-price {
+  font-size: 56rpx;
+}
+.commit {
+  width:110rpx;
+  height:60rpx;
+  line-height:60rpx;
+  text-align:center;
+  background-color:#ff6600;
+  color:#fff;
+  border-radius:5px;
+  float:left;
+  margin: 20rpx 0 0 20rpx;
+}
+
+.reserve-introduce {
+  margin-top: 40rpx;
+  background-color: #fff;
+}
+.introduce-nav {
+  height: 100rpx;
+  width: 100%;
+  border-bottom: 1px solid #ccc;
+}
+.introduce-nav>view {
+  width: 200rpx;
+  height: 100rpx;
+  line-height: 100rpx;
+  text-align: center;
+  float: left;
+  font-size: 28rpx;
+}
+.active {
+  border-bottom: 2px solid #ff9900;
+  color: #ff9900;
+}
+.introduce-infos {
+  padding: 20rpx;
+  min-height: 300rpx;
+  color:#666;
+  font-size:32rpx;
+  line-height:40rpx;
+}
+.arrays {
+  text-indent: 64rpx;
+}

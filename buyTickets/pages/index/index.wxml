@@ -1,0 +1,34 @@
+<!--index.wxml-->
+<view class="container">
+  <scroll-view scroll-y="true" style="height:calc(100% - 120rpx);">
+    <view class="goods-lists" wx:for="{{tricketList}}" wx:for-item="i" wx:key="i.id">
+      <view class="goods-list">
+        <view class="goods-img">
+          <image src="{{i.ticket_pic}}"></image>
+        </view>
+        <view class="goods-infos">
+          <view class="infos-title">{{i.ticket_name}}</view>
+          <!-- <view class="infos-introduce">作为中国吴文化博览园的特色景点</view> -->
+          <!-- <view class="infos-introduce">{{i.sight_info}}</view> -->
+          <view class="infos-price">
+            <span>￥</span>
+            <span class="price">{{i.ticket_price}}</span>
+          </view>
+        </view>
+        <view class="commit" id="{{i.id}}" bindtap="reserveTrick">预定</view>    
+      </view>    
+    </view>
+    
+  </scroll-view>
+
+  <view class="goods-bottom">
+    <view class="trickList">
+      <view class="nav-img"><image src="{{imgUrl}}list-2.png"></image></view>
+      <view>门票列表</view>
+    </view>
+    <view bindtap="mineTrick">
+      <view class="nav-img"><image src="{{imgUrl}}trick-1.png"></image></view>
+      <view>我的订单</view>
+    </view>
+  </view>
+</view>

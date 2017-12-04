@@ -1,0 +1,65 @@
+<!--pages/airmonitor/airmonitor.wxml-->
+<view class="bg-img">
+  <view class="location">无锡</view>
+  <view class="wind">
+    <view class="wind-img"><image src="{{imgUrl}}wind.png"></image></view>
+    <view>风速/风向</view>
+    <view class="position">
+      <view>西</view>
+      <view class="speed">3米/秒</view>
+    </view>
+  </view>
+   <view class="humidity">
+    <view class="humidity-img"><image src="{{imgUrl}}humidity.png"></image></view>
+    <view>湿度</view>
+    <view class="humidity-num">30%</view>
+  </view>
+  <view class="temperature">
+    <!-- <view class="temperature-img"><image src="{{imgUrl}}temperature.png"></image></view> -->
+    <view class="temperature-img">
+      <view class="temperature-num">30</view>
+      <view class="deg">℃</view>
+    </view>
+   
+
+    <!-- <view class="temperature1">Fun</view> -->
+    <!-- <view class="temperature2">阴</view> -->
+    <!-- <view class="temperature-num">30</view>
+    <view class="deg">℃</view> -->
+  </view>
+  <view class="bottom">
+    <view class="bottom-title">
+      <span class="title-name">气压：</span>
+      <span class="title-num">1000百帕</span>
+    </view>
+    <view class="bottom-line">
+      <view class="weather-list">
+        <view class="list1">PM2.5</view>
+        <view class="list2">50.23</view>
+      </view>
+      <view class="weather-list">
+        <view class="list1">CO</view>
+        <view class="list2">2.66</view>
+      </view>
+      <view class="weather-list">
+        <view class="list1">O3</view>
+        <view class="list2">50.23</view>
+      </view>
+    </view>
+    <view class="bottom-line">
+      <view class="weather-list">
+        <view class="list1">PM10</view>
+        <view class="list2">70.23</view>
+      </view>
+      <view class="weather-list">
+        <view class="list1">SO2</view>
+        <view class="list2">20.50</view>
+      </view>
+      <view class="weather-list">
+        <view class="list1">NO2</view>
+        <view class="list2">60.94</view>
+      </view>
+    </view>
+  </view>
+</view>
+
