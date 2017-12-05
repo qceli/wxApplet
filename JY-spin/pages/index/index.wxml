@@ -1,0 +1,33 @@
+<!--index.wxml-->
+<view class="indexImg"><image src="{{thumb}}"></image></view>
+<view class="search">
+  <view class="searchContent" bindtap='search'><image src="../../images/search.png"></image><view>搜索</view></view>
+</view>
+
+<view class="produceLists">
+  <view class='line'>
+    <view class='lineTop'></view>
+    <view class="lineContent">现货</view>
+    <view class='lineTop'></view>
+  </view>
+  <view class="produceList" wx:for="{{lists}}" wx:for-item="i" wx:key="i.id" bindtap='produceDetail' data-id="{{i.id}}">
+    <view>
+      <view class='produceName'>{{i.title}}</view>
+      <view class='producePrice'><span class="price">{{i.marketprice}}</span> 元/吨</view>      
+    </view>
+    <view class='produceParam'>强力（CN）：{{i.strong}}</view>
+    <view class='company'>{{i.enterprise}}</view>
+  </view>
+  <!-- <view class="produceList" bindtap='produceDetail'>
+    <view>
+      <view class='produceName'>漂白棉花</view>
+      <view class='producePrice'><span class="price">22000</span> 元/吨</view>      
+    </view>
+    <view class='produceParam'>强力（CN）：248</view>
+    <view class='company'>江阴市允瑞纺织有限公司</view>
+  </view> -->
+</view>
+<view class="bottom">亲，已经到底了哦...</view>
+
+  
+

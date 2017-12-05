@@ -1,0 +1,92 @@
+/**index.wxss**/
+page {
+  padding: 0;
+  margin: 0;
+  background-color: #eaf2fd;
+}
+.indexImg {
+  height: 300rpx;
+  width: 100%;
+}
+.indexImg>image {
+  height: 300rpx;
+  width: 100%;
+}
+.searchContent {
+  height: 70rpx;
+  margin: 20rpx 40rpx;
+  background-color: #fff; 
+  border-radius: 70rpx;
+  border: solid 1px #ccc;
+  text-align: center;
+  line-height: 70rpx; 
+  font-size: 36rpx;
+  color: #ccc;
+  display: flex;
+  padding-left: 35%;
+}
+.searchContent>image {
+  width: 70rpx;
+  height: 70rpx;
+}
+.produceLists {
+  padding: 20rpx 20rpx 0 20rpx;
+  background-color: #fff;
+}
+.line {
+  width: 100%;
+  display: flex;
+  height: 40rpx;
+}
+.lineTop {
+  width: calc(50% - 55rpx);
+  height: 20rpx;
+  border-bottom: solid 1px #ec9244;
+}
+.lineContent {
+  margin: 0 20rpx;
+  width: 110rpx;
+  text-align: center;
+  line-height: 40rpx;
+  color: #ec9244;
+  font-size: 32rpx;
+  font-weight: bold;
+}
+.produceList {
+  border-bottom: solid 1px #ccc;
+  margin: 20rpx;
+}
+.produceList>view {
+  height: 60rpx;
+}
+.produceName {
+  float: left;
+  font-size: 40rpx;
+  font-weight: bold;
+  line-height: 70rpx;
+}
+.producePrice {
+  float: right;
+  height: 70rpx;
+}
+.price {
+  color: #ff0000;
+  font-size: 40rpx;
+  font-weight: bold;
+}
+.produceParam, .company {
+  color: #666;
+  font-size: 32rpx;
+}
+.produceParam {
+  clear: both;
+}
+.bottom {
+  width: 100%;
+  height: 60rpx;
+  line-height: 60rpx;
+  text-align: center;
+  font-size: 32rpx;
+  color: #ccc;
+  background-color: #eaf2fd;
+}

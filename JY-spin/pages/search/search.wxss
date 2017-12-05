@@ -1,0 +1,67 @@
+/* pages/search/search.wxss */
+.search {
+  background-color: #eaf2fd;
+  padding: 20rpx 40rpx;
+}
+.searchContent {
+  height: 70rpx;
+  border-radius: 70rpx;
+  background-color: #fff;  
+  border: solid 1px #ccc;
+  line-height: 70rpx; 
+  font-size: 36rpx;
+  display: flex;
+  padding-left: 80rpx;
+}
+.searchImg {
+  position: absolute;
+  width: 70rpx;
+  height: 70rpx;
+  margin-top: -70rpx;
+  margin-left: 10rpx;
+}
+
+.produceLists {
+  padding: 20rpx 20rpx 0 20rpx;
+  background-color: #fff;
+}
+.noProduce {
+  width: 100%;
+  height: 100rpx;
+  line-height: 100rpx; 
+  text-align: center;
+  color: #999;
+}
+.produceList {
+  border-bottom: solid 1px #ccc;
+  margin: 20rpx;
+}
+.produceList>view {
+  height: 60rpx;
+}
+.produceName {
+  float: left;
+  font-size: 40rpx;
+  font-weight: bold;
+  line-height: 70rpx;
+}
+.producePrice {
+  float: right;
+  height: 70rpx;
+}
+.price {
+  color: #ff0000;
+  font-size: 40rpx;
+  font-weight: bold;
+}
+.produceParam, .company {
+  color: #666;
+  font-size: 32rpx;
+}
+.produceParam {
+  clear: both;
+}
+.resultState {
+  text-align: center;
+  color: #ccc;
+}

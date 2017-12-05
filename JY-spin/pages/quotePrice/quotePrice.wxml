@@ -1,0 +1,123 @@
+<!--pages/quotePrice/quotePrice.wxml-->
+<image class="bgImage" src="../../images/bg1.jpg"></image>
+<view class="topName">
+  <view>原料价</view>
+  <view class="multi"></view>
+  <view class="pickerNumInput">制成率</view>
+  <view class="multi"></view>
+  <view class="percentNumInput">比 例</view>
+  <view class="multi"></view>
+  <view>成本合计</view>
+</view>
+<view class="content">
+  <view class="contentList">
+    <view class="numInput"><input type="digit" value="{{material}}" bindinput="materialInputEvent" /></view>
+    <view class="multi">*</view>
+    <view class="numInput pickerNumInput">
+      <picker bindchange="madePickerChange" value="{{index1}}" range="{{madeArray}}">
+        <view class="picker">{{madeArray[index1]}}</view>
+      </picker>
+    </view>
+    <view class="multi">*</view>
+    <view class="numInput percentNumInput">
+      <input type="digit" class="scaleInput" value="{{scale}}" bindinput="scaleInputEvent"/>
+      <span class="percent">%</span>
+    </view>
+    <view class="multi">=</view>
+    <view class="numInput costValue">{{cost}}</view>
+  </view>
+  <view class="contentList">
+    <view class="numInput"><input type="digit" value="{{material2}}" bindinput="materialInputEvent2" /></view>
+    <view class="multi">*</view>
+    <view class="numInput pickerNumInput">
+      <picker bindchange="madePickerChange2" value="{{index2}}" range="{{madeArray}}">
+        <view class="picker">{{madeArray[index2]}}</view>
+      </picker>
+    </view>
+    <view class="multi">*</view>
+    <view class="numInput percentNumInput">
+      <input type="digit" class="scaleInput" value="{{scale2}}" bindinput="scaleInputEvent2"/>
+      <span class="percent">%</span>
+    </view>
+    <view class="multi">=</view>
+    <view class="numInput costValue">{{cost2}}</view>
+  </view>
+  <view class="contentList">
+    <view class="numInput"><input type="digit" value="{{material3}}" bindinput="materialInputEvent3" /></view>
+    <view class="multi">*</view>
+    <view class="numInput pickerNumInput">
+      <picker bindchange="madePickerChange3" value="{{index3}}" range="{{madeArray}}">
+        <view class="picker">{{madeArray[index3]}}</view>
+      </picker>
+    </view>
+    <view class="multi">*</view>
+    <view class="numInput percentNumInput">
+      <input type="digit" class="scaleInput" value="{{scale3}}" bindinput="scaleInputEvent3"/>
+      <span class="percent">%</span>
+    </view>
+    <view class="multi">=</view>
+    <view class="numInput costValue">{{cost3}}</view>
+  </view>
+  <view class="contentList">
+    <view class="numInput"><input type="digit" value="{{material4}}" bindinput="materialInputEvent4" /></view>
+    <view class="multi">*</view>
+    <view class="numInput pickerNumInput">
+      <picker bindchange="madePickerChange4" value="{{index4}}" range="{{madeArray}}">
+        <view class="picker">{{madeArray[index4]}}</view>
+      </picker>
+    </view>
+    <view class="multi">*</view>
+    <view class="numInput percentNumInput">
+      <input type="digit" class="scaleInput" value="{{scale4}}" bindinput="scaleInputEvent4"/>
+      <span class="percent">%</span>
+    </view>
+    <view class="multi">=</view>
+    <view class="numInput costValue">{{cost4}}</view>
+  </view>
+  <view class="contentList">
+    <view class="numInput"><input type="digit" value="{{material5}}" bindinput="materialInputEvent5" /></view>
+    <view class="multi">*</view>
+    <view class="numInput pickerNumInput">
+      <picker bindchange="madePickerChange5" value="{{index5}}" range="{{madeArray}}">
+        <view class="picker">{{madeArray[index5]}}</view>
+      </picker>
+    </view>
+    <view class="multi">*</view>
+    <view class="numInput percentNumInput">
+      <input type="digit" class="scaleInput" value="{{scale5}}" bindinput="scaleInputEvent5"/>
+      <span class="percent">%</span>
+    </view>
+    <view class="multi">=</view>
+    <view class="numInput costValue">{{cost5}}</view>
+  </view>
+</view>
+<view class="costTotal">
+  <view class="costTotalName">合 计：</view>
+  <view class="numInput costTotalValue">{{costTotal}}</view>
+</view>
+<!-- <view class="attention">
+  <view>注：</view>
+  <view>
+    <view class="attentionLeft">原料有：</view>
+    <view class="attentionRight">
+      <view>棉花，17000</view>
+      <view>漂白棉花，22000</view>
+      <view>黑棉，25000</view>
+      <view>彩棉，27000</view>
+    </view>
+  </view>
+</view> -->
+<view class="bottom">
+  <view>
+    <view class="bottomTop">
+      <view class="bottomName">工 费：</view>
+      <picker class="bottomPicker" bindchange="workPickerChange" value="{{n}}" range="{{workArray}}">
+        <view class="workPicker">{{workArray[n]}}</view>
+      </picker>
+    </view>
+    <view class="bottomTop">
+      <view class="bottomName">销售价:</view>
+      <view class="salePriceValue">{{salePrice}}</view>
+    </view>
+  </view>
+</view>

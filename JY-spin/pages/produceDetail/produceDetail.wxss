@@ -1,0 +1,90 @@
+/* pages/produceDetail/produceDetail.wxss */
+.produceContent {
+  background-color: #eaf2fd;
+  height: 100%;
+}
+.paddingTop {
+  padding: 40rpx 40rpx 0 40rpx;
+  background-color: #fff;
+}
+.produceTop {
+  height: 80rpx;
+  border-bottom: solid 1px #ccc;
+}
+.produceName {
+  float: left;
+  font-size: 40rpx;
+  font-weight: bold;
+}
+.produceState {
+  float: right;
+  width: 150rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  text-align: center;
+  color: #fff;
+  background-color: #ff9933;
+  border-radius: 5px;
+}
+.produceInfos {
+  border-bottom: solid 1px #ccc;
+  background-color: #fff;
+  font-size: 36rpx;
+}
+.produceInfo {
+  display: flex;
+  height: 70rpx;
+  line-height: 70rpx;
+  color: #333;
+}
+.infoName {
+  width: 250rpx;
+  text-align: right;
+  margin-right: 40rpx;
+}
+.produceDetailInfo {
+  padding: 10rpx 0;
+  background-color: #fff;
+}
+.infoImg {
+  height: 40rpx;
+  width: 40rpx;
+  margin-right: 20rpx;
+}
+.companyDetailInfo {
+  margin-top: 10rpx;
+  padding: 10rpx 0;
+  background-color: #fff;
+}
+.companyInfo {
+  padding-left: 100rpx;
+  color: #333;
+  font-size: 36rpx;
+  line-height: 70rpx;
+}
+
+.bottom {
+  width: 100%;
+  height: 100rpx;
+  position: absolute;
+  bottom: 0;
+  display: flex;
+}
+.bottom>view {
+  flex: 1;
+  line-height: 100rpx;
+  text-align: center;
+}
+/* .onlinePeople {
+  background-color: #fff;
+} */
+.onlinePeople>button {
+  width: 100%;
+  height: 100rpx;
+  border: 0;
+  background-color: #fff;
+}
+.tel {
+  color: #fff;
+  background-color: #19ad17;
+}

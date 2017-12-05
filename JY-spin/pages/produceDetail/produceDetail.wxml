@@ -1,0 +1,69 @@
+<!--pages/produceDetail/produceDetail.wxml-->
+<view class='produceContent'>
+  <view class="paddingTop">
+  <view class='produceTop'>
+    <view class='produceName'>{{goods.title}}</view>
+    <view class="produceState">{{goodState}}</view>
+  </view>
+  </view>
+  <view class="produceInfos">
+    <view class="produceInfo">
+      <view class="infoName">价格</view>
+      <view><span class="producePrice">{{goods.marketprice}}</span> 元</view>
+    </view>
+    <view class="produceInfo">
+      <view class="infoName">数量</view>
+      <view>{{goods.num}} 吨</view>
+    </view>
+    <view class="produceInfo">
+      <view class="infoName">纺纱方式</view>
+      <view>{{goods.fspname}}</view>
+    </view>
+    <view class="produceInfo">
+      <view class="infoName">用途</view>
+      <view>{{goods.purpose}}</view>
+    </view>
+    <view class="produceInfo">
+      <view class="infoName">成分</view>
+      <view>{{goods.cfpname}}</view>
+    </view>
+    <view class="produceInfo">
+      <view class="infoName">产地(仓库)</view>
+      <view>{{goods.province}}</view>
+    </view>
+  
+  </view>
+  <view class="produceDetailInfo">
+    <view class="produceInfo">
+      <view class="infoName"><image class="infoImg" src="../../images/infoParam.png"></image>详细参数</view>
+    </view>
+    <view class="produceInfo">
+      <view class="infoName">强力(CN)</view>
+      <view>{{goods.strong}}</view>
+    </view>
+    <view class="produceInfo">
+      <view class="infoName">条干CV%</view>
+      <view>{{goods.dry}}</view>
+    </view>
+    <view class="produceInfo">
+      <view class="infoName">棉结(+200%)</view>
+      <view>{{goods.nep}}</view>
+    </view>
+  
+  </view>
+  <view class="companyDetailInfo">
+    <view class="produceInfo">
+      <view class="infoName"><image class="infoImg" src="../../images/infoParam.png"></image>企业信息</view>
+    </view>
+    <view class="companyInfo">{{goods.enterprise}}</view>
+    <view class="companyInfo">{{goods.charge}}</view>
+  
+  </view>
+
+  <view class="bottom">
+    <view class='onlinePeople'>
+      <button open-type="contact">在线客服</button>
+    </view>
+    <view class="tel" bindtap='telephoneCall'>联系卖家</view>
+  </view>
+</view>

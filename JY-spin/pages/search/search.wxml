@@ -1,0 +1,17 @@
+<!--pages/search/search.wxml-->
+<view class="search">
+  <input type='text' class="searchContent" placeholder='搜产品' bindchange="searchProduce" confirm-type="search"></input>
+  <image src="../../images/search.png" class='searchImg'></image>
+</view>  
+<view class="produceLists">
+  <!-- <view class='noProduce'>没有查询到符合条件的产品</view> -->
+  <view class="produceList" wx:for="{{lists}}" wx:for-item="i" wx:key="i.id" bindtap='produceDetail' data-id="{{i.id}}">
+    <view>
+      <view class='produceName'>{{i.title}}</view>
+      <view class='producePrice'><span class="price">{{i.marketprice}}</span> 元/吨</view>      
+    </view>
+    <view class='produceParam'>强力（CN）：{{i.strong}}</view>
+    <view class='company'>{{i.enterprise}}</view>
+  </view>
+  <view class="resultState">{{searchResult}}</view>
+</view>

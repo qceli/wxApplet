@@ -1,0 +1,140 @@
+/* pages/quotePrice/quotePrice.wxss */
+.bgImage {
+  position: absolute;
+  z-index: -999;
+  height: 100%;
+  width: 100%;
+}
+.topName {
+  padding: 0 20rpx;
+  width: calc(100% - 40rpx);
+  height: 100rpx;
+  line-height: 100rpx;
+  text-align: center;
+  display: flex;
+}
+.topName>view {
+  flex: 1;
+  font-size: 32rpx;
+  color: #666;
+}
+.multi {
+  flex: 0.2 !important;
+}
+.pickerNumInput {
+  flex: 0.6 !important;
+}
+.percentNumInput {
+  flex: 0.6 !important;
+}
+.contentList {
+  height: 55rpx;
+  padding: 0 20rpx;
+  width: calc(100% - 40rpx);
+  text-align: center;
+  display: flex;
+  margin-bottom: 20rpx;
+}
+.numInput {
+  height: 55rpx;
+  flex: 1;
+  font-size: 32rpx;
+  color: #666;
+  /* color: #ec9244; */
+  text-align: center;
+  font-weight: bold;
+}
+.numInput>input,.picker {
+  border: 1px solid #ccc;
+  height: 50rpx;
+  line-height:50rpx;
+  border-radius: 5px;
+}
+.scaleInput {
+  /* width: calc(100% - 40rpx); */
+  width:70rpx;
+  float:left;
+}
+.percent {  
+  line-height:50rpx;
+}
+.costValue {
+  border:1px solid #ccc;
+  height:50rpx;
+  border-radius:5px;
+
+}
+.costTotal {
+  float: right;
+  width: 400rpx;
+  height: 60rpx;
+  padding: 20rpx 20rpx 20rpx 0;
+}
+.costTotalName {
+  float: left;
+  left: 20rpx;
+  width: 150rpx;
+  height: 60rpx;
+  color: #666;
+}
+.costTotalValue {
+  display: inline-block;
+  width: calc(100% - 160rpx);
+  border:1px solid #ccc;
+  height:60rpx;
+  line-height:60rpx;
+  border-radius:5px;
+}
+/* .attention {
+  margin-top:150rpx;
+  color: #ccc;
+  padding: 20rpx;
+  font-size: 32rpx;
+}
+.attentionLeft {
+  float: left;
+}
+.attentionRight {
+  float: left;
+} */
+
+.bottom {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  height: 200rpx;
+  /* border-top: 1px solid #eee; */
+  box-shadow: 0 -5px 10px #eee;
+}
+.bottomTop {
+  width: calc(100% - 40rpx);
+  height: 60rpx;
+  padding: 20rpx;
+}
+.bottomName {
+  width: 150rpx;
+  height: 60rpx;
+  line-height: 50rpx;
+  float: left;
+  
+}
+.bottomPicker,.bottomTop>input {
+  margin-left: 170rpx;
+  color: #666;
+}
+.workPicker {
+  border: 1px solid #ccc;
+  height: 50rpx;
+  border-radius: 5px;
+  padding-left: 20rpx;
+  width: calc(100% - 70rpx);
+}
+.salePriceValue {
+  display:inline-block;
+  border: 1px solid #ccc;
+  height: 50rpx;
+  border-radius: 5px;
+  padding-left: 20rpx;
+  width: calc(100% - 240rpx);
+  margin-left: 20rpx;
+}

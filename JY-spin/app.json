@@ -1,0 +1,48 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/quotePrice/quotePrice",
+    "pages/produceDetail/produceDetail",
+    "pages/search/search",
+    "pages/about/about",
+    "pages/logs/logs"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#539fff",
+    "navigationBarTitleText": "江阴市允瑞纺织",
+    "navigationBarTextStyle":"white"
+  },
+  "tabBar": {
+    "color": "#7A7E83",
+    "selectedColor": "#539fff",
+    "borderStyle": "black",
+    "backgroundColor": "#fff",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "images/1_1_2.png",
+        "selectedIconPath": "images/1_1_1.png",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "images/1_1_2.png",
+        "selectedIconPath": "images/1_1_1.png",
+        "text": "所有产品"
+      },
+      {
+        "pagePath": "pages/quotePrice/quotePrice",
+        "iconPath": "images/1_2_2.png",
+        "selectedIconPath": "images/1_2_1.png",
+        "text": "报价"
+      },
+      {
+        "pagePath": "pages/about/about",
+        "iconPath": "images/1_1_2.png",
+        "selectedIconPath": "images/1_2_1.png",
+        "text": "关于我们"
+      }
+    ]
+  }
+}
