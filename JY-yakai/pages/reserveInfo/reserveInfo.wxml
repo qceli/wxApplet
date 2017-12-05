@@ -1,0 +1,19 @@
+<!--pages/reserveInfo/reserveInfo.wxml-->
+<view class="container">
+  <view class="infos">
+    <view class="info">
+      <input type='text' placeholder='姓名' bindinput="personName"></input>
+    </view>
+    <view class="info">
+      <input type='number' placeholder='手机号' bindinput="personTel"></input>
+    </view>
+    <view class="info">
+      <input type='text' placeholder='详细地址' bindinput="personAddress"></input>
+    </view>
+    <view class="info">
+      <input type='text' placeholder='感兴趣商品' bindinput="personInt"></input>
+    </view>
+  </view>
+  <view class="reserve" bindtap='reserve'>立即预订</view>
+
+</view>

@@ -1,0 +1,56 @@
+/* pages/series/series.wxss */
+page, .container {
+  height: 100%;
+  background-color: #ebebeb;
+}
+/* .produce {
+  margin: 40rpx;
+}
+.produce>view {
+  width: 100%;
+  height: 400rpx;
+  margin-bottom: 40rpx;
+}
+.prodeceImg>image {
+  width: 100%;
+  height: 400rpx;
+  border-radius: 5px;
+} */
+.integrationLists {
+  width: 100%;
+}
+.integrationList {
+  /* display: flex; */
+  /* padding: 20rpx 40rpx; */
+  /* border-top: solid 1px #ccc;
+  border-bottom: solid 1px #ccc; */
+  width: calc(50% - 40rpx);
+  float: left;
+  text-align: center;
+  margin: 20rpx;
+  background-color: #fff;
+}
+.goodImg, .goodImg>image {
+  height: 350rpx;
+  width: 100%;
+  /* margin-right: 40rpx; */
+  margin: auto;
+}
+.goodInfo {
+  /* width: calc(100% - 240rpx); */
+  color: #666;
+  font-size: 32rpx;
+}
+.goodName {
+  margin: 15rpx 0;
+}
+.goodPrice {
+  margin-bottom: 15rpx;
+}
+.integration {
+  float: left;
+}
+.integration>span {
+  color:red;
+  font-size: 40rpx;
+}

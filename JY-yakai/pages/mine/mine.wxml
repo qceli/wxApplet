@@ -1,0 +1,42 @@
+<!--pages/mine/mine.wxml-->
+<view class="container">
+  <view class="minePadding"> 
+    <view class="mine">
+      <image class='mine-bg' src="../../images/mine-bg.png" mode="widthFix"></image>
+      <view class='mine-txt'>
+        <view class='mineName'>{{realname}}</view>
+        <view class='code'>编号：{{code}}</view>
+        <view class='welcome'><span class="creditName">积分：</span>{{credit1}}</view>
+      </view>
+      
+    </view>
+  </view>
+
+  <!-- <view class='middle'>
+    <view class="credit">
+      <view class="creditTitle">积分</view>
+      <view>{{credit1}}</view>
+    </view>
+    <view class="signIn" bindtap='signIn'>
+      <view>{{signIn}}</view>
+    </view>
+  </view> -->
+
+  <view class="Lists">
+    <view bindtap='signIn'>{{signIn}}</view>
+    <!-- <view bindtap='cardInfo'>我的会员</view> -->
+    <view bindtap='integrationList'>兑换记录</view>
+    <view bindtap='integrationStore'>兑换礼物</view>
+    <!-- <view bindtap=''> -->
+      <!-- <button class='bottonView' open-type="contact">联系客服</button> -->
+    <!-- </view>   -->
+  </view> 
+
+  <view class="bottom">
+    <view bindtap='home'>首页介绍</view>
+    <view bindtap='searchStore'>店铺查询</view>
+    <view bindtap='integrationStore'>积分商城</view>
+    <view class="nowPage">我的</view>
+  </view>
+
+</view>

@@ -1,0 +1,65 @@
+/* pages/giftInfos/giftInfos.wxss */
+.content {
+  font-size: 32rpx;
+}
+.giftImg {
+  height: 320rpx;
+  width: calc(100% - 160rpx);
+  padding: 20rpx 80rpx;
+  background-color: #f5f5f5;
+}
+.giftImg>image {
+  height: 320rpx;
+   width: 100%; 
+   border-radius: 15px;
+}
+.giftPadding {
+  padding: 0 40rpx;
+  width: calc(100% - 80rpx);
+
+}
+.giftName {
+  height: 100rpx;
+  line-height: 100rpx;
+  font-size: 52rpx;
+  font-weight: bold;
+}
+.giftPrice {
+  display: flex;
+}
+.giftPrice>view {
+  flex: 1;
+  height: 80rpx;
+  line-height: 80rpx;
+}
+.giftInfo {
+  border-top: solid 1px #f5f5f5;
+  border-bottom: solid 1px #f5f5f5;
+  height: 100rpx;
+  line-height: 100rpx;
+  font-weight: bold;
+  color: #333;
+}
+.giftDetail {
+  padding: 20rpx 0;
+  text-indent: 64rpx;
+  color: #333;
+}
+.exchangeGift {
+  position: absolute;
+  bottom: 0;
+  margin: 40rpx;
+  width: calc(100% - 80rpx);
+  height: 100rpx;
+  line-height: 100rpx;
+  text-align: center;
+  border-radius: 5px;
+  border-top: solid 1px #d92225;
+  background-color: #d92225;
+  color: #fff
+
+}
+.active {
+  background-color: #ccc !important;
+  color: #fff !important;
+}

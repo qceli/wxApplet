@@ -1,0 +1,12 @@
+<!--pages/reserveState/reserveState.wxml-->
+<view class="container">
+  <view class="stateImg">
+    <image src="../../images/u223.png"></image>
+  </view>
+  <view class="stateInfo">
+    <view>预定成功！</view>
+    <view>工作人员将尽快联系您！</view>
+  </view>
+  <view class="back" bindtap='back'>返回首页</view>
+
+</view>

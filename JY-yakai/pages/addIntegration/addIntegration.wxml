@@ -1,0 +1,12 @@
+<!--pages/addIntegration/addIntegration.wxml-->
+<view class="container">
+  <view class="stateImg">
+    <image src="../../images/u223.png"></image>
+  </view>
+  <view class="stateInfo">
+    <view>积分累加成功！</view>
+    <!-- <view>工作人员将尽快联系您！</view> -->
+  </view>
+  <!-- <view class="back" bindtap='integrationStore'>进入积分商城</view> -->
+
+</view>

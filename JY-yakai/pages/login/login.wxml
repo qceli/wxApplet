@@ -1,0 +1,17 @@
+<!--pages/login/login.wxml-->
+<view class="container">
+  <view class="userinfo-avatar">
+    <image src="../../images/logo.png" background-size="cover"></image>
+  </view>
+  <view class="infos">
+    <view class="info telInfo">
+      <input type='number' placeholder='会员手机' bindinput="personTel"></input>
+    </view>
+    <!-- <view class="info">
+      <input type='text' placeholder='密码' bindinput="personPwd"></input>
+    </view> -->
+  </view>
+  <view class="login" bindtap='login'>登录</view>
+  <view class="register" bindtap='register'>注册</view>
+
+</view>

@@ -1,0 +1,18 @@
+<!--pages/register/register.wxml-->
+<view class="container">
+  <view class="infos">
+    <view class="info telInfo">
+      <input type='number' placeholder='会员手机' bindinput="personTel"></input>
+    </view>
+    <view class="info">
+      <input type='text' placeholder='姓名' bindinput="personName">姓名</input>
+    </view>
+    <picker mode="date" class='infoBirth' value="{{dateValue}}" start="1900-01-01" end="{{endtime}}" bindchange="bindDateChange">
+      <view class="picker">
+        生日   {{dateValue}}
+      </view>
+    </picker>
+  </view>
+  <view class="register" bindtap='register'>立即注册</view>
+
+</view>

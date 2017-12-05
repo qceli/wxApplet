@@ -1,0 +1,37 @@
+.container::-webkit-scrollbar {display:none}
+.produce {
+  margin: 0 40rpx;
+}
+.produce>view {
+  display: flex;
+  margin-bottom: 40rpx;
+  border: solid 1px #ccc;
+  border-radius: 20rpx;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.50);
+}
+.produceImg {
+  height: 270rpx;
+  width: calc(100% - 80rpx);
+}
+.produceImg>image {
+  height: 270rpx;
+  width: 100%;
+}
+.produceName {
+  padding: 0 20rpx;
+  width: 40rpx;
+  color: #686868;
+  font-size: 36rpx;
+  align-items: center;
+  display: -webkit-flex;
+}
+.reserve {
+  margin: 40rpx;
+  padding: 0 40rpx;
+  height: 120rpx;
+  line-height: 120rpx;
+  border: solid 1px #ccc;
+  background-color: #d92225;
+  color: #ffffff;
+  border-radius: 5px;
+}

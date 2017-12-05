@@ -1,0 +1,15 @@
+<!--pages/getCard/getCard.wxml-->
+<view class="container">
+  <view class="tip">恭喜您注册成功！获得会员卡一张。</view>
+    <view class="mine">
+      <image class='mine-bg' src="../../images/mine-bg.png" mode="widthFix"></image>
+      <view class='mine-txt'>
+        <view class='mineName'>{{result.realname}}</view>
+        <view class='code'>编号：{{result.id}}</view>
+        <view class='welcome'><span class="creditName">积分：</span>{{result.credit1}}</view>
+      </view>     
+    </view>
+
+  <view class="comeIn" bindtap='comeIn'>进入</view>
+
+</view>

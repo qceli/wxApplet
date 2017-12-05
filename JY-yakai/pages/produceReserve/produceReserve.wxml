@@ -1,0 +1,29 @@
+<!--pages/produceReserve/produceReserve.wxml-->
+<view class="container">  
+  <view class="banner">
+    <swiper class="index-swiper-block" indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+      <block wx:for="{{SwiperimgUrls}}" wx:key="{{index}}">
+        <swiper-item>
+          <image src="{{item}}" mode="scaleToFill" class="slide-image top-swiper-img" data-link="{{item.link}}" data-id="{{item.id}}"/>
+        </swiper-item>
+      </block>
+    </swiper>
+  </view>
+  <view class="infos">
+    <view class="info">
+      <span class="produceName">商品名：</span>
+      <span>{{goods.title}}</span>
+    </view>
+    <view class="info">
+      <input type='text' placeholder='姓名' bindinput="personName"></input>
+    </view>
+    <view class="info">
+      <input type='number' placeholder='手机号' bindinput="personTel"></input>
+    </view>
+    <view class="info">
+      <input type='text' placeholder='详细地址' bindinput="personAddress"></input>
+    </view>
+  </view>
+  <view class="reserve" bindtap='reserve'>立即预订</view>
+
+</view>

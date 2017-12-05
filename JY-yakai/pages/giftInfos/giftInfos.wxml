@@ -1,0 +1,18 @@
+<!--pages/giftInfos/giftInfos.wxml-->
+<view class="container">
+  <scroll-view scroll-y="auto" style="height:calc(100% - 180rpx);">  
+    <view class='giftImg'><image src="{{goods.thumb}}"></image></view>
+    <view class='giftPadding'>
+      <view class='giftName'>{{goods.title}}</view>
+      <view class='giftPrice'>
+        <view>礼品编号：{{goods.id}}</view>
+        <view>兑换积分：<span>{{goods.credit}}</span></view>
+      </view>
+      <view class='giftInfo'>礼品详情信息</view>
+      <view class='giftDetail'>{{goods.goodsdetail}}</view>
+    
+    </view>
+  </scroll-view>
+  <view class='exchangeGift {{change=="0"? "active" : ""}}' bindtap='exchangeGift'>{{goods.exchange}}</view>
+
+</view>

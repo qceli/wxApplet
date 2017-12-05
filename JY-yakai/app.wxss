@@ -1,0 +1,47 @@
+/**app.wxss**/
+page {
+  height: 100%; 
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  /* background-color: #f4f4f4; */
+  font-size: 32rpx;
+}
+.container {
+  height: 100%;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+} 
+
+.bottom {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  height: 100rpx;
+  border-top: solid 1px #ccc;
+  display: flex;
+  background-color: #ffffff;
+}
+.bottom>view {
+  text-align: center;
+  line-height: 100rpx;
+  flex: 1;
+  color: #333;
+}
+.nowPage {
+  background-color:#c52a2b;
+  color: #ffffff !important;
+}
+
+.paddingTop {
+  padding: 20rpx;
+}
+
+.noResult {
+  text-align: center;
+  font-size: 32rpx;
+  color: #ccc;
+  height: 60rpx;
+  line-height: 60rpx;
+}

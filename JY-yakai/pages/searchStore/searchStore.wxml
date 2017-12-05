@@ -1,0 +1,26 @@
+<!--pages/searchStore/searchStore.wxml-->
+<view class="container">
+  <view class="storeLists">
+    <view class='noResult' wx:if="{{stores == ''}}">附近暂无店铺！</view>
+    <block wx:if="{{stores != ''}}">
+      <view class="storeList" wx:for="{{stores}}" wx:for-item="i" wx:key="{{i.id}}" data-id="{{i.id}}">
+        <view class="storeImg"><image src="{{i.thumb}}"></image></view>
+        <view class="storeInfo">
+          <view class='storeName'>{{i.storename}}</view>
+          <view>距您：<span class="storeDistance">{{i.distance}}km</span></view>
+          <view>地址：{{i.address}}</view>
+        </view>
+      </view>
+    
+    </block>
+
+  </view>
+
+  <view class="bottom">
+    <view bindtap='home'>首页介绍</view>
+    <view class="nowPage">店铺查询</view>
+    <view bindtap='integrationStore'>积分商城</view>
+    <view bindtap='mine'>我的</view>
+  </view>
+
+</view>

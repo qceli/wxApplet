@@ -1,0 +1,82 @@
+/* pages/integrationStore/integrationStore.wxss */
+page, .container {
+  height: 100%;
+  background-color: #ebebeb;
+}
+.search, .sort {
+   padding: 20rpx 80rpx; 
+   background-color: #fff;
+}
+.searchContent {
+  padding-left: 20rpx;
+  height: 80rpx;
+  width: calc(100% - 20rpx);
+  border: 0;
+  border-bottom: solid 1px #ccc;
+}
+
+.integrationArea {
+  width: 100%;
+  height: 60rpx;
+  border-bottom: solid 1px #ccc;
+  margin: 24rpx 40rpx 0 0;
+}
+.areaPicker {
+  width: 250rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+}
+.radio-group {
+  margin: 40rpx 0;
+  display: flex;
+}
+.radio {
+  flex: 1;
+}
+.radio>radio {
+  transform:scale(.8);
+}
+.arrowRight {
+  width: 30rpx;
+  height: 30rpx;
+  float: right;
+  margin-top: -40rpx;
+}
+.integrationLists {
+  width: 100%;
+}
+.integrationList {
+  /* display: flex; */
+  /* padding: 20rpx 40rpx; */
+  /* border-top: solid 1px #ccc;
+  border-bottom: solid 1px #ccc; */
+  width: calc(50% - 40rpx);
+  float: left;
+  text-align: center;
+  margin: 20rpx;
+  background-color: #fff;
+}
+.goodImg, .goodImg>image {
+  height: 350rpx;
+  width: 100%;
+  /* margin-right: 40rpx; */
+  margin: auto;
+}
+.goodInfo {
+  /* width: calc(100% - 240rpx); */
+  color: #666;
+  font-size: 32rpx;
+}
+.goodName {
+  margin: 15rpx 0;
+}
+.goodPrice {
+  margin-bottom: 15rpx;
+}
+.integration {
+  float: left;
+}
+.integration>span {
+  color:red;
+  font-size: 40rpx;
+}

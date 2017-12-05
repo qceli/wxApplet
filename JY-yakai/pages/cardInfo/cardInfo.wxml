@@ -1,0 +1,16 @@
+<!--pages/cardInfo/cardInfo.wxml-->
+<view class="container">
+  <view class="tip">我的会员卡及积分：</view>
+  <view class="cards">
+
+    <image class='cards-bg' src="../../images/mine-bg.png"></image>
+    <view class='cards-txt'>
+      <view>
+        <span class="company">雅凯 </span>
+        <span>积分会员卡</span>
+      </view>
+      <view class='integration'>我的积分：{{credit1}}</view>
+      <view class='cardId'>ID：{{mobile}}</view></view>
+  </view>
+
+</view>

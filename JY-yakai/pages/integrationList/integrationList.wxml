@@ -1,0 +1,24 @@
+<!--pages/integrationList/integrationList.wxml-->
+<view class="container">
+  <view class="integrationLists">
+    <view class='noResult' wx:if="{{goodsList == ''}}">没有兑换的礼品！</view>
+    <view class="integrationList" wx:for="{{goodsList}}" wx:for-item="i" wx:key="{{i.id}}" data-id="{{i.id}}">
+      <view class="listTop">
+        <view class="goodImg"><image src="{{i.thumb}}"></image></view>
+        <view class="goodInfo">
+          <view class='goodName'>{{i.title}}</view>
+          <view>
+            <view class='integration'><span>{{i.credit}}</span> 积分</view>
+            <view class='goodNum'>X1</view>
+          </view>
+        </view>
+      </view>
+      <view class='listBottom'>
+        <view class='orderNum'>订单号：<span class="logno">{{i.logno}}</span></view>
+        <view class='orderState'>{{i.status}}</view>
+      </view>
+    </view>
+
+  </view>
+
+</view>

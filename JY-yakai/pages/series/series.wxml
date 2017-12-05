@@ -1,0 +1,19 @@
+<!--pages/series/series.wxml-->
+<view class="container">
+  <!-- <view class="produce">
+    <view class="prodeceImg" wx:for="{{thumb}}" wx:for-item="i" wx:key="{{i}}"><image src="http://jyyk.wshoto.com/attachment/{{i}}"></image></view>
+    <!-- <view class="prodeceImg"><image src="../../images/u118.jpg"></image></view>
+  </view> -->
+  <view class="integrationLists">
+      <view class='noResult' wx:if="{{result == ''}}">没有符合条件的商品！</view>
+      <view class="integrationList" wx:for="{{result}}" wx:for-item="i" wx:key="{{i.id}}" data-id="{{i.id}}" bindtap='produceInfos'>
+        <view class="goodImg"><image src="http://jyyk.wshoto.com/attachment/{{i.thumb}}"></image></view>
+        <view class="goodInfo">
+          <view class='goodName'>{{i.title}}</view>
+          <view class='goodPrice'>价格： {{i.money}} 元</view>
+          <!-- <view class='integration'><span>{{i.credit}}</span> 积分</view> -->
+        </view>
+      </view>
+    </view>
+</view>
+

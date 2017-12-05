@@ -1,0 +1,80 @@
+/* pages/mine/mine.wxss */
+.minePadding {
+  padding: 40rpx 40rpx;
+}
+.mine {
+  color: #666;
+  width: 100%;
+}
+.mine-bg{
+  width: 100%;
+}
+.mine-txt{
+   position: absolute; 
+   margin-left: 40rpx;
+   margin-top: -240rpx;
+}
+.mineName {
+  font-weight: bold;
+  font-size: 32rpx;
+}
+.code {
+  font-size: 24rpx;
+  margin-bottom: 10rpx;
+}
+.welcome {
+  font-size: 24rpx;
+}
+
+.middle {
+  display: flex;
+  margin: 20rpx 40rpx;
+}
+.middle>view {
+  flex: 1;
+  text-align: center;
+  height: 100rpx;
+  color: #666;
+}
+.credit>view {
+  height: 50rpx;
+  line-height: 50rpx;
+}
+.creditTitle {
+  font-size: 36rpx;
+  color: #333;
+}
+.signIn {
+  height: 100rpx;
+  line-height: 100rpx;
+  text-align: center;
+  background-color: #eee;
+}
+
+.Lists {
+  margin: 40rpx;
+
+}
+.Lists>view {
+  /* padding-left: 40rpx; */
+  height: 100rpx;
+  line-height: 100rpx;
+  border: solid 1px #ccc;
+  margin: 0 40rpx 40rpx 40rpx;
+  border-radius: 10rpx;
+  text-align: center;
+  font-family: PingFangSC-Light;
+/* font-size: 34px; */
+  color: #686868;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.50);
+}
+/* .bottonView {
+  background-color: #fff;
+  font-size: 32rpx;
+  text-align: left;
+  height: 120rpx;
+  line-height: 120rpx;
+  border: solid 1px #ccc;
+  margin: 0 40rpx;
+  border-radius: 10rpx;
+} */

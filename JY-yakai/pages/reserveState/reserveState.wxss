@@ -1,0 +1,24 @@
+/* pages/reserveState/reserveState.wxss */
+.stateImg {
+  margin: 80rpx 0;
+  height: 200rpx; 
+  width: 100%;
+  text-align:center;
+
+}
+.stateImg>image {
+  height: 200rpx;
+  width: 200rpx; 
+}
+.stateInfo>view {
+  height: 100rpx;
+  line-height: 100rpx;
+  text-align: center;
+  font-size: 48rpx;
+  color: #666;
+}
+.back {
+  margin-top: 80rpx;
+  text-align: center;
+  text-decoration:underline;
+}

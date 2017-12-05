@@ -1,0 +1,37 @@
+/* pages/searchStore/searchStore.wxss */
+.container {
+  background-color: #f0f0f0;
+}
+.storeLists {
+  width: 100%;
+}
+.storeList {
+  display: flex;
+  padding: 20rpx 0;
+  margin-bottom: 10rpx;
+  /* border-bottom: solid 1px #333; */
+  background-color: #fff;
+}
+.storeImg {
+  height: 160rpx;
+  width: 160rpx;
+  margin: 0 40rpx;
+}
+.storeImg>image {
+  height: 160rpx;
+  width: 160rpx;
+}
+.storeInfo {
+  color: #666;
+  font-size: 32rpx;
+}
+.storeInfo>view {
+  line-height: 55rpx;
+}
+.storeName {
+  font-size: 36rpx;
+  color: #666;
+}
+.storeDistance {
+  color:coral;
+}

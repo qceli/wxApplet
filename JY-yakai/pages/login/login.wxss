@@ -1,0 +1,61 @@
+/* pages/login/login.wxss */
+.userinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.userinfo-avatar {
+  margin:auto;
+  padding: 40rpx 0 20rpx 0;
+  width: 300rpx;
+  height: 300rpx;
+  border-radius: 50%;
+}
+.userinfo-avatar>image {
+  width: 300rpx;
+  height: 300rpx;
+  border-radius: 50%;
+}
+.infos {
+  padding: 40rpx;
+}
+.info {
+  height: 80rpx;
+  color: #666;
+  font-size:36rpx;
+  border-bottom: solid 1px #ccc;
+}
+.info>input {
+  font-size: 32rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  padding-left: 20rpx;
+}
+.telInfo{
+  margin-bottom: 40rpx;
+}
+.login, .register {
+  margin: 40rpx;
+  height: 100rpx;
+  line-height: 100rpx;
+  font-size: 36rpx;
+  text-align: center;
+  border-radius: 5px;
+}
+.login {
+  background-color: #c52a2b;
+  color: #fff;
+}
+ .register {
+  color: #c52a2b; 
+  border: solid 1px #c52a2b;
+}
+
+
+.userinfo-nickname {
+  color: #aaa;
+}
+
+/* .usermotto {
+  margin-top: 200px;
+} */

@@ -1,0 +1,37 @@
+/* pages/register/register.wxss */
+
+.infos {
+  padding: 40rpx;
+}
+.info {
+  height: 80rpx;
+  color: #666;
+  font-size:36rpx;
+  border-bottom: solid 1px #ccc;
+  margin-top: 60rpx;
+}
+.info>input {
+  font-size: 32rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  padding-left: 20rpx;
+}
+.infoBirth {
+  font-size: 32rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  padding-left: 20rpx;
+  border-bottom: solid 1px #ccc;
+  margin-top: 60rpx;
+  color: #666;
+}
+.register {
+  margin: 160rpx 40rpx 40rpx 40rpx;
+  height: 100rpx;
+  line-height: 100rpx;
+  font-size: 36rpx;
+  text-align: center;
+  border-radius: 5px;
+  background-color: #c52a2b;
+  color: #fff;
+}

@@ -1,0 +1,51 @@
+<!--pages/integrationStore/integrationStore.wxml-->
+<view class="container">
+  <scroll-view scroll-y="auto" style="height:calc(100% - 100rpx);">  
+    <view class="search">
+      <input type="text" class="searchContent" placeholder='请输入查找的礼品' bindinput="searchField" />
+    </view>
+    <view class="sort">
+      <view>
+        <picker class='integrationArea' bindchange="areaPickerChange" value="{{n}}" range="{{integrationArea}}">
+          <view class="areaPicker">{{integrationArea[n]}}</view>
+          <image class="arrowRight" src="../../images/arrowRight.png"></image> 
+        </picker>
+      </view>
+      <view class="sortNav" bindtap="tabFun">
+        <radio-group class="radio-group" bindchange="radioChange">
+          <label class="radio" wx:for="{{items}}">
+              <radio value="{{item.name}}" checked="{{item.checked}}"/>{{item.value}}
+          </label>
+        </radio-group>
+      </view>
+    </view>
+
+    <view class="integrationLists">
+      <view class='noResult' wx:if="{{goods == ''}}">没有符合条件的礼品！</view>
+      <view class="integrationList" wx:for="{{goods}}" wx:for-item="i" wx:key="{{i.id}}" data-id="{{i.id}}" bindtap='giftInfos'>
+        <view class="goodImg"><image src="{{i.thumb}}"></image></view>
+        <view class="goodInfo">
+          <view class='goodName'>{{i.title}}</view>
+          <view class='goodPrice'>积分： {{i.credit}}</view>
+          <!-- <view class='integration'><span>{{i.credit}}</span> 积分</view> -->
+        </view>
+      </view>
+      <!-- <view class="integrationList" bindtap='giftInfos'>
+        <view class="goodImg"><image src="../../images/u274.jpg"></image></view>
+        <view class="goodInfo">
+          <view class='goodName'>雅凯江南大学店</view>
+          <view class='integration'><span>306</span> 积分</view>
+        </view>
+      </view> -->
+    </view>
+  </scroll-view>
+
+
+  <view class="bottom">
+    <view bindtap='home'>首页介绍</view>
+    <view bindtap='searchStore'>店铺查询</view>
+    <view class="nowPage">积分商城</view>
+    <view bindtap='mine'>我的</view>
+  </view>
+
+</view>

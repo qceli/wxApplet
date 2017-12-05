@@ -1,0 +1,11 @@
+<view class="container">
+  <view class='paddingTop'>
+    <view class="produce">
+      <view wx:for="{{result}}" wx:for-item="i" wx:key="{{i.id}}" bindtap='Series' data-id="{{i.id}}">
+        <view class='produceImg'><image src="http://jyyk.wshoto.com/attachment/{{i.thumb}}"></image></view>
+        <view class='produceName'>{{i.title}}</view>
+      </view>
+    </view>
+  </view>
+
+</view>

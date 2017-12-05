@@ -1,0 +1,68 @@
+/* pages/integrationList/integrationList.wxss */
+.integrationLists {
+  padding: 0 20rpx;
+}
+.integrationList {
+  padding: 20rpx 0 0 0;
+  border-bottom: solid 1px #333;
+}
+.listTop {
+  display: flex;
+  border-top: solid 1px #ccc;
+  border-bottom: solid 1px #ccc;
+  padding: 20rpx;
+}
+.goodImg {
+  height: 150rpx;
+  width: 150rpx;
+  margin-right: 40rpx;
+}
+.goodImg>image {
+  height: 150rpx;
+  width: 150rpx;
+  border-radius: 5px;
+}
+.goodInfo {
+  width: calc(100% - 240rpx);
+  color: #666;
+  font-size: 32rpx;
+}
+.goodName {
+  font-size: 40rpx;
+  color: #333;
+  margin-bottom: 20rpx;
+}
+.integration {
+  float: left;
+}
+.integration>span {
+  color:red;
+  font-size: 40rpx;
+}
+.goodNum {
+  float: right;
+}
+.listBottom {
+  height: 80rpx;
+  padding: 0 20rpx;
+  font-size: 32rpx;
+}
+.orderNum {
+  float: left;
+  line-height: 80rpx;
+  color: #333;
+}
+.logno {
+  color: #666;
+}
+.orderState {
+  margin-top: 9rpx;
+  float: right;
+  width: 150rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  text-align: center;
+  border: solid 1px #d92225;
+  border-radius: 60rpx;
+  color: #d92225;
+}

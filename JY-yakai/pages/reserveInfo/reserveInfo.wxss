@@ -1,0 +1,29 @@
+/* pages/reserveInfo/reserveInfo.wxss */
+.infos {
+  margin-top: 80rpx;
+  padding: 40rpx;
+}
+.info {
+  height: 80rpx;
+  color: #666;
+  font-size:36rpx;
+  border-bottom: solid 2px #ffcc00;
+  margin-bottom: 40rpx;
+}
+.info>input {
+  font-size: 36rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  padding-left: 20rpx;
+}
+
+.reserve {
+  margin: 40rpx;
+  height: 120rpx;
+  line-height: 120rpx;
+  text-align: center;
+  background-color: #ffcc00;
+  color: #ffffff;
+  border-radius: 5px;
+  font-size: 48rpx;
+}

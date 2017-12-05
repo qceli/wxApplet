@@ -1,0 +1,39 @@
+/* pages/getCard/getCard.wxss */
+.tip {
+  font-size: 32rpx;
+  text-align: center;
+}
+.mine {
+  color: #666;
+  width: calc(100% - 80rpx);
+  margin: 80rpx 40rpx 40rpx 40rpx;
+}
+.mine-bg{
+  width: 100%;
+}
+.mine-txt{
+   position: absolute; 
+   margin-left: 40rpx;
+   margin-top: -240rpx;
+}
+.mineName {
+  font-weight: bold;
+  font-size: 32rpx;
+}
+.code {
+  font-size: 24rpx;
+  margin-bottom: 10rpx;
+}
+.welcome {
+  font-size: 24rpx;
+}
+.comeIn {
+  margin: 160rpx 40rpx 40rpx 40rpx;
+  height: 100rpx;
+  line-height: 100rpx;
+  font-size: 48rpx;
+  text-align: center;
+  border-radius: 5px;
+  background-color: #c52a2b;
+  color: #fff;
+}

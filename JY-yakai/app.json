@@ -1,0 +1,31 @@
+{
+  "pages":[
+    "pages/strap/strap",
+    "pages/index/index",
+    "pages/addIntegration/addIntegration",
+    "pages/login/login",
+    "pages/wxlogin/wxlogin",
+    "pages/register/register",
+    "pages/getCard/getCard",
+    "pages/searchStore/searchStore",
+    "pages/integrationStore/integrationStore",
+    "pages/mine/mine",
+    "pages/series/series",
+    "pages/reserve/reserve",
+    "pages/reserveInfo/reserveInfo",
+    "pages/reserveState/reserveState",
+    "pages/cardInfo/cardInfo",
+    "pages/integrationList/integrationList",
+    "pages/giftInfos/giftInfos",
+    "pages/produceList/produceList",
+    "pages/produceInfo/produceInfo",
+    "pages/produceReserve/produceReserve",
+    "pages/logs/logs"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "懒马LAMMOU",
+    "navigationBarTextStyle":"black"
+  }
+}
