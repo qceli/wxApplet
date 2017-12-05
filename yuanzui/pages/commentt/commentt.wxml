@@ -1,0 +1,19 @@
+<!--comment.wxml-->
+<view class="container">
+  <view class="title">言论<text bindtap="submit">发布</text></view>
+  <view class="title-con">
+    <input type="text" placeholder="请输入标题" id="title" bindinput="valueChange"/>
+  </view>
+  <view>
+    <textarea name="" id="textarea" placeholder="分享你想说的..." placeholder-class="txtarea" bindinput="valueChange1"></textarea>
+  </view>
+  <view wx:for='{{src}}' class='imgContainer' wx:key='index'>
+    <image src='{{src[index]}}'></image>
+  </view>
+</view>
+<view class="line"></view>
+<view class="bottom_container">
+  <view class="rt" bindtap='choseImg'>
+    <image src="../../images/image.png"></image>
+  </view>
+</view>

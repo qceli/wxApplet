@@ -1,0 +1,41 @@
+/* pages/changePlace/changePlace.wxss */
+.placeList {
+  display: flex;
+  font-size: 36rpx;
+  height: 120rpx;
+  margin: 40rpx 0 20rpx 0;
+}
+.choose {
+  width: 60rpx;
+  margin: 40rpx 20rpx 0 0; 
+
+}
+radio {
+  height: 60rpx;
+  width: 60rpx;
+}
+.middlePlace {
+  width: calc(100% - 210rpx);
+}
+.middlePlaceTop {
+  height: 80rpx;
+  line-height: 80rpx;
+}
+.personName {
+  margin-right: 20rpx;
+}
+.place { 
+  font-size:30rpx;
+}
+.write {
+  width: 100rpx;
+  height: 120rpx;
+  line-height: 120rpx;
+  margin-left: 10rpx; 
+  text-align: center;
+  font-size:30rpx;
+}
+
+.blackBottom {
+  text-align: center;
+}

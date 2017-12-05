@@ -1,0 +1,142 @@
+<scroll-view scroll-y="true" style="height:calc(100% - 100rpx);">
+<view class="container">
+    <view class="title">社区</view>
+    <view class="top" bindtap="toComment">
+        <view class="txt">文字</view>
+        <view class="line"></view>
+        <view class="txt">图片</view>
+    </view>
+    <view class="content">
+        <view class="content_top content_child">
+            <view class="_title">帖子<text bindtap="toMore">更多</text></view>
+            <view class="flex">
+                <view style="height:300rpx;" class="img1 bg" bindtap="toDetail">
+                    <image src="../../images/right1.jpg"></image>
+                    <view class="txt_content">
+                        <view class="txt_title">{{artical.title}}</view>
+                        <view class="txt_text">{{artical.content}}</view>
+                    </view>
+                </view>
+                <view>
+                    <view class="flex_top bg" bindtap="toDetail">
+                        <image src="../../images/right2.jpg"></image>
+                        <view class="txt_content">
+                            <view class="txt_title">{{artical.title}}</view>
+                            <view class="txt_text">{{artical.content}}</view>
+                        </view>
+                    </view>
+                    <view class="flex flex_bot">
+                        <view class="bg" bindtap="toDetail">
+                            <image src="../../images/right1.jpg"></image>
+                            <view class="txt_content">
+                                <view class="txt_title">{{artical.title}}</view>
+                                <view class="txt_text">{{artical.content}}</view>
+                            </view>
+                        </view>
+                        <view class="bg" bindtap="toDetail">
+                            <image src="../../images/right2.jpg"></image>
+                            <view class="txt_content">
+                                <view class="txt_title">{{artical.title}}</view>
+                                <view class="txt_text">{{artical.content}}</view>
+                            </view>
+                        </view>
+                    </view>
+                </view>
+            </view>
+            <view class="flex flex_mid" style="margin-top:20rpx;">
+                <view class="flex column">
+                    <view class="flex_top bg" bindtap="toDetail">
+                        <image  src="../../images/right1.jpg"></image>
+                        <view class="txt_content">
+                            <view class="txt_title">{{artical.title}}</view>
+                            <view class="txt_text">{{artical.content}}</view>
+                        </view>
+                    </view>
+                    <view class="bg" bindtap="toDetail">
+                        <image  src="../../images/right2.jpg"></image>
+                        <view class="txt_content">
+                            <view class="txt_title">{{artical.title}}</view>
+                            <view class="txt_text">{{artical.content}}</view>
+                        </view>
+                    </view>
+                </view>
+                <view class="flex_rt bg" bindtap="toDetail">
+                    <image src="../../images/changtu.jpg"></image>
+                    <view class="txt_content">
+                        <view class="txt_title">{{artical.title}}</view>
+                        <view class="txt_text">{{artical.content}}</view>
+                    </view>
+                </view>
+            </view>
+        </view>
+        <view class="contetn_mid content_child">
+            <view class="_title">问答<text bindtap="toquAns">更多</text></view>
+            <view class="flex">
+                <view style="height:300rpx;" class="img1 bg" bindtap="toquesList">
+                    <!--<image src="../../images/right2.jpg"></image>-->
+                    <view class="txt_content">
+                        <view class="txt_title">{{quesList.title}}</view>
+                        <view class="txt_text">{{quesList.content}}</view>
+                    </view>
+                </view>
+                <view>
+                    <view class="flex_top bg" bindtap="toquesList">
+                        <!--<image src="../../images/right1.jpg"></image>-->
+                        <view class="txt_content">
+                            <!--<view class="txt_title">{{artical.title}}</view>-->
+                            <!--<view class="txt_text">{{artical.content}}</view>-->
+                        </view>
+                    </view>
+                    <view class="flex flex_bot">
+                        <view class="bg" bindtap="toquesList">
+                            <!--<image src="../../images/right2.jpg"></image>-->
+                            <!--<view class="txt_content">-->
+                                <!--<view class="txt_title">{{artical.title}}</view>-->
+                                <!--<view class="txt_text">{{artical.content}}</view>-->
+                            <!--</view>-->
+                        </view>
+                        <view class="bg" bindtap="toquesList">
+                            <!--<image  src="../../images/right1.jpg"></image>-->
+                            <!--<view class="txt_content">-->
+                                <!--<view class="txt_title">{{artical.title}}</view>-->
+                                <!--<view class="txt_text">{{artical.content}}</view>-->
+                            <!--</view>-->
+                        </view>
+                    </view>
+                </view>
+            </view>
+        </view>
+        <view class="content_bot content_child">
+            <view class="_title">社区精品</view>
+            <view class="commus" wx:for="{{goodList}}" wx:key="{{}}">
+                <view bindtap="toDetail" data-id="{{item.id}}">
+                    <image src="../../images/right1.jpg"></image>
+                    <view class="txt_content">
+                        <view class="txt_title">{{item.title}}</view>
+                        <view class="txt_text">{{item.content}}</view>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>
+</scroll-view>
+<!--底部导航 start -->
+<view class="tabbar">
+    <view class="tabbar-item" bindtap="selected">
+      <view class="tb-text">首页</view>
+    </view> 
+    <view class="tabbar-item" bindtap="selected1"> 
+      <view class="tb-text">课程</view>
+    </view> 
+    <view class="tabbar-item"> 
+      <view class="tb-text selected">社区</view>
+    </view> 
+    <view class="tabbar-item" bindtap="selected3"> 
+      <view class="tb-text">商城</view>
+    </view> 
+    <view class="tabbar-item" bindtap="selected4"> 
+      <view class="tb-text">我的</view>
+    </view> 
+</view>
+<!-- 底部导航 end-->
