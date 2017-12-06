@@ -111,6 +111,11 @@ Page({
     wx.redirectTo({
       url: '../integrationStore/integrationStore',
     })
+  },
+  changeInfos: function () {
+    wx.navigateTo({
+      url: '../changeInfos/changeInfos',
+    })
   }
 
 })

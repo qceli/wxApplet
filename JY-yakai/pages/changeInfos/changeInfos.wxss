@@ -1,4 +1,4 @@
-/* pages/register/register.wxss */
+/* pages/changeInfos/changeInfos.wxss */
 .infos {
   padding: 40rpx;
 }

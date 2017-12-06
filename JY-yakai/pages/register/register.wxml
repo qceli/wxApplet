@@ -12,6 +12,9 @@
         生日   {{dateValue}}
       </view>
     </picker>
+    <view class="info">
+      <input type='text' placeholder='地址' bindinput="personAddress">地址</input>
+    </view>
   </view>
   <view class="register" bindtap='register'>立即注册</view>
 

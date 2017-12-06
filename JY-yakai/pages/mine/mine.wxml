@@ -27,6 +27,7 @@
     <!-- <view bindtap='cardInfo'>我的会员</view> -->
     <view bindtap='integrationList'>兑换记录</view>
     <view bindtap='integrationStore'>兑换礼物</view>
+    <view bindtap='changeInfos'>会员信息修改</view>
     <!-- <view bindtap=''> -->
       <!-- <button class='bottonView' open-type="contact">联系客服</button> -->
     <!-- </view>   -->

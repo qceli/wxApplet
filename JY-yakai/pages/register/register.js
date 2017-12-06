@@ -8,14 +8,6 @@ Page({
   },
   onLoad: function (options) {
     var that = this
-    // wx.login({
-    //   success: res => {
-    //     // 发送 res.code 到后台换取 openId, sessionKey, unionId
-    //     console.log(JSON.stringify(res))
-    //     var code = res.code;
-    //     wx.setStorageSync('code', code);
-    //   }
-    // })
     that.setData({
       endtime: util.formatTime1(new Date(new Date())),
     })
@@ -64,6 +56,11 @@ Page({
       dateValue: e.detail.value
     })
   },
+  personAddress: function (e) {
+    this.setData({
+      personAddress: e.detail.value
+    })
+  },
   register: function (e) {
     var that = this
     var apiToken = wx.getStorageSync('apiToken');
@@ -86,7 +83,8 @@ Page({
               'sessionkey': res.data.sessionkey,
               'mobile': mobile,
               'realname': that.data.personName,
-              'birth': that.data.dateValue
+              'birth': that.data.dateValue,
+              'address': that.data.personAddress
             }
             esTools.fn.setEmpty().setHeader({
               'content-type': 'application/x-www-form-urlencoded'

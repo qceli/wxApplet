@@ -1,0 +1,21 @@
+<!--pages/changeInfos/changeInfos.wxml-->
+<view class="container">
+  <view class="infos">
+    <view class="info telInfo">
+      <input type='number' placeholder='会员手机' bindinput="personTel" value="{{memberInfo.mobile}}">手机号</input>
+    </view>
+    <view class="info">
+      <input type='text' placeholder='姓名' bindinput="personName" value="{{memberInfo.realname}}">姓名</input>
+    </view>
+    <picker mode="date" class='infoBirth' value="{{dateValue}}" start="1900-01-01" end="{{endtime}}" bindchange="bindDateChange">
+      <view class="picker">
+        生日   {{dateValue}}
+      </view>
+    </picker>
+    <view class="info">
+      <input type='text' placeholder='地址' bindinput="personAddress" value="{{memberInfo.address}}">地址</input>
+    </view>
+  </view>
+  <view class="register" bindtap='submit'>提交</view>
+
+</view>
