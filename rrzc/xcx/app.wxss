@@ -1,0 +1,7 @@
+/**app.wxss**/
+.swiper-block{
+    width: 100%;
+}
+.page{
+    width: 750rpx;
+}

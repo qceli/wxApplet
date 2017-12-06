@@ -1,0 +1,90 @@
+<!--center.wxml-->
+<view class="center-body">
+  <view class="header-box">
+    <view class="vip-info-bg" id="info-box">
+      <view class="user-header-pic margin-sm">
+        <image  src="{{avatarUrl}}"  />
+      </view>
+      <view class="firstLine">
+        <view class="nickname">{{nickName}}</view>
+        <!-- <view class="lostmoney" bindtap="setupTap">余额 >></view> -->
+      </view>
+      <view class="useredit">押金：{{money}} 元</view>
+    </view>
+  </view>
+  <view class="text-center">
+    <view class="tiancong"></view>
+    <view class="order" bindtap="order">
+      <view class="left-item">
+        <image class="order-icon" src="../images/center-image/order.png"  />
+        <span class="myorder">我的订单</span>
+      </view>
+      <view class="right-item">
+        <span class="myorder-all">全部订单</span>
+        <span class="arrow"></span>
+      </view>
+    </view>
+    <view class="tiancong"></view>
+    <view class="order" bindtap="go">
+      <view class="left-item">
+        <image class="order-icon" src="../images/center-image/wallet.png"  />
+        <span class="myorder">我的钱包</span>
+      </view>
+      <view class="right-item">
+        <span class="myorder-all" >去充值</span>
+        <span class="arrow"></span>
+      </view>
+    </view>
+  </view>
+  <view class="tiancong"></view>
+  <view class="order" bindtap="pay">
+    <view class="left-item">
+      <image class="order-icon" src="../images/center-image/share.png"  />
+      <span class="myorder">在线支付</span>
+    </view>
+    <view class="right-item">
+    <span class="myorder-all" >去支付</span>
+      <span class="arrow"></span>
+    </view>
+  </view>
+  <view class="tiancong"></view>
+  <view class="order" bindtap="owner1">
+    <view class="left-item">
+      <image class="order-icon" src="../images/center-image/bike.png"  />
+      <span class="myorder">我的车辆</span>
+    </view>
+    <view class="right-item">
+    <span class="myorder-all" >去查看</span>
+      <span class="arrow"></span>
+    </view>
+  </view>
+  <!-- <view class="tiancong"></view>
+   <view class="order" bindtap="apliy">
+    <view class="left-item">
+      <image class="order-icon" src="../images/center-image/funding.png"  />
+      <span class="myorder">退还押金</span>
+    </view>
+    <view class="right-item">
+    <span class="myorder-all" >去申请</span>
+      <span class="arrow"></span>
+    </view>
+  </view> -->
+  <!--<view class="order" bindtap="weichouTap">
+    <view class="left-item">
+      <image class="order-icon" src="../images/center-image/funding.png"  />
+      <span class="myorder">我的微筹</span>
+    </view>
+    <view class="right-item">
+      <span class="arrow"></span>
+    </view>
+  </view>
+  <view class="order" bindtap="helpTap">
+    <view class="left-item">
+      <image class="order-icon" src="../images/center-image/help.png"  />
+      <span class="myorder">帮助中心</span>
+    </view>
+    <view class="right-item">
+      <span class="arrow"></span>
+    </view>
+  </view>-->
+</view>

@@ -1,0 +1,38 @@
+<!--pages/remind/remind.wxml-->
+<view class="content">
+  <scroll-view scroll-y="true" class="content-top">
+    <view class="top">
+      <view class='topLeft'>
+        <view class="first-top">{{amount}}</view>
+        <view class="second-top">佣金（元）</view>
+      </view>
+      <view class='topRight' bindtap='apliy'>
+        <view class="first-topR">押金：{{money}}</view>
+        <view class="second-topR">{{moneyState}}</view>
+      </view>
+    </view>
+    <view class="details">
+      <view class="details-top">佣金明细</view>
+      <view class="detail" wx:for="{{lists}}" wx:for-item="i" wx:key="i.id">
+        <view class="detail-left">
+          <view class="detail-name">{{i.desc}}</view>
+          <view class="detail-time">{{i.created_at}}</view>
+        </view>
+        <view class="detail-right" wx:if="{{i.type=='入账'}}">+{{i.amount}}元</view>
+        <view class="detail-right" wx:if="{{i.type=='出账'}}">-{{i.amount}}元</view>
+      </view>
+      <!-- <view class="detail">
+        <view class="detail-left">
+          <view class="detail-name">出租获利</view>
+          <view class="detail-time">2017-08-23</view>
+        </view>
+        <view class="detail-right">-1.0元</view>
+      </view> -->
+      <view class="nodatas" wx:if="{{len < 10}}">暂无更多</view> 
+      <view class="load-more" wx:if="{{len == 10}}" bindtap="loadMore">点击加载更多</view>
+    </view>
+  </scroll-view>
+  <view class="bottom">
+    <view bindtap="getMoney">申请提现</view>
+  </view>
+</view>

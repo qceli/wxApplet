@@ -1,0 +1,64 @@
+/* pages/mineapply/mineapply.wxss */
+page {
+  height: 100%;
+}
+.content {
+  height: 100%;
+  background-color: #eee;
+}
+.lists {
+  padding-bottom: 1px;
+  height: calc(100% - 150rpx);
+}
+.list {
+  padding: 40rpx 20rpx;
+  background-color: #fff;
+  margin-bottom: 20rpx;
+  display:flex;
+  font-size: 30rpx;
+  color: #666;
+}
+.listImg {
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+.listImg>image {
+  width: 100rpx;
+  height: 100rpx;
+}
+.list-middle {
+  padding-left: 20rpx;
+  height: 50rpx;
+  line-height: 50rpx;
+}
+.list-last {
+  padding-left: 20rpx;
+  height: 50rpx;
+  line-height: 50rpx;  
+  /* width:400rpx; */
+}
+.nodatas,.load-more {
+  margin: 20rpx 0 20rpx 0;
+  text-align: center;
+  color: #ccc;
+  font-size: 30rpx;
+}
+.bottom {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background-color: #fff;
+}
+.apply {  
+  width: 250rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  text-align: center;
+  margin: 34rpx auto;
+  border-radius: 5px;
+  border: solid 1px #ccc;
+  color: #fff;
+  background-color: #f98b2a;
+}

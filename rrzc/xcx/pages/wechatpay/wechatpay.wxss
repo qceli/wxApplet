@@ -1,0 +1,38 @@
+/* pages/wechatpay/wechatpay.wxss */
+.list{
+  width: 100%;
+  border-bottom: 2px solid #f98b2a;
+}
+.list .time {
+  line-height: 30px;
+  padding: 10px;
+}
+.list .time image {
+  width: 30px;
+  height: 30px;
+}
+.num {
+  margin-left: 28px;
+  padding-left: 10px;
+
+}
+.list .detail {
+  line-height: 20px;
+  padding: 10px;
+   color: #e6e6e6;
+   font-size: 14px;
+}
+.list .detail text {
+  line-height: 20px;
+}
+.list .detail image{
+  width: 20px;
+  height: 20px;
+ 
+}
+.btn {
+    width: 95%;
+    margin-top: 30px;
+    background: #f98b2a;
+    color: #fff;
+}

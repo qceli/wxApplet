@@ -1,0 +1,27 @@
+<!--pages/bikeinfos/bikeinfos.wxml-->
+<view class="content">
+  <scroll-view scroll-y="true" class="lists">
+    
+    <view class="infos">
+      <view>网 点：{{list.store}}</view>
+      <view>电 话：{{list.store}}</view>
+      <view>品 牌：{{list.brand}}</view>
+      <view>购买日期：{{list.buytime}}</view>
+      <view>申请日期：{{list.created_at}}</view>
+
+    </view>
+    <view class="reasons">
+      <view class="reason">
+        <view>拒绝原因：</view>
+        <textarea>{{list.reject_reason}}</textarea>
+      </view>
+      <view class="remark">
+        <view>备 注：</view>
+        <textarea>{{list.remark}}</textarea>
+      </view>
+    </view>
+  </scroll-view>
+  <view class="bottom">
+    <view class="apply" bindtap="sureBtn">确定</view>
+  </view> 
+</view>

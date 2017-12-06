@@ -1,0 +1,32 @@
+<!--ordersure.wxml-->
+<import src="../../wxParse/wxParse.wxml"/> 
+<scroll-view scroll-y="true" class="index-scroll" bindscrolltolower="lower" >
+  <view class="shopimg"><image src="{{url2}}"></image></view>
+  <view class="body-view">
+    <view class="gray"></view>
+      <view class="num">车辆编号：{{tex2}}</view>
+      <view class="shop">网点：{{tex3}}</view>
+      <view class="address">地址：{{tex5}}</view>
+      <view class="phone">联系电话：{{phone}}</view>
+        <view class="gray"></view>
+  </view>
+
+
+<button class="btn" type="" size="{{primarySize}}" loading="{{loading}}" plain="{{plain}}" bindtap="powerDrawer" data-statu="open"> {{tex4}}</button>
+<view class="wxParse">
+<template id="wxParse" data="{{wxParseData:article_content.nodes}}"/>
+</view>
+<!--mask-->  
+<view class="drawer_screen" bindtap="powerDrawer" data-statu="close" wx:if="{{showModalStatus}}"></view>  
+<!--content-->  
+<!--使用animation属性指定需要执行的动画-->  
+<view animation="{{animationData}}" class="drawer_box" wx:if="{{showModalStatus}}">  
+  
+  <!--drawer content-->  
+  <view class="drawer_title">扫一扫</view>  
+  <view class="drawer_content">  
+    <image src="{{imagetest}}"></image>
+  </view>  
+  <view class="btn_ok" bindtap="pp" data-statu="close">确定</view>  
+</view>  
+</scroll-view>

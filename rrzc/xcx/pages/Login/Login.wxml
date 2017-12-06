@@ -1,0 +1,23 @@
+<!--login.wxml-->
+<scroll-view scroll-y="true" class="index-scroll" bindscrolltolower="lower" >
+<view class="shortimg"><image src="../images/bg1.jpg"></image></view>
+<view class="section">
+<!--<span class="txt">手机号码：</span>
+<span><input type="number" placeholder="填写手机号码"/></span>
+<span class="focus">获取验证码</span>-->
+<view class="itemtxt">手机号码</view>
+<view class="itemtot"><input type="number" name="linkTel" bindblur="blurTel" value="{{phone}}"  bindinput="bindKeyInput"  placeholder="填写手机号码" maxlength="11" /></view>
+<!--<button class="itemtit">获取验证码</button>-->
+<!--<view class="itemtit"><input type="number"  bindtap="setVerify"  value="获取验证码"/></view>-->
+<button class="itemtit"  bindtap="setVerify">{{VerifyCode}}</button>
+</view>
+
+<view class="item">
+<!--<span class="tit">验证码：</span>
+<span><input class="tot" type="number" placeholder="输入验证码"/></span>-->
+<view class="tit">验证码</view>
+<view class="tot"><input  type="number"  value="{{code}}"  bindinput="yan" placeholder="输入验证码"/></view>
+</view>
+<button class="btn" type="" size="{{primarySize}}" loading="{{loading}}" plain="{{plain}}" bindtouchend="log"> 登录 </button>
+</scroll-view>
+<!--bindtap="log" -->

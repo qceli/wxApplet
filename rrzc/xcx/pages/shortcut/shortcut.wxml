@@ -1,0 +1,21 @@
+<!-- shortcut.wxml -->
+<scroll-view scroll-y="true" class="index-scroll" bindscrolltolower="lower" >
+<!--<view class="shortimg"><image src="{{urls}}"></image></view>-->
+<swiper indicator-dots="{{indicatorDots}}" circular="{{circular}}"
+  autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+  <block wx:for="{{imgUrls}}" wx:key="*this">
+    <swiper-item>
+      <image src="{{item}}" class="slide-image" width="375" height="240"/>
+    </swiper-item>
+  </block>
+</swiper>
+<button type="" size="{{primarySize}}" loading="{{loading}}" plain="{{plain}}" bindtap="short" class="shortcutbtn"> {{tex1}}</button>
+<!--<button type="" size="{{primarySize}}" loading="{{loading}}" plain="{{plain}}"
+        disabled="{{disabled}}" bindtap="tel" class="shortcutbtn"> {{tex2}} </button>-->
+<!--<view class="tele" bindtap="tel">{{tex2}}</view>-->
+<view class="term">
+<span class="termone">{{tex3}}</span>
+<span class="termtwo"
+ bindtap="setting">{{tex4}}</span>
+</view>
+</scroll-view>

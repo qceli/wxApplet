@@ -1,0 +1,74 @@
+.rechargeimg image {
+  width: 100%;
+}
+.body-view {
+  display: flex;
+  height: 100px;
+}
+.body-view  image {
+  width: 100%;
+  height:100%;
+}
+image {
+  flex: 1;
+}
+text {
+  flex: 3;
+  line-height: 100px;
+}
+.lostmon {
+  display: flex;
+  height: 100px;
+
+}
+.lost {
+  flex: 1;
+}
+.lost image {
+  width: 50%;
+  height: 60%;
+}
+
+.lostmon span {
+  flex: 1;
+}
+.chose {
+    line-height: 30px;
+    padding-left: 10px;
+    background: #f98b2a;
+    color: #000;
+    font-size: 14px;
+}
+.chose span {
+  color: #fff;
+  font-size: 12px;
+
+}
+.btn {
+    width: 95%;
+    margin-top: 30px;
+    background: #f98b2a;
+    color: #fff;
+}
+.remon {
+    text-align: center;
+    font-size: 14px;
+    margin-top: 10rpx;
+}
+.remon span {
+    color: #f98b2a;
+}
+.mon {
+  margin-bottom: 10px;
+}
+.mon .item {
+    width: 150px;
+    height: 50px;
+    border: 1px solid #f98b2a;
+    text-align: center;
+    line-height: 50px;
+    float: left;
+}
+.active {
+  margin-left: 68rpx;
+}

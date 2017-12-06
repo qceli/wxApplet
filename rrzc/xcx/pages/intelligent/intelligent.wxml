@@ -1,0 +1,54 @@
+<!--pages/intelligent/intelligent.wxml-->
+<view class="content">
+  <view style='height:calc(100% - 300rpx);'>
+    <view class='topImg'>
+      <image src="../images/intelligent.jpg"></image>
+      <view class='bikeInfo'>
+        <view>车号：{{message.vehicle_number}}</view>
+        <view>车辆状态：{{openState}}</view>
+      </view>
+    </view>
+    <view class="powerShow">
+      <view>
+        <view>剩余电量</view>
+        <view><span class="powerNum">{{message.electric}}</span>%</view>
+      </view>
+      <view>
+        <view>预估里程</view>
+        <view><span class="powerNum">{{message.expect_mile}}</span>km</view>
+      </view>
+    </view>
+    <!-- <view>
+      <view class='power' bindtap='powerControl' data-id="{{powerState}}">
+        <view class='powerImg'><image src="{{powerStateImg}}"></image></view>
+        <view>{{powerStateName}}</view>
+      </view>
+    </view> -->
+  </view>
+  <view style='width:100%;height:300rpx;position:absolute;bottom:0;'>
+    <view class="bikeState">
+      <view bindtap='open'>骑行</view>
+      <view bindtap='close'>停车</view>
+    </view>
+    <view class="bottom" bindtap="backBike">去还车</view>
+  </view>
+</view>
+
+<view class="wxParse">
+<template id="wxParse" data="{{wxParseData:article_content.nodes}}"/>
+</view>
+<!--<view class="btn" bindtap="powerDrawer" data-statu="open">button</view>  -->
+  
+<!--mask-->  
+<view class="drawer_screen" bindtap="powerDrawer" data-statu="close" wx:if="{{showModalStatus}}"></view>  
+<!--content-->  
+<!--使用animation属性指定需要执行的动画-->  
+<view animation="{{animationData}}" class="drawer_box" wx:if="{{showModalStatus}}">  
+  
+  <!--drawer content-->  
+  <view class="drawer_title">扫一扫</view>  
+  <view class="drawer_content">  
+    <image src="{{imagetest}}"></image>
+  </view>  
+  <view class="btn_ok" bindtap="opp" data-statu="close">确定</view>  
+</view>

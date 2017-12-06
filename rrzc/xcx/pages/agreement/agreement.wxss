@@ -1,0 +1,14 @@
+/*agreement.wxss*/
+.tit {
+    text-align: center;
+    font-weight: bold;
+}
+.title {
+  font-weight: bold;
+  padding: 10px 10px 0 10px;
+}
+.txt {
+  padding: 10px 10px 0 10px;
+  text-indent: 64rpx;
+  font-size: 32rpx;
+}

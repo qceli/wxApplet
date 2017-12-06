@@ -1,0 +1,44 @@
+<!--myorder.wxml-->
+<import src="../../wxParse/wxParse.wxml"/> 
+<scroll-view scroll-y="true" class="index-scroll" bindscrolltolower="lower" >
+<block wx:if="{{orderarray==''}}">
+   <view class="no-orders">暂无订单</view>
+</block>
+<block wx:if="{{orderarray!=''}}">
+  <view class="list" wx:for="{{orderarray}}">
+    <view class="time"><image src="../images/bk.png"></image>{{item.start}}</view>
+    <block wx:if="{{ index == 0 && power != ''}}"> 
+      <view class="power" bindtap="powerShower" data-id="{{item.id}}">{{power}}</view>
+    </block> 
+    <view>
+      <view class="num">车辆编号：{{item.vehicle_number}}</view>
+      <block wx:if="{{ index == 0 && car != ''}}">
+        <view class="order" bindtap="powerDrawer" data-statu="open" data-id='{{item.ordersn}}'>{{car}}</view>       
+      </block>
+    </view>
+    <view class="ordersn">订单编号：{{item.ordersn}}</view>
+    <view class="detail">
+      <span class="detailImg"><image src="../images/payfor.png"></image></span><span class="details"> 花费：{{item.cost}}元</span>
+      <span class="detailImg"><image src="../images/time.png"></image></span><span class="details"> 时间：{{item.left}}分钟</span>
+    </view>
+  </view>
+</block>
+<view class="wxParse">
+<template id="wxParse" data="{{wxParseData:article_content.nodes}}"/>
+</view>
+<!--<view class="btn" bindtap="powerDrawer" data-statu="open">button</view>  -->
+  
+<!--mask-->  
+<view class="drawer_screen" bindtap="powerDrawer" data-statu="close" wx:if="{{showModalStatus}}"></view>  
+<!--content-->  
+<!--使用animation属性指定需要执行的动画-->  
+<view animation="{{animationData}}" class="drawer_box" wx:if="{{showModalStatus}}">  
+  
+  <!--drawer content-->  
+  <view class="drawer_title">扫一扫</view>  
+  <view class="drawer_content">  
+    <image src="{{imagetest}}"></image>
+  </view>  
+  <view class="btn_ok" bindtap="opp" data-statu="close">确定</view>  
+</view>
+</scroll-view>

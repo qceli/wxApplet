@@ -1,0 +1,38 @@
+<!--pages/applybike/applybike.wxml-->
+<view class="content">
+  <view class="infos">
+    <view>
+      <view class="name">姓    名：</view>
+      <input class="info" type="text" bindinput ="nameInput" />
+    </view>
+    <view>
+      <view class="name">联系方式：</view>
+      <input class="info" type="number" bindinput ="telInput" />
+    </view>
+    <view>
+      <view class="name">车辆品牌：</view>
+      <input class="info" type="text" bindinput ="brandInput" />
+    </view>
+    <view>
+      <view class="name">购买日期：</view>
+      <picker mode="date" value="{{dateValue}}" start="2010-01-01" end="{{endTime}}" bindchange="dateChange">
+        <view class="info">{{dateValue}}</view>
+      </picker>
+    </view>
+    <view>
+      <view class="name">车牌号码：</view>
+      <input class="info" type="text" bindinput ="codeInput" />
+    </view>
+    <view>
+      <view class="name">加入网点：</view>
+      <picker class="info" mode="selector" value="{{index}}" range="{{placeArray}}" bindchange="placeChange">
+        <view class="placeArray">{{placeArray[index]}}</view>
+        <image class="arrowRight" src="../images/arrowRight.png"></image>
+      </picker>
+    </view>
+  </view>
+  <view class="photo" bindtap="chooseImage">
+    <image class="img" src='{{tempFilePath}}' mode="aspectFit "></image>
+  </view>
+  <view class="submit" bindtap="submit">提交</view>
+</view>

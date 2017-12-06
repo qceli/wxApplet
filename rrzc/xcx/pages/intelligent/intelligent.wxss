@@ -1,0 +1,131 @@
+/* pages/intelligent/intelligent.wxss */
+page {
+  height:99%;
+}
+.content {
+  font-size: 36rpx;
+  height:99%;
+}
+.topImg, .topImg>image {
+  height: 360rpx;
+  width: 100%;
+}
+.bikeInfo {
+  position: absolute;
+  width: 100%;
+  top: 20rpx;
+}
+.bikeInfo>view,.powerShow>view {
+  width: 100%;
+  text-align: center;
+}
+.powerShow {
+  width: 100%;
+  background-color: #fff;
+  padding-top: 100rpx; 
+  /* padding-top: 40rpx;  */
+  display: flex
+}
+.powerShow>view {
+  flex: 1;
+  text-align: center;
+}
+.powerNum {
+  margin-right: 10rpx;
+  font-size: 86rpx;
+  height: 80rpx;
+}
+.bikeState {
+  background-color: #fff;
+  box-shadow: 0 -5rpx 10rpx #f4f4f4;
+  display: flex;
+}
+/* .power {
+  width: 200rpx;
+  height: 200rpx;
+  margin:auto;
+  text-align:center;
+}
+.powerImg {
+  width: 150rpx;
+  height: 150rpx;
+  margin-left: 25rpx;
+}
+.powerImg>image {
+  width: 150rpx;
+  height: 150rpx;
+} */
+
+.bikeState>view {
+  flex: 1;
+  margin: 30rpx 60rpx 0 60rpx;
+  height: 100rpx;
+  border-radius: 100rpx;
+  line-height: 100rpx;
+  text-align: center;
+  color: #fff;
+  background-color: #f37431;
+}
+.bottom {
+  margin: 30rpx auto 0 auto;
+  /* border: 1px solid #ccc; */
+  border-radius: 100rpx;
+  height: 100rpx;
+  line-height: 100rpx;
+  width: 350rpx;
+  text-align: center; 
+  color: #fff;
+  background: -webkit-linear-gradient(left,#f3bb44,#fd4c44); /* Safari 5.1 - 6.0 */
+  background: -o-linear-gradient(right,#f3bb44,#fd4c44); /* Opera 11.1 - 12.0 */
+  background: -moz-linear-gradient(right,#f3bb44,#fd4c44); /* Firefox 3.6 - 15 */
+  background: linear-gradient(to right,#f3bb44,#fd4c44);  
+} 
+
+
+.drawer_screen {  
+  width: 100%;  
+  height: 100%;  
+  position: fixed;  
+  top: 0;  
+  left: 0;  
+  z-index: 1000;  
+  background: #000;  
+  opacity: 0.5;  
+  overflow: hidden;  
+}  
+  
+/*content*/  
+.drawer_box {  
+  width: 650rpx;  
+  overflow: hidden;  
+  position: fixed;  
+  top: 50%;  
+  left: 0;  
+  z-index: 1001;  
+  background: #FAFAFA;  
+  margin: -150px 50rpx 0 50rpx;  
+  border-radius: 3px;  
+}  
+  
+.drawer_title{  
+  padding:15px;  
+  font: 20px "microsoft yahei";  
+  text-align: center;  
+}  
+.drawer_content {  
+  height: 500rpx;  
+  overflow-y: scroll; /*超出父盒子高度可滚动*/  
+  text-align: center;
+}  
+.drawer_content>image {
+  width:550rpx !important;
+  height:480rpx !important;
+}
+  
+.btn_ok{  
+  padding: 10px;  
+  font: 20px "microsoft yahei";  
+  text-align: center;  
+  border-top: 1px solid #E8E8EA;  
+  color: #3CC51F;  
+}  

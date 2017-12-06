@@ -1,0 +1,70 @@
+/* pages/getmoney/getmoney.wxss */
+page {
+  height: 100%;
+}
+.content {
+  height: 100%;
+  background-color:#eee;
+}
+.content-top {
+  height: calc(100% - 150rpx);
+}
+.account, .money {
+  width: calc(100% - 40rpx);
+  padding: 20rpx;
+  height:80rpx;
+  line-height:80rpx;
+  /* border-bottom: solid 1px #ccc;  */
+  margin-bottom: 20rpx;
+  background-color:#fff; 
+  font-size: 32rpx;
+}
+.name {
+  width: 220rpx;
+  float: left;
+}
+.infos {
+  border-bottom: 1px #ccc solid;
+  margin-top:25rpx;
+}
+.attention {
+  background-color:#fff;
+  padding-bottom: 20rpx;
+  margin-top: 20rpx;
+}
+.tip {
+  width: calc(100% - 40rpx);
+  padding: 20rpx 20rpx 0 20rpx;
+  font-size: 32rpx;
+  color: #666;
+  height:50rpx;
+  line-height:50rpx;
+}
+.tip-content {
+  line-height:40rpx;
+  width: calc(100% - 40rpx);
+  padding: 0 20rpx;
+  color: #ccc;
+  font-size: 30rpx;
+}
+.tip-content>view {
+  text-indent: 60rpx;
+}
+.bottom {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 150rpx;
+  background-color:#fff;
+}
+.bottom > view {
+  width: 250rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  text-align: center;
+  margin: 34rpx auto;
+  border-radius: 5px;
+  border: solid 1px #ccc;
+  color: #fff;
+  background-color: #f98b2a;
+}

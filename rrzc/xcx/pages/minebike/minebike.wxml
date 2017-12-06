@@ -1,0 +1,23 @@
+<!--pages/minebike/minebike.wxml-->
+<view class="content">
+  <scroll-view scroll-y="true" class="lists">
+    <view class="list" wx:for="{{lists}}" wx:for-item="i" wx:key="i.id" bindtap="reback" data-id="{{i.id}}">
+      <view class="listImg"><image src="{{i.img_url}}"></image></view>
+      <view class="list-middle">
+        <view>网  点：{{i.store_name}}</view>
+        <view>使用次数：{{i.use_account}}</view>
+      </view>
+      <view class="list-last">
+        <view>编  号：{{i.vehicle_number}}</view>
+        <view>盈  利：{{i.profit}}</view>
+      </view>
+    </view>
+    <view class="nodatas" wx:if="{{len < 10}}">暂无更多</view> 
+    <view class="load-more" wx:if="{{len == 10}}" bindtap="loadMore">点击加载更多</view>
+  </scroll-view>
+  <!-- <view class="bottom">
+    <view class="apply" bindtap="owner">添加车辆</view>
+    <view class="apply" bindtap="mineApply">我的申请</view>
+    <view class="apply" bindtap="mineMmoney">我的钱包</view>
+  </view> -->
+</view>

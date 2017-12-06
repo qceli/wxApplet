@@ -1,0 +1,103 @@
+/*login.wxss*/
+span {
+   float: left; 
+}
+.shortimg image {
+    width: 100%;
+}
+.section {
+    display: flex;
+    margin-bottom: 10px;
+}
+.itemtxt {
+    flex: 1;
+    line-height: 35px;
+    width: 85px;
+    text-align: center;
+}
+.itemtot {
+    flex: 2;
+}
+.itemtot input {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    height: 35px;
+    padding-left: 10px;
+    background: #f5f5f5;
+}
+.itemtit {
+    flex: 1;
+    font-size: 14px;
+    font-weight: bold;
+    color: #fff;
+    text-align: center;
+    background: #f98b2a;
+}
+.itemtit input {
+  border: 1px solid #ccc;
+  height: 35px;
+ 
+}
+.item {
+    display: flex;
+    margin-bottom: 20px;
+}
+.tit {
+    flex: 1;
+    line-height: 35px;
+    width: 85px;
+    letter-spacing: 9px;
+    text-align: center;
+}
+.tot {
+    flex: 3;
+}
+.tot input {
+    border: 1px solid #ccc;
+    border-radius: 5px;  
+    height: 35px;
+    padding-left: 10px;
+    margin-left: -7px;
+    background: #f5f5f5;
+}
+.btn {
+    width: 95%;
+    background: #f98b2a;
+    color: #fff;
+}
+/*.txt {
+    padding-top: 7px;
+    font-weight: bold;
+}
+
+.focus {
+    height: 30px; 
+    border: 1px solid #ccc;
+    line-height: 30px;
+    text-align: center;
+    background: #ffffff;
+}
+span input {
+    width: 180px;
+    border: 1px solid #ccc;
+    height: 30px;
+    border-radius: 5px;
+}
+.tit {
+    padding-top: 7px;
+    font-weight: bold;
+    letter-spacing: 5px;
+}
+.tot {
+    width: 275px;
+}
+.section {
+    width: 100%;
+}
+.item {
+    width: 100%;
+}*/
+
+
+
+

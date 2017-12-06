@@ -1,0 +1,80 @@
+/* pages/applybike/applybike.wxss */
+page {    
+  color: #666;
+}
+.infos {
+  margin: 0;
+  padding: 20rpx 40rpx 0 40rpx;
+}
+.infos>view {
+  height: 100rpx;
+  line-height: 100rpx;
+}
+.name {
+  width: 200rpx;
+  float: left;
+}
+.info {
+  width: calc(100% - 270rpx);
+  display: inline-block;
+  margin-top:18rpx;
+  height:60rpx;
+  line-height:60rpx;
+  border:#ccc solid 1px;
+  /* text-indent: 20rpx; */
+  padding-left: 20rpx;
+}
+.place_box{
+    position: relative;
+    margin-left:200rpx;
+
+}
+.place_select{
+    margin-top:0;
+    z-index: 100;
+    position: absolute; /*小程序中z-index和absolute需要同时存在，元素才能脱离文档。 */
+}
+.select_one{
+    text-align: center;
+    background-color:rgb(239, 239, 239);
+    width:440rpx;   /*脱离文档后元素width不能再用百分比。 */
+    height:100rpx;
+    line-height:100rpx;
+    /* margin:0 5%; */
+    border-bottom:2rpx solid rgb(255, 255, 255);
+}
+
+.photo {
+  margin: 40rpx 100rpx;
+  width: calc(100% - 204rpx);
+  height: 300rpx;
+  border-radius: 5%;
+  border: 1px solid #ccc;
+}
+.img {
+  width: 100%; 
+  height: 100%;
+  border-radius: 5%;
+}
+.submit {
+  width: 300rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  text-align: center;
+  border-radius: 5%;
+  border: 1px solid #ccc;
+  margin-left: 30%;
+  color: #fff;
+  background-color: #f98b2a;
+}
+
+.placeArray {
+  float: left;
+  width: calc(100% - 70rpx);
+}
+.arrowRight {
+  width: 30rpx;
+  height: 30rpx;
+  float: left;
+  margin-top: 15rpx;
+}

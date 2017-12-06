@@ -1,0 +1,157 @@
+/*ordersure.wxss*/
+@import "/wxParse/wxParse.wxss";
+page {
+  height:100%;
+}
+scroll-view {
+  height:100%;
+}
+
+.body-view {
+  margin-bottom: 50rpx;
+  color: #f98b2a;
+  background: #fff;
+
+}
+.bikeimg {
+    flex: 1;
+}
+.bikeimg image {
+    width: 80%;
+    height: 100%;
+}
+.tit {
+    padding-left: 10px;
+    font-weight: bold;
+    color: 1aad19;
+}
+.tot {
+    flex: 1;
+}
+.shop {
+    height: 40px;
+    line-height: 40px;
+    padding-left: 10px;
+}
+.shopimg image {
+    width: 100%;
+}
+.btn {
+    width: 95%;
+    background: #f98b2a;
+    color: #fff;
+}
+.address {
+  padding-left: 10px;
+  height: 40px;
+  line-height: 40px;
+}
+.phone {
+  padding-left: 10px;
+  height: 40px;
+  line-height: 40px;
+}
+.num {
+  padding-left: 10px;
+  height: 40px;
+  line-height: 40px;
+}
+.gray {
+  height:35rpx;
+  width:100%;
+  background:#F6F6F9;
+
+}
+.drawer_screen {  
+  width: 100%;  
+  height: 100%;  
+  position: fixed;  
+  top: 0;  
+  left: 0;  
+  z-index: 1000;  
+  background: #000;  
+  opacity: 0.5;  
+  overflow: hidden;  
+}  
+  
+/*content*/  
+.drawer_box {  
+  width: 650rpx;  
+  overflow: hidden;  
+  position: fixed;  
+  top: 50%;  
+  left: 0;  
+  z-index: 1001;  
+  background: #FAFAFA;  
+  margin: -150px 50rpx 0 50rpx;  
+  border-radius: 3px;  
+}  
+  
+.drawer_title{  
+  padding:15px;  
+  font: 20px "microsoft yahei";  
+  text-align: center;  
+}  
+.drawer_content {   
+  text-align: center;
+}  
+.drawer_content>image {
+  width:550rpx !important;
+  height:550rpx !important;
+}
+  
+.btn_ok{  
+  padding: 10px;  
+  font: 20px "microsoft yahei";  
+  text-align: center;  
+  border-top: 1px solid #E8E8EA;  
+  color: #3CC51F;  
+}  
+  
+.top{  
+    padding-top:8px;  
+}  
+.bottom {  
+    padding-bottom:8px;  
+}  
+.title {  
+    height: 30px;  
+    line-height: 30px;  
+    width: 160rpx;  
+    text-align: center;  
+    display: inline-block;  
+    font: 300 28rpx/30px "microsoft yahei";  
+}  
+  
+.input_base {  
+    border: 2rpx solid #ccc;  
+    padding-left: 10rpx;  
+    margin-right: 50rpx;  
+}  
+.input_h30{  
+    height: 30px;  
+    line-height: 30px;  
+}  
+.input_h60{  
+    height: 60px;  
+}  
+.input_view{  
+    font: 12px "microsoft yahei";  
+    background: #fff;  
+    color:#000;  
+    line-height: 30px;  
+}  
+  
+input {  
+    font: 12px "microsoft yahei";  
+    background: #fff;  
+    color:#000 ;  
+}  
+radio{  
+    margin-right: 20px;  
+}  
+.grid { display: -webkit-box; display: box; }  
+.col-0 {-webkit-box-flex:0;box-flex:0;}  
+.col-1 {-webkit-box-flex:1;box-flex:1;}  
+.fl { float: left;}  
+.fr { float: right;}  

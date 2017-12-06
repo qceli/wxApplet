@@ -1,0 +1,10 @@
+<!--wechatpay.wxml-->
+<scroll-view scroll-y="true" class="index-scroll" bindscrolltolower="lower" >
+<view class="list">
+<view class="time"><image src="../images/bk.png"></image>{{start}}</view>
+<view class="num">车辆编号：{{vehicle_id}}</view>
+<view class="detail"><image src="../images/payfor.png"></image>花费：{{cost}}元 <image src="../images/time.png"></image> 时间：{{left}}分钟</view>
+
+</view>
+<button class="btn" type="" size="{{primarySize}}" loading="{{loading}}" plain="{{plain}}" bindtap="log" >去结账 </button>
+</scroll-view>

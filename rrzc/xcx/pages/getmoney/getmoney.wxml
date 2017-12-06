@@ -1,0 +1,28 @@
+<!--pages/getmoney/getmoney.wxml-->
+<view class="content">
+  <scroll-view scroll-y="true" class="content-top">
+    <view class="account">
+      <view class="name">支付宝账号：</view>
+      <input class="infos" type="text" bindinput ="accountInput" placeholder="请输入支付宝账号" />
+    </view>
+    <view class="account">
+      <view class="name">支付宝姓名：</view>
+      <input class="infos" type="text" bindinput ="nameInput" placeholder="请输入支付宝姓名" />
+    </view>
+    <view class="money">
+      <view class="name">提现金额：</view>
+      <input class="infos" type="number" bindinput ="moneyInput" placeholder="请输入提现金额" />
+    </view>
+    <view class="attention">
+      <view class="tip">提示：</view>    
+      <view class="tip-content">
+        <view>按照提现金额的3%收取服务费，申请提现后3-7个工作日到账。</view>
+        <view>需要提供支付宝账号和支付宝账 号对应的真实姓名。</view>
+        <view>满 100 元才能提现，且每次 提现金额必须是整数，不支持小数。</view>
+      </view>
+    </view>
+  </scroll-view>
+  <view class="bottom">
+    <view bindtap="getMoney">提现</view>
+  </view>
+</view>

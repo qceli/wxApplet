@@ -1,0 +1,26 @@
+{
+  "pages":[
+    "pages/scan/scan",
+    "pages/index/index",
+    "pages/shortcut/shortcut",
+    "pages/Login/Login",
+    "pages/agreement/agreement",
+    "pages/ordersure/ordersure",
+    "pages/center/center",
+    "pages/myorder/myorder",
+    "pages/recharge/recharge",
+    "pages/applybike/applybike",
+    "pages/minebike/minebike",
+    "pages/intelligent/intelligent",
+    "pages/remind/remind",
+    "pages/getmoney/getmoney",
+    "pages/mineapply/mineapply",
+    "pages/bikeinfos/bikeinfos"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#f98b2a",
+    "navigationBarTitleText": "零零骑共享出行",
+    "navigationBarTextStyle":"white"
+  }
+}

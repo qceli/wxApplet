@@ -1,0 +1,111 @@
+/* pages/remind/remind.wxss */
+page {
+  height: 100%;
+}
+.content {
+  height: 100%;
+}
+.content-top {
+  height: calc(100% - 150rpx);
+}
+.top {
+  width: calc(100% - 40rpx);
+  text-align: center;
+  padding: 50rpx 20rpx;
+  display: flex;
+}
+.topLeft {
+  flex: 1;
+}
+.topRight {
+  margin-left: 40rpx;
+  margin-top: 20rpx;
+  flex: 1; 
+}
+.first-top {
+  font-size: 60rpx;
+  font-weight: bold;
+  height: 80rpx;
+  line-height: 80rpx; 
+}
+.second-top {
+  font-size: 32rpx;
+  height: 50rpx;
+  line-height: 50rpx; 
+}
+.first-topR {
+  font-size: 32rpx;
+  height: 50rpx;
+  line-height: 50rpx; 
+}
+.second-topR {
+  font-size: 28rpx;
+  height: 50rpx;
+  line-height: 50rpx; 
+  color: #41a6ff;
+}
+
+
+
+.details {
+  border-top: solid 1px #ccc;
+  background-color:#eee;
+}
+.details-top {
+  padding: 20rpx;
+  width: calc(100% - 40rpx);
+  color: #666;
+  font-size: 32rpx;
+}
+.detail {
+  width: calc(100% - 40rpx);
+  padding: 20rpx;
+  border-bottom: solid 1px #ccc;
+  background-color:#fff;
+}
+.detail-left {
+  float: left;
+  width: calc(100% - 170rpx)
+}
+.detail-name {
+  height: 50rpx;
+  line-height: 50rpx; 
+  font-size: 32rpx;
+}
+.detail-time {
+  color: #ccc;
+  font-size: 28rpx;
+  height: 30rpx;
+  line-height: 30rpx; 
+}
+.detail-right {
+  display: inline-block;
+  height: 80rpx;
+  line-height: 80rpx; 
+  font-size: 40rpx;
+}
+.nodatas { 
+  background-color:#fff;
+}
+.nodatas,.load-more {
+  padding: 20rpx 0;
+  text-align: center;
+  color: #ccc;
+  font-size: 30rpx;
+}
+.bottom {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+.bottom > view {
+  width: 250rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  text-align: center;
+  margin: 34rpx auto;
+  border-radius: 5px;
+  border: solid 1px #ccc;
+  color: #fff;
+  background-color: #f98b2a;
+}

@@ -1,0 +1,14 @@
+<scroll-view scroll-y="true" class="index-scroll" bindscrolltolower="lower" >
+<!--<view class="body-view"><image src="../images/b.png"></image><text>充值余额</text></view>-->
+<view class="rechargeimg"><image src="../images/bg3.jpg"></image></view>
+<view class="chose">充值金额</view>
+<!--<view class="mon">
+<view class="item active">¥10</view>
+<view class="item">¥20</view>
+</view>
+<view class="mon">
+<view class="item active">¥50</view>
+<view class="item">¥100</view>
+</view>-->
+<button class="btn" type="" size="{{primarySize}}" loading="{{loading}}" plain="{{plain}}" bindtap="mon" >押金充值</button>
+</scroll-view>
