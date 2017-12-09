@@ -1,0 +1,41 @@
+<!--pages/comment/comment.wxml-->
+<view class="page">
+  <view class='mainContent'>
+    <view class='courseTitle'>舞蹈魅惑术</view>
+    <view class='courseIntroduce'>国内首批性感魅力课程，“亚洲小姐”夏莎亲自出镜教学，女性妖孽美学集大成者。</view>
+  </view>
+  <view class='comment'>
+    <view class='commentScore'>5.0</view>
+    <view class='commentStars'>
+      <view>
+        <span class='starImg'><image src='../../images/star.png'></image></span><span class='starImg'><image src='../../images/star.png'></image></span><span class='starImg'><image src='../../images/star.png'></image></span>
+        <span></span>
+      </view>
+      <view class='commentNum'>9764个课程评论</view>
+    </view>
+  </view>
+  <view class="commentList">
+    <view class="commentItem">
+      <view class="commentUser">
+        <view class="name">cheeral</view>
+        <view class="time">2017/03/04</view>
+      </view>
+      <view>
+        <span class='commentListStar'><image src='../../images/star.png'></image></span><span class='commentListStar'><image src='../../images/star.png'></image></span><span class='commentListStar'><image src='../../images/star.png'></image></span><span class='commentListStar'><image src='../../images/star.png'></image></span>
+      </view>
+      <view class="commentContent">评论评论评论评论评论评论评论评论评论评论评论评论评论评论评论评论评论评论评论评论评论评论评论评论评论评论论评论评论评论论评论评论评论</view>
+    </view>
+
+     <view class="commentItem">
+      <view class="commentUser">
+        <view class="name">cheeral</view>
+        <view class="time">2017/03/04</view>
+      </view>
+      <view>
+        <span class='commentListStar'><image src='../../images/star.png'></image></span>
+      </view>
+      <view class="commentContent">评论评论评论评论评论评论评论评论评论评论评论评论评论评论评论评论评论评论评论评论评论评论评论评论评论评论论评论评论评论论评论评论评论</view>
+    </view>
+  </view>
+</view>
+

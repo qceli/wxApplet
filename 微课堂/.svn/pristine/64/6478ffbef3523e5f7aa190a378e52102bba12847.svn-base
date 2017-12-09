@@ -1,0 +1,42 @@
+<!--pages/changePlace/changePlace.wxml-->
+<scroll-view scroll-y="true" style="height:calc(100% - 100rpx);">
+  <view class='mainContent'>
+    <view class='blackTitle'>收货地址</view>
+    <radio-group class="radio-group" bindchange="radioChange">
+      <view class='placeList'>
+        <view class='choose'><radio value="id" checked="{{item.checked}}"></radio></view>
+        <view class='middlePlace'>
+          <view class='middlePlaceTop'>
+            <span class='personName'>徐大宇</span>
+            <span>13798765554</span>
+          </view>
+          <view class='place'>北京朝阳区⼴广渠路路98号地下室</view>
+        </view>
+        <view class='write' bindtap='write' data-id='id'>编辑</view>
+      </view>
+      <view class='placeList'>
+        <view class='choose'><radio value="id" checked="{{item.checked}}"></radio></view>
+        <view class='middlePlace'>
+          <view class='middlePlaceTop'>
+            <span class='personName'>徐大宇</span>
+            <span>13798765554</span>
+          </view>
+          <view class='place'>北京朝阳区⼴广渠路路98号地下室</view>
+        </view>
+        <view class='write' bindtap='write' data-id='id'>编辑</view>
+      </view>
+      <view class='placeList'>
+        <view class='choose'><radio value="id" checked="{{item.checked}}"></radio></view>
+        <view class='middlePlace'>
+          <view class='middlePlaceTop'>
+            <span class='personName'>徐大宇</span>
+            <span>13798765554</span>
+          </view>
+          <view class='place'>北京朝阳区⼴广渠路路98号地下室</view>
+        </view>
+        <view class='write' bindtap='write' data-id='id'>编辑</view>
+      </view>
+    </radio-group>
+  </view>
+</scroll-view>
+<view class='blackBottom' bindtap='addPlace'>新增收货地址</view>

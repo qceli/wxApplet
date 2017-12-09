@@ -1,0 +1,151 @@
+/* pages/course/course.wxss */
+/* 搜索 */
+.searchBox{
+  display: flex;
+}
+.search{
+  width: 100%;
+  height: 80rpx;
+  background: #D7D7D7;
+  display: flex;
+  border-radius: 5px;
+}
+.searchIcon{
+  padding: 22rpx 20rpx 0 20rpx;
+}
+.searchInput{
+  width: 100%;
+  height: 80rpx;
+}
+.topTitle{
+   color: #333;
+   font-size: 50rpx;
+   margin: 20rpx 0;
+}
+swiper {
+  height: 100%;
+}
+.top_img {
+  height: 350rpx;
+}
+.slider-img{
+  height: 350rpx;
+  border-radius: 5px;
+}
+.subTitle{
+  color: #858181;
+  font-size: 40rpx;
+  margin: 20rpx 0;
+}
+.genre{
+  height: 660rpx;
+  display: flex;
+}
+.genre-left{
+  width: 50%;
+  height: 100%;
+  background-color: #D7D7D7;
+  border-radius: 8px;
+  margin-right: 20rpx;
+  vertical-align: middle;
+}
+.genre-right{
+  width: 50%;
+}
+.genre-img{
+  width: 100rpx;
+  height: 100rpx;
+  margin: 20rpx;
+}
+.genre-text{
+  color: #898686;
+  font-size: 40rpx;
+  text-align: center;
+  line-height: 330rpx;
+}
+.gr-top{
+  width: 100%;
+  height: 160rpx; 
+  line-height: 170rpx;
+  color: #898686;
+  font-size: 40rpx;
+  text-align: center;
+   
+  box-sizing: border-box; 
+  margin-bottom: 20rpx;
+  border-radius: 8px;
+  background-color: #D7D7D7;
+}
+.gr-bottom{
+  width: 100%;
+  height: 300rpx;
+  border-radius: 8px;
+  background-color: #F25C62;
+  position: relative;
+}
+.grb-img{
+  width: 100rpx;
+  height: 100rpx;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.grb-title{
+  color: #fff;
+  font-size: 40rpx;
+  padding: 100rpx 0 0 20rpx;
+}
+.grb-by{
+  color: #fff;
+  font-size: 30rpx;
+  padding: 20rpx 0 0 20rpx;
+}
+.speaker{
+  width: 100%;
+  height: 350rpx;
+}
+.speaker-item{
+  display: inline-block;
+  width: 35%; 
+  height: 350rpx; 
+  text-align: center;
+  color: #939393;
+  font-size: 30rpx;
+  box-sizing: border-box;
+  margin-right: 20rpx;
+  padding: 20rpx; 
+  background-color: #E3E3E3;
+  border-radius: 5px;
+}
+.speaker-img{
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 50%;
+}
+.speaker-name{
+  
+}
+.speaker-intro{
+  width: 100%;
+  height: 120rpx; 
+  margin-top: 20rpx; 
+  word-wrap: break-word;
+  display: -webkit-box; 
+  -webkit-box-orient: vertical; 
+  -webkit-line-clamp:3; 
+  overflow: hidden; 
+  white-space: pre-line;
+}
+.speaker-slider{
+   white-space: nowrap;  
+   display: block;
+   margin: 0 auto;
+   width: 100%;  
+}
+.top-quality{
+  height: 600rpx;
+  border-radius: 5px;
+  background-color: #E3E3E3;
+  margin: 20rpx 0;
+  padding: 20rpx;
+}

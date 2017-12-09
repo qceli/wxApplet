@@ -1,0 +1,145 @@
+/* pages/courseInfo/courseInfo.wxss */
+@import "../../wxParse/wxParse.wxss";
+.courseTop {
+  background-color: #cfcfcf;
+}
+.courseTopImg {
+  height: 460rpx;
+  margin: 0;
+  padding: 0;
+}
+.courseTopImg>image {
+  height: 450rpx;
+  width: 100%;
+}
+.coursePrice {
+  position: relative;
+  margin-top: -420rpx;  
+  left: 70%;
+  width: 170rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  text-align: center;
+  font-size: 36rpx;
+  border-radius: 50rpx;
+  background-color: #ededed;
+  /* top: 50rpx; */
+}
+.mainContent {
+  padding-bottom: 20rpx;
+}
+.courseTitle {
+  margin-top: 10rpx;
+  font-size: 36rpx;
+  font-weight: bold;
+  height: 60rpx;
+  line-height: 60rpx;
+}
+.courseIntroduce {
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  display: -webkit-box;
+  color: #666;
+  font-size: 32rpx;
+  line-height: 50rpx;
+}
+.comment {
+  display: flex;
+  height: 100rpx; 
+  margin: 20rpx 0;
+}
+.commentScore {
+  flex: 0.5;
+  line-height: 100rpx;
+  font-size: 75rpx;
+}
+.commentStars {
+  flex: 2;
+  margin: 5rpx 20rpx;
+}
+.starImg>image {
+  height: 40rpx;
+  width: 40rpx;
+}
+.commentNum {
+  color: #999;
+  font-size: 32rpx;
+}
+.commentAll {
+  flex: 1;
+  line-height: 100rpx;
+  font-size: 32rpx;
+  color: #666;
+  text-align: right;
+}
+.authorInfos {
+  display: flex;
+  margin: 40rpx 0;
+}
+.authorInfos>view {
+  flex: 1;
+}
+.author {
+  height: 260rpx;
+  background-color: #737373;
+  border-radius: 5px;
+  margin-right: 10rpx;
+  padding: 20rpx;
+}
+.authorNames {
+  margin-top: 100rpx;
+  color: #fff;
+  font-size: 32rpx;
+}
+.authorName {
+  font-size: 40rpx;
+  font-weight: bold;
+}
+.authorImg {
+  float: right;
+  margin-top: -240rpx;
+}
+.authorImg>image {
+  height: 150rpx;
+  width: 150rpx;
+  border-radius: 50%;
+}
+.authorInfo {
+  font-size: 32rpx;
+  color: #666;
+  margin: 10rpx;
+  font-weight: bold; 
+}
+.courseIntroduces {
+  margin: 80rpx 0 20rpx 0;
+}
+.courseIntroduces>view {
+  height: 260rpx;
+  background-color: #d7d7d7;
+  border-radius: 5px;
+  padding: 20rpx;
+}
+.courseDetail {
+  padding: 20rpx;
+  font-size: 36rpx;
+  font-weight: bold;
+}
+ .wxParse {
+  margin: 0;
+  color: #333 !important;
+  font-size: 36rpx !important;
+  line-height: 50rpx !important;
+} 
+
+.buyCourse{
+  margin: 80rpx 0;
+  height: 100rpx;
+  line-height: 100rpx;
+  text-align: center;
+  font-size: 36rpx;
+  font-weight: bold;
+  color: #fff;
+  background-color: #737373;
+  border-radius: 5px;
+}

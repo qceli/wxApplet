@@ -1,0 +1,44 @@
+<!--首页-->
+<view class="scrollsBody">
+  <view class='tabs'>
+    <text wx:for="{{tab}}" wx:key="" data-index='{{index}}' bindtap='tabChange' class='{{tabselected==index?"tabactive":""}}'>{{item}}</text>
+  </view>
+
+  <view class='classes'>
+    <scroll-view scroll-y="true" bindscrolltolower="loadAll" class='csUl' hidden='{{tabselected==0?false:true}}'>
+      <view class='csLi' wx:for="{{orderAll}}" wx:key="">
+        <view class='cl1'>
+         {{item.state==0?'待付款':'已付款'}}
+        </view>
+        <view class='cl2' data-id='{{item.id}}' bindtap='goClasses'>
+          <image mode='aspectFill' src='{{item.classimg}}'></image>
+          <text class='cl3'>{{item.classname}}</text>
+          <text class='cl4'>{{item.classintro}}</text>
+        </view>
+        <view class='clist'>
+          <view class='cn'><text>商品数量</text><text>2件</text></view>
+          <view class='cn'><text>订单金额</text><text>￥300*2</text></view>
+        </view>
+        <view class='cl5'>
+          <view class='cl6'>实付款：<text>￥{{item.price}}</text></view>
+          <view class='cl7' hidden='{{item.state==0?false:true}}'>
+            <text class='clbtn' data-id='{{item.id}}' bindtap='orderPay'>立即付款</text>
+            <text class='clbtn' data-id='{{item.id}}' bindtap='orderOff'>取消订单</text>        
+          </view>
+          <view class='cl7' hidden='{{item.state==0?true:false}}'>
+            <text class='clbtn' data-id='{{item.id}}' bindtap='orderPj'>立即评价</text>
+            <text class='clbtn' data-id='{{item.id}}' bindtap='orderBack'>申请退款</text>       
+          </view>
+        </view>
+      </view>
+      <view class="nomore" hidden='{{more[0]}}'>无更多数据</view>   
+    </scroll-view>
+
+    <view class='csUl' hidden='{{tabselected==1?false:true}}'>
+      2<view class="nomore" hidden='{{more[1]}}'>无更多数据</view> 
+    </view>
+    <view class='csUl' hidden='{{tabselected==2?false:true}}'>
+      3<view class="nomore" hidden='{{more[2]}}'>无更多数据</view> 
+    </view>
+  </view>
+</view>

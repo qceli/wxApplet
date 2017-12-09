@@ -1,0 +1,20 @@
+<!--物流-->
+<view class="scrollsBody">
+  <view class='wl'>
+    <image class='wl1' src='../../images/0.png' background-size="contain"></image>
+    <view class='wl2'>物流状态 运送中</view>
+    <view class='wl3'>承运来源 顺丰快递</view>
+    <view class='wl3'>运单编号 42544848487848</view>
+    <view class='wl3'>官方电话 <text>95338</text></view>
+  </view>
+
+  <view class='wltit'>物流跟踪</view>
+  <view class='wlUl'>
+    <view class='wlli' wx:for="{{wl}}" wx:key="">
+      <text class='w1'>{{item.content}}</text>
+      <text class='w2'>{{item.time}}</text>
+      <view class='w3'></view>
+    </view>
+  
+  </view>
+</view>

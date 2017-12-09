@@ -1,0 +1,25 @@
+<scroll-view scroll-y="true" style="height:calc(100% - 100rpx);">
+<view class="container">
+  <view>
+    <view class="title">{{quesList.title}}</view>
+    <view class="user">提问：<text>{{quesList.nickname}}</text><text>{{quesList.addtime}}</text></view>
+  </view>
+  <view class="comments" wx:if="{{answList.length!=0}}">
+    <view class="title">回答</view>
+    <view class="comment" wx:for="{{answList}}" wx:key="">
+      <view class="comment-item" bindtap="toDetail" data-id="{{item.id}}">
+        <view class="info">
+          <text>{{item.nickname}}</text>
+          <image src='../../images/zan.png'></image>
+          <text class='rt'>{{item.collectnum}}</text>
+        </view>
+        <view class="detail">
+          {{item.content}}
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="bar"><text class="lf">{{quesList.replynum}}回答</text><text class="rt" bindtap="toAnsw">回答</text></view>
+</view>
+</scroll-view>
+

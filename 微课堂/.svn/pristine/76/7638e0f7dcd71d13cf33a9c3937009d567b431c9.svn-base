@@ -1,0 +1,58 @@
+/* pages/courseSort/courseSort.wxss */
+.title{
+  font-size: 50rpx;
+  color: #373737;
+}
+.tab{
+  height: 50rpx;
+  display: flex;
+  margin: 40rpx 0;
+  border-bottom: 1rpx solid #F8F8F8;
+}
+.tabItem{
+  /* width: 20%; */
+  color: #C4C1C1;
+  font-size: 30rpx;
+  margin-right: 5%;
+}
+.tabItemSelected{
+  color: #424242;
+  border-bottom: 1rpx solid #424242;
+}
+.tabContents{
+
+}
+.tabContent{
+  display: none;
+}
+.tabContent.active{
+  display: block;
+}
+.tabContentItem{
+  height: 200rpx;
+  padding: 20rpx;
+  margin-top: 20rpx;
+  border-radius: 5px;
+  background-color: #F6F6F6;
+  position: relative;
+}
+.tabContentTitle{
+  font-size: 40rpx;
+  color: #868181;
+  margin-bottom: 20rpx;
+}
+.tabContentImg{
+  width: 60rpx;
+  height: 60rpx;
+  position: absolute;
+  top: 20rpx;
+  right: 20rpx;
+}
+.tabContentIntro{
+  font-size: 35rpx;
+  color: #9E9E9E;
+  display: -webkit-box; 
+  -webkit-box-orient: vertical; 
+  -webkit-line-clamp:3; 
+  overflow: hidden;
+}

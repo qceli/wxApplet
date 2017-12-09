@@ -1,0 +1,53 @@
+<!--comment.wxml-->
+<scroll-view scroll-y="true" style="height:calc(100% - 100rpx);">
+<view class="container">
+  <view class="title">帖子</view>
+  <view class="navBar">
+    <view class="{{tabArr.curTabIndex=='0'?'active':''}}" data-id="0"  bindtap="tab">
+      官方分享
+    </view>
+    <view class="{{tabArr.curTabIndex=='1'?'active':''}}" data-id="1"  bindtap="tab">
+      用户分享
+    </view>
+  </view>
+  <view class='content-container'>
+    <view class="content {{tabArr.curDivIndex=='0'?'active':''}}" wx:for="{{bbsList1}}" wx:key="id">
+      <view class="bbs-item" bindtap="toDetail" data-id='{{item.id}}' data-curDivIndex="0">
+          <image src="../../images/right1.jpg"></image>
+          <view class="item-txt">
+            <view class="_title">{{item.title}}</view>
+            <view class="txt">
+              <import src="../../wxParse/wxParse.wxml"/>
+              <!--文章 start-->
+               <view class="wxParse">
+                <template is="wxParse" data="{{wxParseData:article.nodes}}"/>
+              </view> 
+              <!--文章 end -->
+            </view>
+          </view>
+          <view class="comment">{{item.replynum}}评论</view>
+      </view>
+    </view>
+    <view class="content {{tabArr.curDivIndex=='1'?'active':''}}" wx:for="{{bbsList2}}" wx:key="id">
+      <view class="bbs-item" bindtap="toDetail" data-id="{{item.id}}" data-curDivIndex="1">
+        <view>
+          <image src="../../images/right2.jpg"></image>
+          <view class="item-txt">
+            <view class="_title">{{item.title}}</view>
+            <view class="txt">
+            {{item.content}}
+              <!-- <import src="../../wxParse/wxParse.wxml"/>
+              <!--文章 start-->
+              <!-- <view class="wxParse">
+                <template is="wxParse" data="{{wxParseData:article.nodes}}"/>
+              </view> -->
+              <!--文章 end -->
+            </view>
+          </view>
+          <view class="comment">{{item.replynum}}评论</view>
+        </view>
+      </view>
+  </view>
+  </view>
+</view>
+</scroll-view>

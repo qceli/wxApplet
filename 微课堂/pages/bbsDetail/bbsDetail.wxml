@@ -1,0 +1,38 @@
+<!--comment.wxml-->
+<scroll-view scroll-y="true" style="height:calc(100% - 100rpx);">
+<view class="container">
+  <view>
+    <view class="title">{{bbsDetail.title}}</view>
+    <view class="user">作者：<text>{{bbsDetail.nickname}}</text><text>{{bbsDetail.addtime}}</text></view>
+  </view>
+  <view class="content">
+    <view class="txt">
+      <import src="../../wxParse/wxParse.wxml"/>
+      <!--文章 start-->
+        <view class="wxParse">
+        <template is="wxParse" data="{{wxParseData:article.nodes}}"/>
+      </view> 
+      <!--文章 end -->
+    </view>
+    <view class="img">
+      <image src="../../images/right1.jpg"></image>
+    </view>
+    <view class="txt">{{content2}}</view>
+  </view>
+  <view class="comments" wx:if="{{replyList.length!==0}}">
+    <view class="title">评论</view>
+    <view class="comment" wx:for="{{replyList}}" wx:key="{{id}}">
+      <view class="comment-item">
+        <view class="info"><text>{{item.nickname}}</text><text>{{item.replytime}}</text></view>
+        <view class="detail">
+          {{item.content}}
+        </view>
+      </view>
+    </view>
+  </view>
+  
+</view>
+</scroll-view>
+<view class="bar"><text class="lf">{{bbsDetail.replynum}}评论</text><text class="rt" bindtap="toComments">发表评论</text></view>
+
+

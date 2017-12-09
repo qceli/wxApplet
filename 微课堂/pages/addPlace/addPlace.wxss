@@ -1,0 +1,53 @@
+/* pages/addPlace/addPlace.wxss */
+.placeInfos {
+  margin-top: 40rpx;
+}
+.placeInfo {
+  margin: 20rpx 0;
+  display: flex;
+  height: 80rpx;
+  line-height: 80rpx;
+  border-bottom: solid 1px #ccc;
+}
+.infoTitle {
+  width: 180rpx;
+  font-size: 34rpx;
+}
+.infoInput {
+  font-size: 34rpx;
+  width: calc(100% - 180rpx);
+}
+.infoInput>picker {
+  height: 80rpx;
+  line-height: 80rpx;
+  width: 100%;
+}
+.picker {
+  font-size: 34rpx;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  overflow: hidden;
+}
+.infoInput>input {
+  height: 80rpx;
+  line-height: 80rpx;
+  width: 100%;
+  font-size: 34rpx;
+}
+.right {
+  height: 40rpx;
+  width: 40rpx;
+  position: absolute;
+  margin-top: -58rpx;
+  right: 40rpx;
+}
+textarea {
+  margin-top: 40rpx;
+  font-size: 34rpx;
+  width: 100%;
+  height: 200rpx;
+}
+.blackBottom {
+  text-align: center;
+}

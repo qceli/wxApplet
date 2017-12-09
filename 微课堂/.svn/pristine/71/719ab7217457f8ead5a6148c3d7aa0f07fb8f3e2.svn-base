@@ -1,0 +1,77 @@
+/* pages/comment/comment */
+.container{
+  width:90%;
+  margin:0 auto;
+  padding-bottom:30rpx;
+}
+.title{
+  font-size:40rpx;
+  color:#3D3D3D;
+  margin-bottom:20rpx;
+}
+.user{
+    font-size:28rpx;
+    color:#C0C0C0;
+}
+.user text{
+    margin-right:30rpx;
+    font-size:28rpx;
+    color:#C0C0C0;
+}
+.content{
+    margin-top:50rpx;
+}
+.img{
+  margin:30rpx 0;
+}
+.content image{
+    width:100%;
+}
+.txt{
+    font-size:28rpx;
+}
+.comments{
+    margin-top:50rpx;
+}
+.comment-item{
+    background:#F1F1F1;
+    margin-bottom:50rpx;
+}
+.info{
+    padding:20rpx 20rpx;
+    font-size: 28rpx;
+}
+.info>text:last-child{
+    float:right;
+    color:#D4D4D4;
+}
+.info>text:first-child{
+    color:#393939;
+}
+.detail{
+    padding:20rpx 20rpx 40rpx ;
+    font-size:28rpx;
+}
+.bar{
+    height:80rpx;
+    width:100%;
+    position:fixed;
+    bottom:0;
+    left:0;
+    background:#fff;
+    border-top:4rpx solid #EDEDED;
+    line-height: 80rpx;
+    font-size: 32rpx;
+}
+
+.bar .lf{
+    float:left;
+    margin-left:5%;
+}
+.bar .rt{
+    display:block;
+    float:right;
+    margin-right:5%;
+    padding:0 20rpx;
+    height:80rpx;
+}

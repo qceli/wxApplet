@@ -1,0 +1,73 @@
+/* pages/comment/comment.wxss  */
+.mainContent {
+  padding-bottom: 20rpx;
+}
+.courseTitle {
+  margin-top: 10rpx;
+  font-size: 36rpx;
+  font-weight: bold;
+  height: 60rpx;
+  line-height: 60rpx;
+}
+.courseIntroduce {
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  display: -webkit-box;
+  color: #666;
+  font-size: 32rpx;
+  line-height: 50rpx;
+}
+.comment {
+  display: flex;
+  height: 100rpx;
+  margin: 20rpx 40rpx;
+}
+.commentScore {
+  flex: 0.5;
+  line-height: 100rpx;
+  font-size: 75rpx;
+  /* font-weight: bold; */
+}
+.commentStars {
+  flex: 2;
+  margin: 10rpx 20rpx;
+}
+.starImg>image {
+  height: 40rpx;
+  width: 40rpx;
+}
+.commentNum {
+  height: 40rpx;
+  line-height: 30rpx;
+  color: #999;
+  font-size: 32rpx;
+}
+.commentList{
+  margin: 40rpx;
+}
+.commentItem{
+  background-color: #F1F1F1;
+  border-radius: 5px;
+  padding: 20rpx;
+  margin-bottom: 20px;
+}
+.commentUser{
+  font-size: 30rpx;
+  display: flex;
+  justify-content: space-between;
+}
+.commentListStar>wx-image{
+  width: 30rpx;
+  height: 30rpx;
+}
+.name{
+  color: #303030;
+}
+.time{
+  color: #C1C1C1;
+}
+.commentContent{
+  font-size: 30rpx;
+  margin: 20rpx 0;
+}

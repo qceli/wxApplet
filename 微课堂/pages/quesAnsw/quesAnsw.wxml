@@ -1,0 +1,38 @@
+
+<!--<scroll-view scroll-y="true" style="height:calc(100% - 100rpx);">-->
+<view class="container">
+  <view class="title">问答<text bindtap="toQues">提问</text></view>
+  <view class="navBar">
+    <view class="{{tabArr.curTabIndex=='0'?'active':''}}" data-id="0"  bindtap="tab">
+      官方问答
+    </view>
+    <view class="{{tabArr.curTabIndex=='1'?'active':''}}" data-id="1"  bindtap="tab">
+      用户问答
+    </view>
+  </view>
+  <view class='content-container'>
+    <view class="content {{tabArr.curDivIndex=='0'?'active':''}}" wx:for="{{quesAnsw1}}" wx:key="{{index}}">
+      <view class="bbs-item" bindtap="toDetail" data-id="{{item.id}}">
+          <image src="../../images/right1.jpg"></image>
+          <view class="item-txt">
+            <view class="_title">{{item.title}}</view>
+            <view class="txt">{{item.content}}</view>
+          </view>
+          <view class="comment">{{item.replynum}}回答</view>
+      </view>
+    </view>
+    <view class="content {{tabArr.curDivIndex=='1'?'active':''}}" wx:for="{{quesAnsw2}}" wx:key="{{index}}">
+      <view class="bbs-item" bindtap="toDetail" data-id="{{item.id}}">
+        <view>
+          <image src="../../images/right2.jpg"></image>
+          <view class="item-txt">
+            <view class="_title">{{item.title}}</view>
+          </view>
+          <view class="comment">{{item.replynum}}回答</view>
+        </view>
+      </view>
+  </view>
+  </view>
+</view>
+<!--</scroll-view>-->
+

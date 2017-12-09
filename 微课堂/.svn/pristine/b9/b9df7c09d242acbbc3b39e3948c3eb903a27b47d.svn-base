@@ -1,0 +1,85 @@
+<!--pages/course/course.wxml-->
+<scroll-view scroll-y="true" style="height:calc(100% - 100rpx);">
+  <view class="mainContent">
+    <!-- 搜索框 start -->
+    <!-- <view class="searchBox">
+      <view class="search">
+        <icon class="searchIcon" type="search" size="15" color="#898686"></icon>
+        <input class="searchInput" type="text" placeholder='搜索' placeholder-style="color:#898686 " bindtap="" disabled></input>
+      </view>
+    </view> -->
+    <!-- 搜索框 end -->
+    <view class="topTitle">课程</view>
+    <!--banner图片 start-->
+    <view class="top_img" style="{{width}}">
+      <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" circular="{{circular}}">
+        <block wx:for="{{banner}}" wx:key="">
+          <swiper-item>
+            <view class="swiper-item" data-id="{{item.id}}" bindtap="courseInfo">
+              <image class="slider-img" src="{{item.img}}" mode="scaleToFill" style="width: 100%;"/>
+            </view>
+          </swiper-item>
+        </block>
+      </swiper>
+    </view>
+    <!--banner图片 end-->
+    <!-- 类别-->
+    <view class="subTitle">类别</view>
+    <view class="genre">
+      <view class="genre-left" data-id="{{lessonSort[0].id}}" bindtap="courseSort" >
+        <image class="genre-img" src="{{lessonSort[0].ico}}"></image>
+        <view class="genre-text">{{lessonSort[0].name}}</view>
+      </view>
+      <view class="genre-right">
+        <view class="gr-top" data-id="{{lessonSort[1].id}}" bindtap="courseSort">{{lessonSort[1].name}}</view>
+        <view class="gr-top" data-id="{{lessonSort[2].id}}" bindtap="courseSort">{{lessonSort[2].name}}</view>
+        <view class="gr-bottom" bindtap="courseSort">
+          <image class="grb-img" src="../../images/right-upper-arrow.png"></image>
+          <view class="grb-title">Beautiful Architecture</view>
+          <view class="grb-by">by Aaron Marshall</view>
+        </view>
+      </view>
+    </view>
+    <!-- 主讲人 -->
+    <view class="subTitle">主讲人</view>
+    <view class="speaker">
+      <scroll-view scroll-x="true" class="speaker-slider" style="height: 350rpx;">
+         <view wx:for="{{tList}}" wx:key=""  class="speaker-item" >  
+          <view  data-id="{{item.id}}" bindtap="lecturer">
+            <image class="speaker-img" src="{{item.teacherphoto}}"></image>
+            <view class="speaker-name">{{item.teacher}}</view>
+            <view  class="speaker-intro ">{{item.teacherdes}}</view>
+          </view>
+         </view>    
+      </scroll-view>
+    </view>
+    <!-- 精品课程 -->
+    <view class="subTitle">精品课程</view>
+    <view >
+      <view  wx:for="{{topQuality}}" wx:key="" class="top-quality" data-id="{{item.id}}" bindtap="courseInfo">
+        <view>{{item.bookname}}</view>
+        <view>{{item.brief}}</view> 
+      </view>
+    </view> 
+  </view>  
+</scroll-view>
+<!--底部导航 start -->
+  <view class="tabbar">
+      <view class="tabbar-item" bindtap="selected"> 
+        <view class="tb-text">首页</view>
+      </view>  
+      <view class="tabbar-item"> 
+        <view class="tb-text selected">课程</view>
+      </view>  
+      <view class="tabbar-item" bindtap="selected2"> 
+        <view class="tb-text">社区</view>
+      </view> 
+      <view class="tabbar-item" bindtap="selected3"> 
+        <view class="tb-text">商城</view>
+      </view> 
+      <view class="tabbar-item" bindtap="selected4"> 
+        <view class="tb-text">我的</view>
+      </view> 
+  </view>
+  <!-- 底部导航 end-->
+

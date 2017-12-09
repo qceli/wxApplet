@@ -1,0 +1,6 @@
+/* pages/eshop/eshop.wxss */
+.goodsImg, .goodsImg>image {
+  height:350rpx;
+  width:100%;
+  border-radius:5px;
+}
