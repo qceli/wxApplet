@@ -43,9 +43,9 @@
 
   <view class="bottom">
     <view bindtap='home'>首页介绍</view>
-    <view bindtap='searchStore'>店铺查询</view>
+    <!-- <view bindtap='searchStore'>店铺查询</view> -->
     <view class="nowPage">积分商城</view>
-    <view bindtap='mine'>我的</view>
+    <view bindtap='mine'>个人中心</view>
   </view>
 
 </view>

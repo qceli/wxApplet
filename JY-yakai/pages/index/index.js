@@ -29,22 +29,38 @@ Page({
       }
 
     });
+    var indexIMg = {
+      'access_token': accessToken,
+      'identification': "picture"
+    }
+    esTools.fn.setEmpty().setHeader({
+      'content-type': 'application/x-www-form-urlencoded'
+    }).signData(indexIMg).setMethod('get').setExtraUrl('wxappadvs').wxappadvs(function (res) {
+      if (res.statusCode === 1) {
+        console.log(res.data)
+        var result = res.data;
+        that.setData({
+          indexIMg: result.thumb
+        })
+      }
+
+    });
   },
-  produceLists: function (e) {
-    wx.navigateTo({
-      url: '../produceList/produceList',
-    })
-  },
-  reserve: function() {
-    wx.navigateTo({
-      url: '../reserve/reserve',
-    })
-  },
-  searchStore: function () {
-    wx.redirectTo({
-      url: '../searchStore/searchStore',
-    })
-  },
+  // produceLists: function (e) {
+  //   wx.navigateTo({
+  //     url: '../produceList/produceList',
+  //   })
+  // },
+  // reserve: function() {
+  //   wx.navigateTo({
+  //     url: '../reserve/reserve',
+  //   })
+  // },
+  // searchStore: function () {
+  //   wx.redirectTo({
+  //     url: '../searchStore/searchStore',
+  //   })
+  // },
   integrationStore: function () {
     wx.redirectTo({
       url: '../integrationStore/integrationStore',

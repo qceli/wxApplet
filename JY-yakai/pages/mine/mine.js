@@ -102,11 +102,11 @@ Page({
       url: '../index/index',
     })
   },
-  searchStore: function () {
-    wx.redirectTo({
-      url: '../searchStore/searchStore',
-    })
-  },
+  // searchStore: function () {
+  //   wx.redirectTo({
+  //     url: '../searchStore/searchStore',
+  //   })
+  // },
   integrationStore: function () {
     wx.redirectTo({
       url: '../integrationStore/integrationStore',

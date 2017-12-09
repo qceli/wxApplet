@@ -20,6 +20,7 @@
     "pages/produceList/produceList",
     "pages/produceInfo/produceInfo",
     "pages/produceReserve/produceReserve",
+    "pages/changeInfos/changeInfos",
     "pages/logs/logs"
   ],
   "window":{

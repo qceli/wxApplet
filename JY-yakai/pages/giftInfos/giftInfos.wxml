@@ -1,7 +1,7 @@
 <!--pages/giftInfos/giftInfos.wxml-->
 <view class="container">
   <scroll-view scroll-y="auto" style="height:calc(100% - 180rpx);">  
-    <view class='giftImg'><image src="{{goods.thumb}}"></image></view>
+    <view class='giftImg'><image src="{{goods.thumb}}" mode='aspectFit'></image></view>
     <view class='giftPadding'>
       <view class='giftName'>{{goods.title}}</view>
       <view class='giftPrice'>

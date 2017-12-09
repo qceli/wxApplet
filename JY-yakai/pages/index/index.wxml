@@ -1,44 +1,49 @@
 <!--index.wxml-->
 <view class="container">
-  <view class='homeImg'>
-    <image src="{{thumb}}"></image>
-  </view>
-  <view class="homeLists">
-    <view class='homeList' bindtap='mine'>
-      <view class='homeListImg'><image src="../../images/homeCard.png"></image></view>
-      <view>我的会员卡</view>
+  <scroll-view scroll-y="auto" style="height:calc(100% - 100rpx);"> 
+    <view class='homeImg'>
+      <image src="{{thumb}}"></image>
     </view>
-    <view class='homeList' bindtap='integrationStore'>
-      <view class='homeListImg'><image src="../../images/homeIntegration.png"></image></view>
-      <view>积分商城</view>
+    <!-- <view class="homeLists">
+      <view class='homeList' bindtap='mine'>
+        <view class='homeListImg'><image src="../../images/homeCard.png"></image></view>
+        <view>我的会员卡</view>
+      </view>
+      <view class='homeList' bindtap='integrationStore'>
+        <view class='homeListImg'><image src="../../images/homeIntegration.png"></image></view>
+        <view>积分商城</view>
+      </view>
+      <view class='homeList' bindtap='reserve'>
+        <view class='homeListImg'><image src="../../images/homeReserve.png"></image></view>
+        <view>预约定制</view>
+      </view>
     </view>
-    <view class='homeList' bindtap='reserve'>
-      <view class='homeListImg'><image src="../../images/homeReserve.png"></image></view>
-      <view>预约定制</view>
-    </view>
-  </view>
-  <view class="homeLists">
-    <view class='homeList' bindtap='produceLists'>
-      <view class='homeListImg'><image src="../../images/homeProduce.png"></image></view>
-      <view>产品系列</view>
-    </view>
-    <view class='homeList' bindtap='searchStore'>
-      <view class='homeListImg'><image src="../../images/homeStore.png"></image></view>
-      <view>店铺查询</view>
-    </view>
-    <view class='homeList'> 
-      <view class='homeListImg'><image src="../../images/homeService.png"></image></view>
-      <view>客户服务</view>
-      <button open-type="contact">
-      </button>
-    </view> 
-  </view>
+    <view class="homeLists">
+      <view class='homeList' bindtap='produceLists'>
+        <view class='homeListImg'><image src="../../images/homeProduce.png"></image></view>
+        <view>产品系列</view>
+      </view>
+      <view class='homeList' bindtap='searchStore'>
+        <view class='homeListImg'><image src="../../images/homeStore.png"></image></view>
+        <view>店铺查询</view>
+      </view>
+      <view class='homeList'> 
+        <view class='homeListImg'><image src="../../images/homeService.png"></image></view>
+        <view>客户服务</view>
+        <button open-type="contact">
+        </button>
+      </view> 
+    </view> -->
 
+    <view class='bigImg'>
+      <view class='bigImgInfo' wx:for="{{indexIMg}}" wx:for-item="i" wx:key="{{i.id}}"><image mode='aspectFit' src="http://jyyk.wshoto.com/attachment/{{i}}"></image></view>
+    </view>
+
+  </scroll-view>
   <view class="bottom">
     <view class="nowPage">首页介绍</view>
-    <view bindtap='searchStore'>店铺查询</view>
+    <!-- <view bindtap='searchStore'>店铺查询</view> -->
     <view bindtap='integrationStore'>积分商城</view>
-    <view bindtap='mine'>我的</view>
+    <view bindtap='mine'>个人中心</view>
   </view>
-
 </view>
