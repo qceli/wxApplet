@@ -4,7 +4,7 @@ let util = require('../../utils/util');
 let esTools = require('../../utils/eshop/tools');
 Page({
   data: {
-    integrationArea: ['0-5000', '5001-10000', '10001-15000', '15001-30000'],
+    integrationArea: ['0-500', '500-1000', '1000-1500', '1500-2000'],
     items: [
       { name: 'ASC', value: '积分从低到高'},
       { name: 'DESC', value: '积分从高到低'}

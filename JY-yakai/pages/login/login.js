@@ -36,6 +36,11 @@ Page({
       personTel: e.detail.value
     })
     wx.setStorageSync('mobile', e.detail.value);
+  }, 
+  personPwd: function (e) {
+    this.setData({
+      personPwd: e.detail.value
+    })
   },
   login: function (e) {
     var that = this
@@ -59,7 +64,8 @@ Page({
               'access_token': apiToken.access_token,
               'sessionkey': res.data.sessionkey,
               'mobile': that.data.personTel,
-              'type': 'login'
+              'type': 'login',
+              'pwd': that.data.personPwd
             }
             esTools.fn.setEmpty().setHeader({
               'content-type': 'application/x-www-form-urlencoded'
