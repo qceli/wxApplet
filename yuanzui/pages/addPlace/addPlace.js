@@ -1,4 +1,7 @@
 // pages/addPlace/addPlace.js
+var app = getApp();
+var util = require('../../utils/util');
+var esTools = require('../../utils/eshop/tools');
 //获取应用实例
 Page({
   data: {
@@ -7,9 +10,27 @@ Page({
   onLoad: function (options) {
     console.log(options)
     var that = this;
-    var id = options.id;
-    if (id != undefined) {
-      
+    var apiToken = wx.getStorageSync('apiToken');
+    var sessionKey = wx.getStorageSync('sessionKey');
+    console.log(sessionKey.sessionkey);
+    var addressid = options.id;
+    if (addressid != undefined) {
+      var placeInfo = {
+        'access_token': apiToken.access_token,
+        'sessionkey': sessionKey.sessionkey,
+        'addressid': addressid
+      }
+      esTools.fn.setEmpty().setHeader({
+        'content-type': 'application/x-www-form-urlencoded'
+      }).signData(placeInfo).setMethod('post').setExtraUrl('Addresses').addresses(function (res) {
+        if (res.statusCode === 1) {
+          console.log(res.data)
+          // var goods = res.data;
+          // that.setData({
+          //   goods: goods
+          // })
+        }
+      });
 
     }
 
@@ -63,6 +84,41 @@ Page({
     })
   },
   save: function () {
+    var that = this;
+    var apiToken = wx.getStorageSync('apiToken');
+    var sessionKey = wx.getStorageSync('sessionKey');
+    console.log(sessionKey.sessionkey);
+    var personName = that.data.personName;
+    var personTel = that.data.personTel;
+    var region = that.data.region;
+    var personArea = that.data.personArea;
+    var personPostcode = that.data.personPostcode;
+    var personAddress = that.data.personAddress;
+    var placeInfo = {
+      'access_token': apiToken.access_token,
+      'sessionkey': sessionKey.sessionkey,
+      'realname': personName,
+      'mobile': personTel,
+      'province': region[0],
+      'city': region[1],
+      'area': region[2],
+      'address': personArea,
+      'zipcode': personPostcode,
+      'street': personAddress
+    }
+    esTools.fn.setEmpty().setHeader({
+      'content-type': 'application/x-www-form-urlencoded'
+    }).signData(placeInfo).setMethod('post').setExtraUrl('Addresses').addresses(function (res) {
+      if (res.statusCode === 1) {
+        console.log(res.data)
+        // var goods = res.data;
+        // that.setData({
+        //   goods: goods
+        // })
+      }
+    });
+
+
     wx.navigateBack();
   }
 })

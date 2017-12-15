@@ -14,8 +14,8 @@
 }
 .videoIntro{
   margin: 40rpx;
-  font-size: 40rpx;
-  color: #282828;
+  /* font-size: 40rpx; */
+  color: #2C2C2C;
 }
 .changeLesson{
   width: 100%;
@@ -25,14 +25,23 @@
 .preLesson,.nextLesson{
   width: 90%; 
   /* height: 100rpx; */
-  color: #959090;
+  color: #2E2E2E;
   box-sizing: border-box;
-  background-color: #F6F6F6;
+  background-color: #F4F4F4;
   margin: 20rpx 5%;
+  padding: 20rpx;
   border-radius: 5px;
-  text-align: center;
-  line-height: 100rpx;
+  display: flex;
+  /* font-size: 30rpx; */
 }
 .hide{
   display: none;
+}
+.lesTitle{
+  display: inline-block;
+  width: 480rpx;
+  margin-left: 30rpx;
+  overflow: hidden; 
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }

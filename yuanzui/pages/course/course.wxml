@@ -15,7 +15,7 @@
       <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" circular="{{circular}}">
         <block wx:for="{{banner}}" wx:key="">
           <swiper-item>
-            <view class="swiper-item" data-id="{{item.id}}" bindtap="courseInfo">
+            <view class="swiper-item" data-id="{{item.link}}" bindtap="courseInfo">
               <image class="slider-img" src="{{item.img}}" mode="scaleToFill" style="width: 100%;"/>
             </view>
           </swiper-item>

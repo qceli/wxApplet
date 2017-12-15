@@ -91,6 +91,8 @@ Page({
     let ids = e.currentTarget.dataset.ids;
     let pid = e.currentTarget.dataset.pid;
     console.log(ids);
+    console.log(id);
+    console.log(pid);
     wx.navigateTo({
       url: '../courseDetail/courseDetail?id=' + id + '&ids=' + ids + '&pid=' + pid,
     });

@@ -32,13 +32,12 @@ Page({
       // 'page' : 1,
       // 'psize': 5
     }
-    console.log(memberInfo);
     // 轮播
     esTools.fn.setEmpty().setHeader({
       'content-type': 'application/x-www-form-urlencoded'
     }).signData(memberInfo).setMethod('get').setExtraUrl('lessionSlides').slides(function (res) {
       if (res.statusCode === 1) {
-        console.log(res.data)
+        console.log("banner",res.data)
         var banner = res.data;
         that.setData({
           banner: banner

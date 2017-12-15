@@ -1,0 +1,76 @@
+/* pages/center/center.wxss */
+.container {
+  background-color: #f8f8f8;
+}
+.memberTop {
+  width: 100%;
+  height: 350rpx;
+}
+.topImg {
+  width: 100%;
+  height: 350rpx;
+}
+.mineInfos {
+  width: 100%;
+  position: absolute;
+  top: 50rpx;
+  margin: auto;
+}
+.mineInfos>view {
+  text-align: center;
+  color: #ddd;
+  font-size: 32rpx;
+}
+.mineInfo {
+  height: 50rpx;
+  line-height: 50rpx;
+}
+.mineAvatar>image {
+  height: 150rpx;
+  width: 150rpx;
+  border-radius: 50%;
+}
+.memberInfos {
+  height: 150rpx;
+  width: 100%;
+  display: flex;
+  background-color: #fff;
+  border-bottom: solid 1px #ccc;
+}
+.memberInfos>view {
+  flex: 1;
+  text-align: center;
+  height: 150rpx;
+}
+.memberInfo>view { 
+  height: 75rpx;
+}
+
+.infoName {
+  color: #666;
+  font-size: 32rpx;
+  line-height: 85rpx;
+}
+.infos {
+  color: red;
+}
+
+.mineLists {
+  margin-top: 40rpx;
+  border-top: #ccc solid 1px; 
+  background-color: #fff;
+}
+.mineList {
+  display: flex;
+}
+.mineList>view {
+  flex: 1;
+  width: 100%;
+  text-align: center;
+  font-size: 36rpx;
+  color: #666;
+}
+.listImg {
+  height: 100rpx;
+  width: 100rpx; 
+}

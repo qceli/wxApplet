@@ -1,0 +1,27 @@
+<!--comment.wxml-->
+<view class="container">
+  <view>
+    <view class="title">{{quesList.title}}</view>
+    <view class="user">提问：<text>{{quesList.nickname}}</text><text>{{quesList.addtime}}</text></view>
+  </view>
+  <view class="comments">
+    <view class="comment">
+      <view class="comment-item">
+        <view class="info">
+          <text>{{answList.nickname}}</text>
+          <image src='../../images/zan.png'></image>
+          <text class='rt'>{{answList.collectnum}}</text>
+        </view>
+        <view class="detail">
+          {{answList.content}}
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+<view class="bar" bindtap='collect'>
+  <view class="line"></view>
+  <view class="zan">赞一下</view>
+</view>
+
+

@@ -19,7 +19,7 @@
     <view class="more" data-id="{{tInfo.id}}" bindtap="lecturerCourse">更多</view>
   </view>
   <view class="tabContent">
-      <view wx:for="{{tInfo.lesson_list}}" wx:key='' data-id="{{item.cid}}" class="tabContentItem"  bindtap='courseInfo'>
+      <view wx:for="{{tInfo.lesson_list}}" wx:key='' data-id="{{item.pid}}" class="tabContentItem"  bindtap='courseInfo'>
         <view class="tabContentTitle">{{item.name}}</view>
         <image class="tabContentImg" src="{{item.ico}}"></image>
         <view class="tabContentIntro">{{item.brief}}</view>

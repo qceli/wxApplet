@@ -1,0 +1,227 @@
+page{
+  font-family: '微软雅黑';
+  width: 100%;
+  height: 100%;
+  background: #fff  
+}
+.scrollsBody{
+  width: 100%;
+  height: 100%;
+  float: left;
+  box-sizing: border-box;
+  position: relative;
+  font-family: '微软雅黑';
+  padding: 2% 3%;
+}
+.meinfo{
+  width: 100%;
+  float: left;
+  height: auto;
+  box-sizing: border-box;
+  padding: 20rpx 0;
+  border-bottom:solid 1px #e5e5e5; 
+}
+.mi1{
+  width: 180rpx;
+  height: 180rpx;
+  background: #ddd;
+  border-radius:4px;
+  box-sizing: border-box;
+  padding:4%;
+  float: left;
+  margin-right: 2%
+}
+.mi2{
+  width: 100%;
+  height: 100%
+}
+.mi3{
+  width: 65%;
+  float: left;
+  text-align: left;
+  font-size: 40rpx;
+  color: #333;
+}
+.metitle{
+  width: 100%;
+  float: left;
+  margin-top: 50rpx;
+  margin-bottom: 20rpx;
+}
+.mt{
+  font-size: 35rpx;
+  font-weight: bold;
+  color: #666;
+  letter-spacing: 2px;
+}
+.meshop{
+  width: 100%;
+  float: left;
+  box-sizing: border-box;
+  padding: 20rpx;
+  background: #f2f2f2;
+  border-radius:4px 
+}
+.meli{
+  background: #ddd;
+  border-radius: 4px;
+  position: relative;
+  overflow: hidden;
+  float: left;
+}
+.meli image{
+  width: 100%;
+  height: 100%;
+}
+.ml2{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  box-sizing: border-box;
+  padding: 20rpx;
+  background: rgba(0, 0, 0, .4)
+}
+.ml2{
+  width: 100%;
+  float: left;
+  text-align: left;
+  color: #fff;
+  display: flex;
+  flex-wrap: wrap;
+  align-content:flex-end;
+}
+.ml3{
+  width: 100%;
+  float: left;
+  font-size: 28rpx;
+  font-weight: bold;
+  margin-bottom: 10rpx;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.ml4{
+  width: 100%;
+  float: left;
+  font-size: 26rpx;
+}
+/**/
+.classes .meli:nth-child(1n){
+  width: 48%;
+  height: 300rpx;
+}
+.classes .meli:nth-child(1n) .ml4{
+  display:-webkit-box; 
+  -webkit-box-orient:vertical;
+  -webkit-line-clamp:3;
+  overflow: hidden;
+}
+.classes .meli:nth-child(2n){
+  width: 48%;
+  height: 140rpx;
+  margin-left: 20rpx;
+  margin-bottom: 20rpx;
+}
+.classes .meli:nth-child(2n) .ml4,.classes .meli:nth-child(3n) .ml4{
+  display:-webkit-box; 
+  -webkit-box-orient:vertical;
+  -webkit-line-clamp:1;
+  overflow: hidden;  
+}
+.classes .meli:nth-child(3n){
+  width: 48%;
+  height: 140rpx;
+  margin-left: 20rpx;
+}
+/**/
+.shopes .meli:nth-child(1n){
+  width: 48%;
+  height: 300rpx;
+}
+.shopes .meli:nth-child(1n) .ml4{
+  display:-webkit-box; 
+  -webkit-box-orient:vertical;
+  -webkit-line-clamp:3;
+  overflow: hidden;
+}
+.shopes .meli:nth-child(2n){
+  width: 48%;
+  height: 140rpx;
+  margin-left: 20rpx;
+  margin-bottom: 20rpx;
+}
+.shopes .meli:nth-child(2n) .ml4{
+  display:-webkit-box; 
+  -webkit-box-orient:vertical;
+  -webkit-line-clamp:1;
+  overflow: hidden;  
+}
+
+.shopes .meli:nth-child(3n){
+  width: 22%;
+  height: 140rpx;
+  margin-left: 20rpx;
+}
+.shopes .meli:nth-child(4n){
+  width: 22%;
+  height: 140rpx;
+  margin-left: 20rpx;
+  margin-bottom: 0
+}
+.shopes .meli:nth-child(3n) .ml4,.shopes .meli:nth-child(4n) .ml4{
+  display: none;
+}
+.shopes .meli:nth-child(3n) .ml3,.shopes .meli:nth-child(4n) .ml3{
+  display:-webkit-box; 
+  -webkit-box-orient:vertical;
+  -webkit-line-clamp:2;
+  overflow: hidden;
+  font-size: 24rpx;
+  white-space: normal;
+  line-height: 2.0
+}
+.mymsg{
+  width: 100%;
+  float: left;
+  box-sizing: border-box;
+  padding: 20rpx;
+  background: #f6f6f6;
+  border-radius:4px;
+  margin-top:30rpx; 
+}
+.mm1{
+  float: left;
+  font-size:35rpx;
+  font-weight:bold;
+  color:#666;
+  letter-spacing:2px;
+}
+.mm2{
+  float: right;
+  font-size:35rpx;
+  font-weight:bold;
+  color:#333;
+  display: block;
+  position: relative;
+  margin-right: 2%;
+}
+.mm2 view{
+  position: absolute;
+  right: -15rpx;
+  top: 0rpx;
+  width: 7px;
+  height: 7px;
+  background: #d81e06;
+  border-radius:50% 
+}
+.more{
+  float: right;
+  font-size: 28rpx;
+  color: #666;
+  box-sizing: border-box;
+  padding:10rpx 20rpx;
+  margin-top: -2rpx;
+}

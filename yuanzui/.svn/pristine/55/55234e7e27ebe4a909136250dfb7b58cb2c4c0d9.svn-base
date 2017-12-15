@@ -1,0 +1,23 @@
+<!--comment.wxml-->
+<view class="container">
+  <view class="title">评论<text bindtap='submit'>发布</text></view>
+  <view class="bbs-item" bindtap='toDetail'>
+    <image src="../../images/right1.jpg"></image>
+    <view class="item-txt">
+      <view class="_title">{{bbsDetail.title}}</view>
+      <view class="txt">
+        <import src="../../wxParse/wxParse.wxml"/>
+        <!--文章 start-->
+        <view class="wxParse">
+          <template is="wxParse" data="{{wxParseData:article.nodes}}"/>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="relative">
+    <textarea name="" id="textarea" placeholder="发表评论" maxlength="100"
+              placeholder-class="txtarea" bindinput="valueChange"></textarea>
+    <text>{{length}}/100</text>
+  </view>
+</view>
+

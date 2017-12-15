@@ -1,12 +1,15 @@
 <!--pages/courseList/courseList.wxml-->
 <view>
-  <view class="topTitle">{{lesList.bookname}}</view>
+  <view class="topTitle">《{{lesList.bookname}}》</view>
   <view class="top">
     <image class="topImg" src="{{lesList.images}}"></image>
     <view class="topText">{{lesList.brief}}</view>
   </view>
-  <view class="subTitle">课程列表</view>
+  <!-- <view class="subTitle">课程列表</view> -->
   <view class="courseList" >
-    <view class="courseItem" data-pid="{{lesList.id}}" data-ids="{{lesList.ids}}" wx:for="{{lesList.section}}" wx:key='' data-id="{{item.id}}"   bindtap='courseDetail'>{{item.title}}</view>
+    <view class="courseItem" data-pid="{{lesList.id}}" data-ids="{{lesList.ids}}" wx:for="{{lesList.section}}" wx:key='' data-id="{{item.id}}"   bindtap='courseDetail'>
+      <view class="titleText">有一把椅子就能展现性感有一把椅子就能展现性感</view>
+      <view class="videoPlay">播放</view>
+    </view>
   </view>
 </view>

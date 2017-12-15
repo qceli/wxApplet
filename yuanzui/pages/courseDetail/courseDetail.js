@@ -37,26 +37,38 @@ Page({
         console.log(ids);
         let preId;
         let nextId;
+        let preTitle;
+        let nextTitle;
         for (let i = 0, len = ids.length; i < len; i++) {
           if (ids[i] == id) {
             if(i == 0){
               preId = false;
               nextId = ids[i + 1];
+              preTitle = false;
+              nextTitle = lesDetail.list[i+1].title;
             }else if(i == len-1){
               preId = ids[i - 1];
               nextId = false;
+              preTitle = lesDetail.list[i - 1].title;
+              nextTitle = false;
             }else{
               preId = ids[i - 1];
               nextId = ids[i + 1];
+              preTitle = lesDetail.list[i - 1].title;
+              nextTitle = lesDetail.list[i + 1].title;
             }            
             console.log("preId: " + preId);
             console.log("nextId: " + nextId);
+            console.log("preTitle: " + preTitle);
+            console.log("nextTitle: " + nextTitle);
           }
         }
         that.setData({
           lesDetail: lesDetail,
           preId: preId,
-          nextId: nextId
+          nextId: nextId,
+          preTitle: preTitle,
+          nextTitle: nextTitle
         })
       }else{
         console.log(res.errMsg);

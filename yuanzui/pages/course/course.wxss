@@ -106,7 +106,7 @@ swiper {
 }
 .speaker-item{
   display: inline-block;
-  width: 35%; 
+  width: 45%; 
   height: 350rpx; 
   text-align: center;
   color: #939393;
@@ -118,21 +118,23 @@ swiper {
   border-radius: 5px;
 }
 .speaker-img{
-  width: 100rpx;
-  height: 100rpx;
+  width: 150rpx;
+  height: 150rpx;
   border-radius: 50%;
+  border: 2px solid #28323B;
 }
 .speaker-name{
-  
+  margin: 20rpx 0;
 }
 .speaker-intro{
   width: 100%;
-  height: 120rpx; 
-  margin-top: 20rpx; 
+  height: 80rpx; 
+  color: #3E474F;
+  /* margin-top: 20rpx;  */
   word-wrap: break-word;
   display: -webkit-box; 
   -webkit-box-orient: vertical; 
-  -webkit-line-clamp:3; 
+  -webkit-line-clamp:2; 
   overflow: hidden; 
   white-space: pre-line;
 }

@@ -24,7 +24,7 @@
       </view>
       <view class='placeInfo'>
         <view class='infoTitle'>街道</view>
-        <view class='infoInput'><input placeholder='街道' bindinput="personArea"></input></view>
+        <view class='infoInput'><input type='text' placeholder='街道' bindinput="personArea"></input></view>
       </view>
       <view class='placeInfo'>
         <view class='infoTitle'>邮政编码</view>
