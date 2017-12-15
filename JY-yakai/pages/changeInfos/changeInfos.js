@@ -76,60 +76,81 @@ Page({
       personAddress: e.detail.value
     })
   },
+  pwd: function (e) {
+    this.setData({
+      pwd: e.detail.value
+    })
+  },
+  checkPwd: function (e) {
+    this.setData({
+      checkPwd: e.detail.value
+    })
+  },
   submit: function (e) {
     var that = this
-    var apiToken = wx.getStorageSync('apiToken');
-    console.log(JSON.stringify(apiToken))
-    var sessionkey = wx.getStorageSync('sessionkey');
-    var realname = that.data.personName;
-    var mobile = that.data.personTel;
-    var address = that.data.personAddress;
-    var memberInfo = that.data.memberInfo;
-    if (mobile == undefined) {
-      mobile = memberInfo.mobile;
-    }
-    if (realname == undefined) {
-      realname = memberInfo.realname;
-    }
-    if (address == undefined) {
-      address = memberInfo.address;
-    }
-    let userInfo = {
-      'access_token': apiToken.access_token,
-      'sessionkey': sessionkey,
-      'mobile': mobile,
-      'realname': realname,
-      'birth': that.data.dateValue,
-      'address': address
-    }
-    esTools.fn.setEmpty().setHeader({
-      'content-type': 'application/x-www-form-urlencoded'
-    }).signData(userInfo).setMethod('put').setExtraUrl('members').members(function (res) {
-      console.log("codeLogin---" + JSON.stringify(res))
-      if (res.statusCode === 1) {
-        wx.showModal({
-          title: '提示',
-          content: '修改成功',
-          success: function (res) {
-            if (res.confirm) {
-              wx.navigateBack({
-                delta: 2
-              })
-            } else if (res.cancel) {
-              wx.navigateBack({
-                delta: 2
-              })
-            }
-          }
-        })
+    var pwd = this.data.pwd;
+    var checkPwd = this.data.checkPwd;
+    if (checkPwd == pwd) {
 
-      } else {
-        wx.showModal({
-          title: '提示',
-          content: res.data,
-        })
+      var apiToken = wx.getStorageSync('apiToken');
+      console.log(JSON.stringify(apiToken))
+      var sessionkey = wx.getStorageSync('sessionkey');
+      var realname = that.data.personName;
+      var mobile = that.data.personTel;
+      var address = that.data.personAddress;
+      var memberInfo = that.data.memberInfo;
+      if (mobile == undefined) {
+        mobile = memberInfo.mobile;
       }
-    });
+      if (realname == undefined) {
+        realname = memberInfo.realname;
+      }
+      if (address == undefined) {
+        address = memberInfo.address;
+      }
+      let userInfo = {
+        'access_token': apiToken.access_token,
+        'sessionkey': sessionkey,
+        'mobile': mobile,
+        'realname': realname,
+        'birth': that.data.dateValue,
+        'address': address,
+        'pwd': that.data.pwd
+      }
+      esTools.fn.setEmpty().setHeader({
+        'content-type': 'application/x-www-form-urlencoded'
+      }).signData(userInfo).setMethod('put').setExtraUrl('members').members(function (res) {
+        console.log("codeLogin---" + JSON.stringify(res))
+        if (res.statusCode === 1) {
+          wx.showModal({
+            title: '提示',
+            content: '修改成功',
+            success: function (res) {
+              if (res.confirm) {
+                wx.navigateBack({
+                  delta: 2
+                })
+              } else if (res.cancel) {
+                wx.navigateBack({
+                  delta: 2
+                })
+              }
+            }
+          })
 
+        } else {
+          wx.showModal({
+            title: '提示',
+            content: res.data,
+          })
+        }
+      });
+
+    } else {
+      wx.showModal({
+        title: '提示',
+        content: '两次密码不一样，请重新输入！',
+      })
+    }
   }
 })

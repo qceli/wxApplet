@@ -2,7 +2,13 @@
 <view class="container">
   <scroll-view scroll-y="auto" style="height:calc(100% - 100rpx);"> 
     <view class='homeImg'>
-      <image src="{{thumb}}"></image>
+    <swiper class='swiper' indicator-dots='true' autoplay='true' interval='5000' duration='1000'>
+      <block wx:for="{{thumb}}" wx:for-index="{{index}}">
+        <swiper-item>
+          <image src="http://jyyk.wshoto.com/attachment/{{item}}" class='topPic' mode='aspectFill'></image>
+        </swiper-item>
+      </block> 
+    </swiper>
     </view>
     <!-- <view class="homeLists">
       <view class='homeList' bindtap='mine'>

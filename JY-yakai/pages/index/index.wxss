@@ -38,3 +38,10 @@ button {
 .bigImg, .bigImgInfo, .bigImgInfo>image {
   width: 100%;
 }
+
+.swiper{
+  height: 490rpx;
+}
+.swiper image{
+  width:100%;
+}

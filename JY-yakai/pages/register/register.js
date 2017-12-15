@@ -61,54 +61,74 @@ Page({
       personAddress: e.detail.value
     })
   },
+  pwd: function (e) {
+    this.setData({
+      pwd: e.detail.value
+    })
+  },
+  checkPwd: function (e) {
+    this.setData({
+      checkPwd: e.detail.value
+    })
+  },
   register: function (e) {
     var that = this
-    var apiToken = wx.getStorageSync('apiToken');
-    console.log(JSON.stringify(apiToken))
-    var mobile = that.data.personTel; 
-    wx.login({
-      success: res => {
-        // 发送 res.code 到后台换取 openId, sessionKey, unionId
-        console.log(JSON.stringify(res))
-        // var code = res.code;
-        let loginData = {
-          'code': res.code,
-          'access_token': apiToken.access_token
-        }
-        esTools.fn.setEmpty().setHeader({ 'content-type': 'application/x-www-form-urlencoded' }).signData(loginData).setMethod('post').setExtraUrl('sessionCode').login(function (res) {
-          // console.log(res)
-          if (res.statusCode === 1) {
-            let userInfo = {
-              'access_token': apiToken.access_token,
-              'sessionkey': res.data.sessionkey,
-              'mobile': mobile,
-              'realname': that.data.personName,
-              'birth': that.data.dateValue,
-              'address': that.data.personAddress
-            }
-            esTools.fn.setEmpty().setHeader({
-              'content-type': 'application/x-www-form-urlencoded'
-            }).signData(userInfo).setMethod('post').setExtraUrl('codeLogin').auth(function (res) {
-              console.log("codeLogin---" + JSON.stringify(res))
-              if (res.statusCode === 1) {
-                wx.setStorageSync('sessionkey', res.data.sessionkey);
-                wx.redirectTo({
-                  url: '../getCard/getCard',
-                })
-
-              } else {
-                wx.showModal({
-                  title: '提示',
-                  content: res.data,
-                })
-              }
-            });
-
+    var pwd = this.data.pwd;
+    var checkPwd = this.data.checkPwd;
+    if (checkPwd == pwd) {
+      var apiToken = wx.getStorageSync('apiToken');
+      console.log(JSON.stringify(apiToken))
+      var mobile = that.data.personTel;
+      wx.login({
+        success: res => {
+          // 发送 res.code 到后台换取 openId, sessionKey, unionId
+          console.log(JSON.stringify(res))
+          // var code = res.code;
+          let loginData = {
+            'code': res.code,
+            'access_token': apiToken.access_token
           }
+          esTools.fn.setEmpty().setHeader({ 'content-type': 'application/x-www-form-urlencoded' }).signData(loginData).setMethod('post').setExtraUrl('sessionCode').login(function (res) {
+            // console.log(res)
+            if (res.statusCode === 1) {
+              let userInfo = {
+                'access_token': apiToken.access_token,
+                'sessionkey': res.data.sessionkey,
+                'mobile': mobile,
+                'realname': that.data.personName,
+                'birth': that.data.dateValue,
+                'address': that.data.personAddress,
+                'pwd': that.data.pwd
+              }
+              esTools.fn.setEmpty().setHeader({
+                'content-type': 'application/x-www-form-urlencoded'
+              }).signData(userInfo).setMethod('post').setExtraUrl('codeLogin').auth(function (res) {
+                console.log("codeLogin---" + JSON.stringify(res))
+                if (res.statusCode === 1) {
+                  wx.setStorageSync('sessionkey', res.data.sessionkey);
+                  wx.redirectTo({
+                    url: '../getCard/getCard',
+                  })
 
-        });
-      }
-    })
+                } else {
+                  wx.showModal({
+                    title: '提示',
+                    content: res.data,
+                  })
+                }
+              });
 
+            }
+
+          });
+        }
+      })
+
+    } else {
+      wx.showModal({
+        title: '提示',
+        content: '两次密码不一样，请重新输入！',
+      })
+    }
   }
 })

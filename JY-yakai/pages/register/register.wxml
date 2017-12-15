@@ -15,6 +15,12 @@
     <view class="info">
       <input type='text' placeholder='地址' bindinput="personAddress">地址</input>
     </view>
+    <view class="info">
+      <input type='password' placeholder='密码' bindinput="pwd">密码</input>
+    </view>
+    <view class="info">
+      <input type='password' placeholder='重复密码' bindinput="checkPwd">重复密码</input>
+    </view>
   </view>
   <view class="register" bindtap='register'>立即注册</view>
 

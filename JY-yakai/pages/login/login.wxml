@@ -7,9 +7,9 @@
     <view class="info telInfo">
       <input type='number' placeholder='会员手机' bindinput="personTel"></input>
     </view>
-    <!-- <view class="info">
-      <input type='text' placeholder='密码' bindinput="personPwd"></input>
-    </view> -->
+     <view class="info">
+      <input type='password' placeholder='密码' bindinput="personPwd"></input>
+    </view> 
   </view>
   <view class="login" bindtap='login'>登录</view>
   <view class="register" bindtap='register'>注册</view>
