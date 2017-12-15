@@ -1,2 +1,0 @@
-<view class="my-animation" animation="{{animationData}}" style="{{windowHeight}}{{windowWidth}}" bindtap="goIndex">
-</view>
