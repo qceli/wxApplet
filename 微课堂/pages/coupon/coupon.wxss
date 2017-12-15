@@ -1,0 +1,37 @@
+/* pages/coupon/coupon.wxss */
+.title{
+  color: #373737;
+  font-size: 45rpx;
+  font-weight: bold;
+}
+.couponCon{
+  margin: 40rpx 0;
+}
+.couponItem{
+  background-color: #F6F6F6;
+  margin-bottom: 20rpx;
+  padding: 20rpx;
+  position: relative;
+}
+.name{
+  color: #868181;
+  font-size: 35rpx;
+  font-weight: bold;
+  margin-bottom: 40rpx;
+}
+.text{
+  color: #969696;
+  font-size: 30rpx;
+}
+.img{
+  width: 60rpx;
+  height: 60rpx;
+  position: absolute;
+  top: 20rpx;
+  right: 20rpx;
+}
+.choose{
+  position: absolute;
+  bottom: 20rpx;
+  right: 20rpx;
+}

@@ -1,0 +1,17 @@
+<!--pages/courseOrder/courseOrder.wxml-->
+<view class="mainContent">
+  <view class="topTitle">课程订单</view>
+  <view class="orderDetail">
+    <view class="title">课程名称</view>
+    <image class="img" src="../../images/2.jpg"></image>
+    <view class="info">课程简介</view>
+  </view>
+  <view class="text">订单金额: ￥100</view>
+  <view class="{{true? 'hide' : 'show'}} text">优惠券: 9折</view>
+  <view class="text">总价: ￥100</view>
+  <view class="couponCon" bindtap='coupon'>
+    <view class="useCoupon">{{true?'使用优惠券':'9折优惠券'}}</view>
+    <image src='../../images/right.png' class="right"></image>
+  </view>
+</view>
+<view class="bottom">立即支付</view>

@@ -1,0 +1,25 @@
+<!--pages/collage/collage .wxml-->
+<view class="collageCon">
+  <view class="normalText">普通团</view>
+  <view class="originalPrice">原价:￥100</view>
+  <radio-group class="collageListCon" bindchange="radioChange">
+    <view class="collageList {{radioCheckVal==0?'active':''}}">
+      <view>2人团</view>
+      <view class="groupPrice">￥95</view>
+      <radio value="0" checked=""></radio>
+    </view>
+    <view class="collageList  {{radioCheckVal==1?'active':''}}">
+      <view>2人团</view>
+      <view class="groupPrice">￥95</view>
+      <radio value="1" checked=""></radio>
+    </view>
+    <view class="collageList  {{radioCheckVal==2?'active':''}}">
+      <view>2人团</view>
+      <view class="groupPrice">￥95</view>
+      <radio value="2" checked=""></radio>
+    </view>
+  </radio-group>
+  <view class="costPrice">原价:￥100</view>
+  <view class="collagePrice">拼团价:￥80</view>
+</view>
+<view class="bottom">立即购买</view>

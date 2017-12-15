@@ -1,0 +1,27 @@
+<!--pages/coupon/coupon.wxml-->
+<view class="mainContent">
+  <view class="title">优惠券</view>
+  <radio-group class="couponCon" bindchange="radioChange">
+    <view class="couponItem">
+      <view class="name">9折优惠券</view>
+      <image class="img" src="../../images/2.jpg"></image>
+      <view class="text">优惠券使用介绍:</view>
+      <view class="text">使用时限:</view>
+      <radio class="choose" value="0" checked=""></radio>
+    </view>
+    <view class="couponItem">
+      <view class="name">9折优惠券</view>
+      <image class="img" src="../../images/2.jpg"></image>
+      <view class="text">优惠券使用介绍:</view>
+      <view class="text">使用时限:</view>
+      <radio class="choose" value="0" checked=""></radio>
+    </view>
+    <view class="couponItem">
+      <view class="name">9折优惠券</view>
+      <image class="img" src="../../images/2.jpg"></image>
+      <view class="text">优惠券使用介绍:</view>
+      <view class="text">使用时限:</view>
+      <radio class="choose" value="0" checked=""></radio>
+    </view>
+  </radio-group>
+</view>

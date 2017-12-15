@@ -1,0 +1,51 @@
+/* pages/collage/collage .wxss */
+.collageCon{
+  margin: 0 40rpx;
+}
+.collageListCon{
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.collageList{
+  width: 30%;
+  color: #fff;
+  box-sizing: border-box;
+  /* margin-right: 20rpx; */
+  margin-bottom: 20rpx;
+  padding: 40rpx 0;
+  background: #ccc;
+  text-align: center;
+  border-radius: 5px;
+}
+.collageListCon view.active{
+  background: #6D6D6D;
+}
+.bottom{
+  width: 100%;  
+  color: #fff;
+  text-align: center;
+  background: #2E2E2E;
+  padding: 20rpx 0;
+  position: fixed;
+  bottom: 0;
+}
+.groupPrice{
+   margin: 30rpx 0 20rpx 0;
+}
+.normalText{
+  font-size: 40rpx;
+  color: #969696;
+  /* margin-bottom: 20rpx; */
+}
+.originalPrice{
+  color: #B0B0B0;
+  margin: 20rpx 0;
+}
+.costPrice{
+  margin: 40rpx 0 20rpx 0;
+}
+.collagePrice{
+
+}
